@@ -34,7 +34,7 @@ class hr_employee(models.Model):
     Inherit hr.employee to added field perception type of the employee
     '''
     _inherit = 'hr.employee'
-    
+
     @api.model
     def _get_perception_types(self):
         types = [
@@ -43,7 +43,8 @@ class hr_employee(models.Model):
             ]
         return types
 
-    perception_type = fields.Selection(_get_perception_types,
-        'Perception Type', help='Perception type of the employee. Use: \n' \
-        '- 5 to declaration individual.\n- 6 to joint declaration, when the '\
+    perception_type = fields.Selection(
+        _get_perception_types, 'Perception Type',
+        help='Perception type of the employee. Use: \n'
+        '- 5 to declaration individual.\n- 6 to joint declaration, when the '
         'spouse not work.')
