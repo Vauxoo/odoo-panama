@@ -33,12 +33,12 @@ class res_partner(osv.Model):
 
     _inherit = 'res.partner'
 
-    __check_vat_pa_re1 = re.compile(r'0{2}(N0|PE|E0)-\d{3}[1-9]-\d{4}[1-9]$')
+    __check_vat_pa_re1 = re.compile(r'0{2}(N0|PE|E0)-\d{4}-\d{5}$')
     __check_vat_pa_re2 = re.\
-        compile(r'(0\d|1[0-2])(PI|AV|00)-\d{3}[1-9]-\d{4}[1-9]$')
-    __check_vat_pa_re3 = re.compile(r'\d{5}[1-9]\d{3}[1-9]\d{5}[1-9]$')
+        compile(r'(0\d|1[0-2])(PI|AV|00)-\d{4}-\d{5}$')
+    __check_vat_pa_re3 = re.compile(r'\d{16}$')
     __check_vat_pa_re4 = re.compile(r'PAS\d{1,27}$')
-    __check_vat_pa_re5 = re.compile(r'(0\d|1[0-2])-NT-\d{3}[1-9]-\d{4}[1-9]$')
+    __check_vat_pa_re5 = re.compile(r'(0\d|1[0-2])-NT-\d{4}-\d{5}$')
 
     def check_vat_pa(self, vat):
         if self.__check_vat_pa_re1.match(vat) or self.__check_vat_pa_re2.\
