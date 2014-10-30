@@ -27,6 +27,7 @@
 This file adds field to set perception type in employee
 '''
 from openerp import models, fields, api
+from openerp.tools.translate import _
 
 
 class hr_employee(models.Model):
@@ -38,13 +39,13 @@ class hr_employee(models.Model):
     @api.model
     def _get_perception_types(self):
         types = [
-            ('5_individual', '5- Individual'),
-            ('6_joint', '6- Joint'),
+            ('5_individual', _('5 Individual Declaration')),
+            ('6_joint', _('6 Joint Declaration')),
             ]
         return types
 
     perception_type = fields.Selection(
         _get_perception_types, 'Perception Type',
         help='Perception type of the employee. Use: \n'
-        '- 5 to declaration individual.\n- 6 to joint declaration, when the '
+        '- 5 to individual declaration.\n- 6 to joint declaration, when the '
         'spouse not work.')
