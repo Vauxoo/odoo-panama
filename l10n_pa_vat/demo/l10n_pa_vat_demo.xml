@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<openerp>
+    <data noupdate="1">
+        
+        <record id="ruc_panama_partner_0" model="res.partner" context="{'default_is_company': True}">
+            <field name="name">Partner to validate RUC Panamá</field>
+            <field name="company_id" eval="None"/>
+            <field name="image" eval="False"/>
+            <field name="customer" eval="False"/>
+            <field name="is_company" eval="True"/>
+            <field name="street"></field>
+            <field name="city"></field>
+            <field name="zip"></field>
+            <field name="phone"></field>
+        </record>
+        
+    </data>
+</openerp>
