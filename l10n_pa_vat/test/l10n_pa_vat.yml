@@ -1,0 +1,30 @@
+-
+  To test the Panamá RUC Validation
+-
+  !python {model: res.partner}: |
+    res_partner = self.pool.get('res.partner')
+    import traceback
+    import openerp.tools as tools
+    from openerp.osv.orm import except_orm
+    from openerp.tools.misc import mute_logger
+    ruc_panama_partner_valid = {
+        '00': ['PA4-444-856DV22', 'PA4-444-856DV45'],
+        'E': ['PAE-447-966DV09', 'PAE-447-966DV75'],
+        'AV': ['PA5-AV-785-856DV65', 'PA5-AV-785-856DV23'],
+        'NTJ': ['PA9-NT-787-158DV30', 'PA9-NT-787-158DV97'],
+        'PE': ['PAPE-256-117DV14', 'PAPE-256-117DV45'],
+        'PI': ['PA11-PI-756-249DV64', 'PA11-PI-756-249DV56'],
+        'PAS': ['PAPAS123568966433245', 'PAPASG'],
+        'PJ': ['PA0102-124-563DV45', 'PA0102-124-563DV45'],
+        'NT': ['PA1-NT-456-4445DV22', 'PA1-NT-456-4445DV22'],#llevara N
+    }
+    test_ok = False
+    for type_ruc in ruc_panama_partner_valid.keys():
+        res_partner.write(cr, uid, ref('ruc_panama_partner_0'), {'vat': ruc_panama_partner_valid.get(type_ruc)[0]})
+        try:
+            with mute_logger('openerp.osv.orm'):
+                res_partner.write(cr, uid, ref('ruc_panama_partner_0'), {'vat': ruc_panama_partner_valid.get(type_ruc)[1]})
+        except except_orm:
+            error = tools.ustr( traceback.format_exc() )
+            test_ok = True
+        assert test_ok, "Test failed."

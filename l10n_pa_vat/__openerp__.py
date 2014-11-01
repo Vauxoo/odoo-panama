@@ -39,8 +39,12 @@ This module is used to validate Ruc of partner from Panamá.
             "base_vat",
     ],
     "demo": [
+        'demo/l10n_pa_vat_demo.xml',
     ],
     "data": [
+    ],
+    "test": [
+        "test/l10n_pa_vat.yml",
     ],
     "installable": True,
     "active": False,

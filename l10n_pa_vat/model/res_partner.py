@@ -27,7 +27,7 @@
 
 from openerp.osv import osv
 import re
-from . import ruc_dv
+from . import ruc_vat
 
 
 class res_partner(osv.Model):
@@ -44,12 +44,12 @@ class res_partner(osv.Model):
     def check_vat_pa(self, vat):
         vat_split_dv = vat.split('DV')
         vat = vat_split_dv[0]
-        ruc_dv.calculateDV(vat)
+        ruc_vat.calculateDV(vat)
         if self.__check_vat_pa_re1.match(vat) or self.__check_vat_pa_re2.\
                 match(vat) or self.__check_vat_pa_re3.match(vat) or self.\
                 __check_vat_pa_re4.match(vat) or self.__check_vat_pa_re5.\
                 match(vat):
             if len(vat_split_dv) == 2:
-                return ruc_dv.calculateDV(vat) == vat_split_dv[-1]
+                return ruc_vat.calculateDV(vat) == vat_split_dv[-1]
             return True
         return False
