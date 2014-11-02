@@ -3,6 +3,7 @@
 #
 # Reference:
 # https://www.anip.gob.pa/documentos/DV_RUC.pdf
+# Source code from copy from https://github.com/apple314159/panama-dv
 
 _arrval = {
         '00': '00',
