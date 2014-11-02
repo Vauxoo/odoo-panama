@@ -80,51 +80,60 @@ def calculateDV(ruc):
         # Los E estan OK, 23 posiciones
     if ruc[0] == 'E':
         ructb = '0'*(2-len(rs[1])) + '0000005' + '00' + '50' + '0'*(3-len(rs[1])) + rs[1] + '0'*(5-len(rs[2])) + rs[2]
-        print "Tipo E"
+        #print "Tipo E"
         #print "caracteres",len(ructb)
         # 4 campos
     elif rs[0][:-1] == 'N' and rs[1] == 'NT':
         ructb = '0'*(3-len(rs[0])) + '0000005' + '0'*(1-len(rs[0][:-2])) + rs[0][1:] + rs[1][:-2] + '43' + '0'*(3-len(rs[2])) + rs[2] + '0'*(5-len(rs[3])) + rs[3]
-        print "Tipo NT Natural"
-        print ructb
-        print "caracteres",len(ructb)
+        #print "Tipo NT Natural"
+        #print ructb
+        #print "caracteres",len(ructb)
         # 4 campos
     elif rs[1] == 'NT':
         ructb = '0'*(2-len(rs[0])) + '0000000' + '0'*(2-len(rs[0])) + rs[0] + rs[1][:-2] + '43' + '0'*(3-len(rs[2])) + rs[2] + '0'*(5-len(rs[3])) + rs[3]
-        print "Tipo NT Juridico"
-        print ructb
-        print "caracteres",len(ructb)
+        #print "Tipo NT Juridico"
+        #print ructb
+        #print "caracteres",len(ructb)
         # 4 campos
     elif rs[1] == 'AV':
         ructb = '0'*(2-len(rs[0])) + '0000005' + '0'*(2-len(rs[0])) + rs[0] + rs[0][:-2] + '15' + '0'*(3-len(rs[2])) + rs[2] + '0'*(5-len(rs[3])) + rs[3]
-        print "Tipo AV"
+        #print "Tipo AV"
         #print "caracteres",len(ructb)
         # 4 campos
     elif rs[1] == 'PI':
         ructb = '0'*(2-len(rs[0])) + '0000005' + '0'*(2-len(rs[0])) + rs[0] + rs[1][:-2] + '79' + '0'*(3-len(rs[2])) + rs[2] + '0'*(5-len(rs[3])) + rs[3]
-        print "Tipo PI"
+        #print "Tipo PI"
         #print "caracteres",len(ructb)
         # Los PE estan OK, 21 posiciones
     elif rs[0] == 'PE':
-        ructb = '0'*(3-len(rs[1])) + '0000005' + '00' + '75' + '0'*(3-len(rs[1])) + rs[1] + '0'*(5-len(rs[2])) + rs[2]
-        print "Tipo PE"
+        if len(rs[1]) > 3:
+            cutrs1 = rs[1][1:]
+            #print "cutrs1", cutrs1
+            ructb = '0'*(5-len(rs[1])) + '0000005' + '0' + '74' + '0'*(4-len(rs[1])) + rs[1] + '0'*(5-len(rs[2])) + rs[2]
+        elif len(rs[1]) <=3:
+            ructb = '0'*(3-len(rs[1])) + '0000005' + '00' + '75' + '0'*(3-len(rs[1])) + rs[1] + '0'*(5-len(rs[2])) + rs[2]
+        #print "Tipo PE"
+        #print rs
+        #print "00000005007500100019"
+        #print ructb
         #print "caracteres",len(ructb)
         # Los N estan OK, 21 positiones
     elif ruc[0] == 'N':
         ructb = '0'*(3-len(rs[1])) + '0000005' + '00' + '40' + '0'*(3-len(rs[1])) + rs[1] + '0'*(5-len(rs[2])) + rs[2]
-        print "Tipo N"
+        #print "Tipo N"
+        #print ructb
         #print "caracteres",len(ructb)
         # 4 campos
         # Son las cedulas normales, esta OK, 20 positiones?
 #    elif 0 < len(rs[0]) <= 2:
     elif len(rs[0]) == 1 or rs[0] == '10' or rs[0] == '11' or rs[0] == '12' or rs[0] == '13':
         ructb = '0'*(4-len(rs[1])) + '0000005' + '0'*(2-len(rs[0])) + rs[0] + '00' + '0'*(3-len(rs[1])) + rs[1] + '0'*(5-len(rs[2])) + rs[2]
-        print "Persona Natural"
+        #print "Persona Natural"
         #print ructb
         #print "caracteres",len(ructb)
     else: # RUC juridico, 20 positiones, OK
         ructb = '0'*(10-len(rs[0])) + rs[0] + '0'*(4-len(rs[1])) + rs[1] + '0'*(6-len(rs[2])) + rs[2]
-        print "Tipo Juridico"
+        #print "Tipo Juridico"
         #print rs[0]
         #print "caracteres",len(ructb)
         #print ructb
@@ -137,13 +146,13 @@ def calculateDV(ruc):
         ructb = ructb[:5] + _arrval.get(ructb[5:7],ructb[5:7]) + ructb[7:]
 
     #if sw == 'True':
-        print "Antiguo =", sw
+        #print "Antiguo =", sw
     #print ructb
 
     dv1 = _digitDV(sw, ructb)
     #print "DV1",dv1
     dv2 = _digitDV(sw, ructb+chr(48+dv1))
-    print "Resultado DV =",dv1,dv2
+    #print "Resultado DV =",dv1,dv2
 
     ret =  chr(48+dv1) + chr(48+dv2)
     #print ret
@@ -160,4 +169,4 @@ if __name__ == "__main__":
     dv = calculateDV(args.ruc)
     if len(dv) == 0:
         sys.exit(1)
-    print "DV","=",dv
+    #print "DV =",dv
