@@ -27,7 +27,7 @@
 
 from openerp.osv import osv
 import re
-import ruc
+import ruc as ruc_vat
 
 
 class res_partner(osv.Model):
