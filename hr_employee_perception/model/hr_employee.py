@@ -26,11 +26,12 @@
 '''
 This file adds field to set perception type in employee
 '''
-from openerp import models, fields, api
+from openerp import api, fields, models
 from openerp.tools.translate import _
 
 
 class hr_employee(models.Model):
+
     '''
     Inherit hr.employee to added field perception type of the employee
     '''
@@ -41,7 +42,7 @@ class hr_employee(models.Model):
         types = [
             ('5_individual', _('5 Individual Declaration')),
             ('6_joint', _('6 Joint Declaration')),
-            ]
+        ]
         return types
 
     perception_type = fields.Selection(
