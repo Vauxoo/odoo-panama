@@ -13,8 +13,8 @@ virtualenv:
 
 install:
   - git clone https://github.com/oca/maintainer-quality-tools.git -b master ${HOME}/maintainer-quality-tools
-  - git clone https://github.com/Vauxoo/panama-dv.git -b master ${HOME}/panama-dv-lib
   - export PATH=${HOME}/maintainer-quality-tools/travis:${PATH}
+  - git clone https://github.com/Vauxoo/panama-dv.git -b master ${HOME}/panama-dv-lib
   - export PYTHONPATH=${HOME}/panama-dv-lib:${PYTHONPATH}
   - travis_install_nightly
 
