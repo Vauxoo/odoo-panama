@@ -1,4 +1,4 @@
-# coding:utf8
+# -*- coding: utf-8 -*-
 #
 #    OpenERP, Open Source Management Solution
 #    Copyright (c) 2014 Vauxoo - http://www.vauxoo.com/
@@ -22,6 +22,7 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 from openerp import fields, models
+from openerp.tools.translate import _
 
 
 class MaritalStatus(models.Model):
@@ -32,4 +33,4 @@ class MaritalStatus(models.Model):
     _inherit = 'hr.employee'
 
     marital = fields.Selection(
-        selection_add=[('cohabitation', 'Cohabitation')])
+        selection_add=[('cohabitation', _('Cohabitation'))])
