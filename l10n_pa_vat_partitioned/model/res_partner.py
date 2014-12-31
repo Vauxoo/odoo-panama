@@ -24,7 +24,7 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 from openerp import models, fields, api
-from openerp.tools.translate import _
+
 
 class ResPartner(models.Model):
 
@@ -33,9 +33,10 @@ class ResPartner(models.Model):
 
     def get_panama_code(self):
         panama = None
-        for panama_id in self.env['res.country'].search([('name','=','Panama')]):
+        for panama_id in self.env['res.country'].search(
+                [('name', '=', 'Panama')]):
             panama = panama_id
-        return panama_id
+        return panama
 
     @api.onchange('l10n_pa_ruc', 'l10n_pa_ruc_dv')
     def _onchange_partitioned_vat(self):

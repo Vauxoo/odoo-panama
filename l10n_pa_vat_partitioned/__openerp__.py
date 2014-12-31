@@ -32,12 +32,12 @@
     "category": "Generic Modules",
     "description": """
         l10n_pa_vat_partitioned
-        
+
         This module splits the VAT field into 3 fields:
             1. l10n_pa_ruc_country_id (PA)
             2. l10n_pa_ruc (RUC)
             3. l10n_pa_ruc_dv (DV)
-        
+
         The previous fields will be disposed to replace the directly
         'VAT' field editing.
     """,
