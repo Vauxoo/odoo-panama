@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_partner_form_inherited_xml">
+            <field name="name">view.partner.form.inherited.xml</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+            
+                <xpath expr="//field[@name='vat']" position="after">
+                    <group>
+                        <field name="l10n_pa_ruc_country_id" string="Country" readonly="1"/>
+                        <field name="l10n_pa_ruc"/>
+                        <field name="l10n_pa_ruc_dv"/>
+                    </group>
+                </xpath>
+                
+            </field>
+        </record>
+
+    </data>
+</openerp>
