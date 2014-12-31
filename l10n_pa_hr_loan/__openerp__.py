@@ -36,7 +36,7 @@
     "website": "http://www.vauxoo.com/",
     "license": "AGPL-3",
     "depends": [
-            "hr_loan",
+        "hr_loan",
     ],
     "demo": [
     ],
