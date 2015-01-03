@@ -30,7 +30,9 @@ class ResPartner(models.Model):
     # Will be part of res.partner model
     _inherit = "res.partner"
 
+    @api.one
     def _get_panama_default(self):
+        print "%s ------------------" % self.ref('base.pa')
         return self.ref('base.pa')
 
     @api.one
