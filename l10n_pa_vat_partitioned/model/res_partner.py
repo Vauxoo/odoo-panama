@@ -30,12 +30,8 @@ class ResPartner(models.Model):
     # Will be part of res.partner model
     _inherit = "res.partner"
 
-    def get_panama_code(self):
-        panama = None
-        for panama_id in self.env['res.country'].search(
-                [('name', '=', 'Panama')]):
-            panama = panama_id
-        return panama
+    def _get_panama_default(self):
+        return self.ref('base.pa')
 
     @api.one
     @api.depends('vat')
@@ -82,7 +78,7 @@ class ResPartner(models.Model):
 
     # COLUMNS
     l10n_pa_ruc_country_id = fields.Many2one(
-        'res.country', ondelete="set null", default=get_panama_code, compute='_get_l10n_pa_ruc_country_id', inverse='_set_l10n_pa_ruc_country_id')
+        'res.country', ondelete="set null", default=_get_panama_default, compute='_get_l10n_pa_ruc_country_id', inverse='_set_l10n_pa_ruc_country_id')
     l10n_pa_ruc = fields.Char(
         string="RUC", size=25, compute='_get_l10n_pa_ruc', inverse='_set_l10n_pa_ruc')
     l10n_pa_ruc_dv = fields.Char(
