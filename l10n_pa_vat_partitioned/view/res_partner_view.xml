@@ -10,7 +10,7 @@
             
                 <xpath expr="//field[@name='vat']" position="after">
                     <group>
-                        <field name="l10n_pa_ruc_country_id" string="Country" readonly="1"/>
+                        <field name="l10n_pa_ruc_country_id" string="Country"/>
                         <field name="l10n_pa_ruc"/>
                         <field name="l10n_pa_ruc_dv"/>
                     </group>

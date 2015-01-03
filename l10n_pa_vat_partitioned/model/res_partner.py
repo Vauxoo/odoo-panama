@@ -38,17 +38,53 @@ class ResPartner(models.Model):
             panama = panama_id
         return panama
 
-    @api.onchange('l10n_pa_ruc', 'l10n_pa_ruc_dv')
-    def _onchange_partitioned_vat(self):
-        if self.l10n_pa_ruc:
-            self.vat = "PA%s" % self.l10n_pa_ruc
-        if self.l10n_pa_ruc and self.l10n_pa_ruc_dv:
-            self.vat = "PA%sDV%s" % (self.l10n_pa_ruc, self.l10n_pa_ruc_dv)
+    @api.one
+    @api.depends('vat')
+    def _get_l10n_pa_ruc_country_id(self):
+        print "GET ACTIVATED ************************** COUNTRY"
+        if self.vat:
+            country_code = None
+            for country_id in self.env['res.country'].search(
+                    [('code', '=', self.vat[:2])]):
+                country_code = country_id
+            self.l10n_pa_ruc_country_id = country_code
+
+    @api.one
+    def _set_l10n_pa_ruc_country_id(self):
+        print "SET ACTIVATED ************************** COUNTRY"
+        if self.l10n_pa_ruc_country_id:
+            self.vat = "%s%s" % (self.l10n_pa_ruc_country_id.code, self.vat[2:])
+
+    @api.one
+    @api.depends('vat')
+    def _get_l10n_pa_ruc(self):
+        print "GET ACTIVATED ************************** RUC"
+        if self.vat:
+            self.l10n_pa_ruc = self.vat[2:len(self.vat)-4]
+
+    @api.one
+    def _set_l10n_pa_ruc(self):
+        print "SET ACTIVATED ************************** RUC"
+        if self.l10n_pa_ruc_country_id:
+            self.vat = "%s%s%s" % (self.vat[:2], self.l10n_pa_ruc, self.vat[:len(self.vat)-4])
+
+    @api.one
+    @api.depends('vat')
+    def _get_l10n_pa_ruc_dv(self):
+        print "GET ACTIVATED ************************** DV"
+        if self.vat:
+            self.l10n_pa_ruc_dv = self.vat[-2:]
+
+    @api.one
+    def _set_l10n_pa_ruc_dv(self):
+        print "SET ACTIVATED ************************** DV"
+        if self.l10n_pa_ruc_dv:
+            self.vat = "%s%s" % (self.vat[:-2], self.l10n_pa_ruc_dv)
 
     # COLUMNS
     l10n_pa_ruc_country_id = fields.Many2one(
-        'res.country', ondelete="set null", default=get_panama_code)
+        'res.country', ondelete="set null", default=get_panama_code, compute='_get_l10n_pa_ruc_country_id', inverse='_set_l10n_pa_ruc_country_id')
     l10n_pa_ruc = fields.Char(
-        string="RUC", size=25)
+        string="RUC", size=25, compute='_get_l10n_pa_ruc', inverse='_set_l10n_pa_ruc')
     l10n_pa_ruc_dv = fields.Char(
-        string="DV", size=2)
+        string="DV", size=2, compute='_get_l10n_pa_ruc_dv', inverse='_set_l10n_pa_ruc_dv')
