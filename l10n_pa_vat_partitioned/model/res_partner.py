@@ -53,19 +53,17 @@ class ResPartner(models.Model):
     @api.depends('vat')
     def _get_l10n_pa_ruc(self):
         """ Get the RUC value from the VAT field """
+        self.l10n_pa_ruc = ""
         if self.vat:
             self.l10n_pa_ruc = self.vat[2:len(self.vat)-4]
-        else:
-            self.l10n_pa_ruc = "--"
 
     @api.one
     @api.depends('vat')
     def _get_l10n_pa_ruc_dv(self):
         """ Get the DV value from the VAT field """
-        if self.vat:
+        self.l10n_pa_ruc_dv = ""
+        if self.vat and 'DV' in self.vat:
             self.l10n_pa_ruc_dv = self.vat[-2:]
-        else:
-            self.l10n_pa_ruc_dv = "--"
 
     @api.one
     @api.depends('l10n_pa_ruc_country_id', 'l10n_pa_ruc', 'l10n_pa_ruc_dv')
