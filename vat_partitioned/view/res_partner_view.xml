@@ -7,15 +7,13 @@
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
-            
-                <xpath expr="//field[@name='vat']" position="after">
-                    <group>
-                        <field name="l10n_pa_ruc_country_id" string="Country"/>
-                        <field name="l10n_pa_ruc"/>
-                        <field name="l10n_pa_ruc_dv"/>
+                <xpath expr="//field[@name='vat']" position="before">
+                    <group col="3">
+                        <field name="vat_country_id" nolabel="1" placeholder="Country"/>
+                        <field name="vat_alone" nolabel="1" placeholder="TIN"/>
+                        <field name="vat_dv" nolabel="1" placeholder="Check Digit"/>
                     </group>
                 </xpath>
-                
             </field>
         </record>
 
