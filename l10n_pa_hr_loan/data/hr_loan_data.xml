@@ -6,7 +6,7 @@
     of December
 -->
     <record id="ir_config_december" model="ir.config_parameter">
-        <field name="key">hr_loan.month_exception</field>
+        <field name="key">l10n_pa_hr_loan.month_exception</field>
         <field name="value">12</field>
     </record>
   </data>
