@@ -5,7 +5,7 @@
     ir.config_parameter for the calculation of hr loan ommigin the month
     of December
 -->
-    <record id="ir_config_december" model="ir.config_parameter">
+    <record id="hr_loan.ir_config_december_demo" model="ir.config_parameter">
         <field name="key">hr_loan.month_exception</field>
         <field name="value">12</field>
     </record>
