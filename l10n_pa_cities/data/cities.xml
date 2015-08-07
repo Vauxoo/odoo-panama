@@ -1,0 +1,1140 @@
+<?xml version="1.0" ?>
+    <openerp>
+         <data>
+
+        <record id='city_1' model='res.better.zip'>
+            <field name='city'>city</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='achutupo_2' model='res.better.zip'>
+            <field name='city'>Achutupo</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='ailigandi_3' model='res.better.zip'>
+            <field name='city'>Ailigandí</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='alanje_4' model='res.better.zip'>
+            <field name='city'>Alanje</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='alcalde_diaz_5' model='res.better.zip'>
+            <field name='city'>Alcalde Díaz</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='almirante_6' model='res.better.zip'>
+            <field name='city'>Almirante</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='alto_de_la_estancia_7' model='res.better.zip'>
+            <field name='city'>Alto de la Estancia</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='alto_del_espino_8' model='res.better.zip'>
+            <field name='city'>Alto del Espino</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='agua_buena_9' model='res.better.zip'>
+            <field name='city'>Agua Buena</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='aguadulce,_cocle_10' model='res.better.zip'>
+            <field name='city'>Aguadulce, Coclé</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='ancon_11' model='res.better.zip'>
+            <field name='city'>Ancón</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='anton_12' model='res.better.zip'>
+            <field name='city'>Antón</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='arraijan_13' model='res.better.zip'>
+            <field name='city'>Arraiján</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='aserrio_de_gariche_14' model='res.better.zip'>
+            <field name='city'>Aserrío de Gariché</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='atalaya_15' model='res.better.zip'>
+            <field name='city'>Atalaya</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='berba_16' model='res.better.zip'>
+            <field name='city'>Berbá</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='bisira_17' model='res.better.zip'>
+            <field name='city'>Bisira</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='boca_de_parita_18' model='res.better.zip'>
+            <field name='city'>Boca de Parita</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='bocas_town_19' model='res.better.zip'>
+            <field name='city'>Bocas Town</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='boqueron_20' model='res.better.zip'>
+            <field name='city'>Boquerón</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='boquete_21' model='res.better.zip'>
+            <field name='city'>Boquete</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='bugaba_22' model='res.better.zip'>
+            <field name='city'>Bugaba</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='burica_23' model='res.better.zip'>
+            <field name='city'>Burica</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='bagala_24' model='res.better.zip'>
+            <field name='city'>Bágala</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='caimitillo_25' model='res.better.zip'>
+            <field name='city'>Caimitillo</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='calobre_26' model='res.better.zip'>
+            <field name='city'>Calobre</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='calzada_larga_27' model='res.better.zip'>
+            <field name='city'>Calzada Larga</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='canoa_28' model='res.better.zip'>
+            <field name='city'>Canoa</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='capellania_29' model='res.better.zip'>
+            <field name='city'>Capellanía</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='capeti_30' model='res.better.zip'>
+            <field name='city'>Capetí</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='capira_31' model='res.better.zip'>
+            <field name='city'>Capira</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='carti_sugtupu_32' model='res.better.zip'>
+            <field name='city'>Cartí Sugtupu</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='cativa_33' model='res.better.zip'>
+            <field name='city'>Cativá</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='canazas_34' model='res.better.zip'>
+            <field name='city'>Cañazas</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='celmira_35' model='res.better.zip'>
+            <field name='city'>Celmira</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='cermeno_36' model='res.better.zip'>
+            <field name='city'>Cermeño</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='cerro_cama_37' model='res.better.zip'>
+            <field name='city'>Cerro Cama</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='cerro_punta_38' model='res.better.zip'>
+            <field name='city'>Cerro Punta</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='chame_39' model='res.better.zip'>
+            <field name='city'>Chame</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='changuinola_40' model='res.better.zip'>
+            <field name='city'>Changuinola</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='chepo_41' model='res.better.zip'>
+            <field name='city'>Chepo</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='chichica_42' model='res.better.zip'>
+            <field name='city'>Chichica</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='chigore_43' model='res.better.zip'>
+            <field name='city'>Chigoré</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='chiguiri_arriba_44' model='res.better.zip'>
+            <field name='city'>Chiguirí Arriba</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='chilibre_45' model='res.better.zip'>
+            <field name='city'>Chilibre</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='chiman_46' model='res.better.zip'>
+            <field name='city'>Chimán</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='chiriqui_grande_47' model='res.better.zip'>
+            <field name='city'>Chiriquí Grande</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='chitre_48' model='res.better.zip'>
+            <field name='city'>Chitré</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='churuquita_chiquita_49' model='res.better.zip'>
+            <field name='city'>Churuquita Chiquita</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='churuquita_grande_50' model='res.better.zip'>
+            <field name='city'>Churuquita Grande</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='cirilo_guainora_51' model='res.better.zip'>
+            <field name='city'>Cirilo Guainora</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='coetupo_52' model='res.better.zip'>
+            <field name='city'>Coetupo</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='colon_53' model='res.better.zip'>
+            <field name='city'>Colón</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='coloncito_54' model='res.better.zip'>
+            <field name='city'>Coloncito</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='cristobal_55' model='res.better.zip'>
+            <field name='city'>Cristóbal</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='david_56' model='res.better.zip'>
+            <field name='city'>David</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='divala_57' model='res.better.zip'>
+            <field name='city'>Divalá</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='dolega_58' model='res.better.zip'>
+            <field name='city'>Dolega</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='el_cano_59' model='res.better.zip'>
+            <field name='city'>El Caño</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='el_cope_60' model='res.better.zip'>
+            <field name='city'>El Copé</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='el_cortezo_61' model='res.better.zip'>
+            <field name='city'>El Cortezo</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='el_cortezo_62' model='res.better.zip'>
+            <field name='city'>El Cortezo</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='el_cristo_63' model='res.better.zip'>
+            <field name='city'>El Cristo</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='el_cristo_64' model='res.better.zip'>
+            <field name='city'>El Cristo</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='el_espave_65' model='res.better.zip'>
+            <field name='city'>El Espavé</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='el_espino_de_santa_rosa_66' model='res.better.zip'>
+            <field name='city'>El Espino de Santa Rosa</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='el_giral_67' model='res.better.zip'>
+            <field name='city'>El Giral</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='el_porvenir_68' model='res.better.zip'>
+            <field name='city'>El Porvenir</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='el_real_de_santa_maria_69' model='res.better.zip'>
+            <field name='city'>El Real de Santa María</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='el_rincon_70' model='res.better.zip'>
+            <field name='city'>El Rincón</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='el_roble_71' model='res.better.zip'>
+            <field name='city'>El Roble</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='el_silencio_72' model='res.better.zip'>
+            <field name='city'>El Silencio</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='el_uvito_73' model='res.better.zip'>
+            <field name='city'>El Uvito</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='el_valle_de_la_union_74' model='res.better.zip'>
+            <field name='city'>El Valle de la Unión</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='entradero_75' model='res.better.zip'>
+            <field name='city'>Entradero</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='escobal_76' model='res.better.zip'>
+            <field name='city'>Escobal</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='finca_blanco_77' model='res.better.zip'>
+            <field name='city'>Finca Blanco</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='finca_cincuenta_y_uno_78' model='res.better.zip'>
+            <field name='city'>Finca Cincuenta y Uno</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='finca_corredor_79' model='res.better.zip'>
+            <field name='city'>Finca Corredor</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='garachine_80' model='res.better.zip'>
+            <field name='city'>Garachiné</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='gariche_81' model='res.better.zip'>
+            <field name='city'>Gariché</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='guabito_82' model='res.better.zip'>
+            <field name='city'>Guabito</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='gualaca_83' model='res.better.zip'>
+            <field name='city'>Gualaca</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='guarare_84' model='res.better.zip'>
+            <field name='city'>Guararé</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='guarumal_85' model='res.better.zip'>
+            <field name='city'>Guarumal</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='guarumal_86' model='res.better.zip'>
+            <field name='city'>Guarumal</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='horconcitos_87' model='res.better.zip'>
+            <field name='city'>Horconcitos</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='icanti_88' model='res.better.zip'>
+            <field name='city'>Icantí</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='ipeti_89' model='res.better.zip'>
+            <field name='city'>Ipetí</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='jaque_90' model='res.better.zip'>
+            <field name='city'>Jaqué</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='kanir-dup_91' model='res.better.zip'>
+            <field name='city'>Kanir-Dup</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='kankintu_92' model='res.better.zip'>
+            <field name='city'>Kankintú</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='kusapin_93' model='res.better.zip'>
+            <field name='city'>Kusapin</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='la_cabima_94' model='res.better.zip'>
+            <field name='city'>La Cabima</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='la_chorrera_95' model='res.better.zip'>
+            <field name='city'>La Chorrera</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='la_espigadilla_96' model='res.better.zip'>
+            <field name='city'>La Espigadilla</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='la_loma_97' model='res.better.zip'>
+            <field name='city'>La Loma</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='la_mata_98' model='res.better.zip'>
+            <field name='city'>La Mata</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='la_mitra_99' model='res.better.zip'>
+            <field name='city'>La Mitra</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='la_palma_100' model='res.better.zip'>
+            <field name='city'>La Palma</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='la_raya_de_santa_maria_101' model='res.better.zip'>
+            <field name='city'>La Raya de Santa María</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='la_tiza_102' model='res.better.zip'>
+            <field name='city'>La Tiza</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='las_cumbres_103' model='res.better.zip'>
+            <field name='city'>Las Cumbres</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='las_guias_oriente_104' model='res.better.zip'>
+            <field name='city'>Las Guías Oriente</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='las_minas_105' model='res.better.zip'>
+            <field name='city'>Las Minas</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='las_tablas_106' model='res.better.zip'>
+            <field name='city'>Las Tablas</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='llano_largo_107' model='res.better.zip'>
+            <field name='city'>Llano Largo</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='llano_marin_108' model='res.better.zip'>
+            <field name='city'>Llano Marín</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='llano_de_piedra_109' model='res.better.zip'>
+            <field name='city'>Llano de Piedra</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='los_algarrobos_110' model='res.better.zip'>
+            <field name='city'>Los Algarrobos</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='los_anastacios_111' model='res.better.zip'>
+            <field name='city'>Los Anastacios</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='los_boquerones_112' model='res.better.zip'>
+            <field name='city'>Los Boquerones</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='los_lotes_113' model='res.better.zip'>
+            <field name='city'>Los Lotes</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='los_pollos_114' model='res.better.zip'>
+            <field name='city'>Los Pollos</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='los_pozos_115' model='res.better.zip'>
+            <field name='city'>Los Pozos</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='lidice_116' model='res.better.zip'>
+            <field name='city'>Lídice</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='macaracas_117' model='res.better.zip'>
+            <field name='city'>Macaracas</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='mamitipo_118' model='res.better.zip'>
+            <field name='city'>Mamitipo</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='maria_chiquita_119' model='res.better.zip'>
+            <field name='city'>María Chiquita</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='mata_del_nance_120' model='res.better.zip'>
+            <field name='city'>Mata del Nance</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='meteti_121' model='res.better.zip'>
+            <field name='city'>Metetí</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='monte_lirio_122' model='res.better.zip'>
+            <field name='city'>Monte Lirio</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='morti_123' model='res.better.zip'>
+            <field name='city'>Mortí</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='mulatupo_124' model='res.better.zip'>
+            <field name='city'>Mulatupo</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='nata_125' model='res.better.zip'>
+            <field name='city'>Nata</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='nombre_de_dios_126' model='res.better.zip'>
+            <field name='city'>Nombre de Dios</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='nueva_gorgona_127' model='res.better.zip'>
+            <field name='city'>Nueva Gorgona</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='nuevo_arraijan_128' model='res.better.zip'>
+            <field name='city'>Nuevo Arraiján</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='nuevo_emperador_129' model='res.better.zip'>
+            <field name='city'>Nuevo Emperador</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='nuevo_guarare_130' model='res.better.zip'>
+            <field name='city'>Nuevo Guararé</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='nuevo_san_juan_131' model='res.better.zip'>
+            <field name='city'>Nuevo San Juan</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='nuevo_vigia_132' model='res.better.zip'>
+            <field name='city'>Nuevo Vigía</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='ocu_133' model='res.better.zip'>
+            <field name='city'>Ocú</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='ola_134' model='res.better.zip'>
+            <field name='city'>Olá</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='pacora_135' model='res.better.zip'>
+            <field name='city'>Pacora</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='pacola_136' model='res.better.zip'>
+            <field name='city'>Pacola</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='palmas_bellas_137' model='res.better.zip'>
+            <field name='city'>Palmas Bellas</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='panama_city_capital_138' model='res.better.zip'>
+            <field name='city'>Panama City capital</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='parita_139' model='res.better.zip'>
+            <field name='city'>Parita</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='paso_blanco_140' model='res.better.zip'>
+            <field name='city'>Paso Blanco</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='pedasi_141' model='res.better.zip'>
+            <field name='city'>Pedasí</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='pedregal_142' model='res.better.zip'>
+            <field name='city'>Pedregal</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='pedregal_143' model='res.better.zip'>
+            <field name='city'>Pedregal</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='pedregal_144' model='res.better.zip'>
+            <field name='city'>Pedregal</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='penonome_145' model='res.better.zip'>
+            <field name='city'>Penonomé</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='pese_146' model='res.better.zip'>
+            <field name='city'>Pesé</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='plaza_de_caisan_147' model='res.better.zip'>
+            <field name='city'>Plaza de Caisán</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='pocri_(cocle)_148' model='res.better.zip'>
+            <field name='city'>Pocrí (Coclé)</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='pocri_(los_santos)_149' model='res.better.zip'>
+            <field name='city'>Pocrí (Los Santos)</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='portobello_150' model='res.better.zip'>
+            <field name='city'>Portobello</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='potrerillos_abajo_151' model='res.better.zip'>
+            <field name='city'>Potrerillos Abajo</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='potrerillos_arriba_152' model='res.better.zip'>
+            <field name='city'>Potrerillos Arriba</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='potrero_grande_153' model='res.better.zip'>
+            <field name='city'>Potrero Grande</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='puerto_armuelles_154' model='res.better.zip'>
+            <field name='city'>Puerto Armuelles</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='puerto_caimito_155' model='res.better.zip'>
+            <field name='city'>Puerto Caimito</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='puerto_indio_156' model='res.better.zip'>
+            <field name='city'>Puerto Indio</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='puerto_pilon_157' model='res.better.zip'>
+            <field name='city'>Puerto Pilón</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='punta_pena_158' model='res.better.zip'>
+            <field name='city'>Punta Peña</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='quebrada_bonita_adentro_159' model='res.better.zip'>
+            <field name='city'>Quebrada Bonita Adentro</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='rio_alejandro_160' model='res.better.zip'>
+            <field name='city'>Río Alejandro</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='rio_duque_161' model='res.better.zip'>
+            <field name='city'>Río Duque</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='rio_hato_162' model='res.better.zip'>
+            <field name='city'>Río Hato</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='rio_rita_163' model='res.better.zip'>
+            <field name='city'>Río Rita</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='rio_sereno_164' model='res.better.zip'>
+            <field name='city'>Río Sereno</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='rio_de_jesus_165' model='res.better.zip'>
+            <field name='city'>Río de Jesús</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='sabanitas_166' model='res.better.zip'>
+            <field name='city'>Sabanitas</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='sajalices_167' model='res.better.zip'>
+            <field name='city'>Sajalices</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='san_miguelito_168' model='res.better.zip'>
+            <field name='city'>San Miguelito</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='san_vicente_de_bique_169' model='res.better.zip'>
+            <field name='city'>San Vicente de Bique</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='santa_ana_arriba_170' model='res.better.zip'>
+            <field name='city'>Santa Ana Arriba</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='santa_fe_171' model='res.better.zip'>
+            <field name='city'>Santa Fé</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='santa_rita_arriba_172' model='res.better.zip'>
+            <field name='city'>Santa Rita Arriba</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='santiago_de_veraguas_173' model='res.better.zip'>
+            <field name='city'>Santiago de Veraguas</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='sasardi_174' model='res.better.zip'>
+            <field name='city'>Sasardi</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='siogui_abajo_175' model='res.better.zip'>
+            <field name='city'>Sioguí Abajo</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='siogui_arriba_176' model='res.better.zip'>
+            <field name='city'>Sioguí Arriba</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='sortova_177' model='res.better.zip'>
+            <field name='city'>Sortová</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='tocumen_178' model='res.better.zip'>
+            <field name='city'>Tocumen</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='tole_179' model='res.better.zip'>
+            <field name='city'>Tolé</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='tonosi_180' model='res.better.zip'>
+            <field name='city'>Tonosí</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='tubuala_181' model='res.better.zip'>
+            <field name='city'>Tubualá</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='union_choco_182' model='res.better.zip'>
+            <field name='city'>Unión Chocó</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='ustupo_183' model='res.better.zip'>
+            <field name='city'>Ustupo</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='vacamonte_184' model='res.better.zip'>
+            <field name='city'>Vacamonte</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='valle_del_risco_185' model='res.better.zip'>
+            <field name='city'>Valle del Risco</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='villa_carmen_186' model='res.better.zip'>
+            <field name='city'>Villa Carmen</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='villa_rosario_187' model='res.better.zip'>
+            <field name='city'>Villa Rosario</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='volcan_188' model='res.better.zip'>
+            <field name='city'>Volcán</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+        <record id='yaviza_189' model='res.better.zip'>
+            <field name='city'>yaviza</field>
+            <field name="country_id" ref="base.pa"/>
+        </record>
+
+
+    </data>
+</openerp>
