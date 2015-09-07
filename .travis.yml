@@ -16,8 +16,7 @@ install:
   - git clone --single-branch --depth=1 https://github.com/vauxoo/maintainer-quality-tools.git -b master ${HOME}/maintainer-quality-tools
   - export PATH=${HOME}/maintainer-quality-tools/travis:${PATH}
   - git clone --single-branch --depth=1 https://github.com/Vauxoo/hr.git -b ${VERSION} ${HOME}/hr
-  - git clone --single-branch --depth=1 https://github.com/Vauxoo/panama-dv.git -b master ${HOME}/panama-dv-lib
-  - export PYTHONPATH=${HOME}/panama-dv-lib:${PYTHONPATH}
+  - pip install git+https://github.com/vauxoo/panama-dv.git
   - travis_install_nightly
 
 script:
