@@ -31,7 +31,7 @@ import ruc as ruc_vat
 from openerp.osv import osv
 
 
-class res_partner(osv.Model):
+class ResPartner(osv.Model):
 
     _inherit = 'res.partner'
 

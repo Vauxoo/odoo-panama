@@ -30,7 +30,7 @@ from openerp import api, fields, models
 from openerp.tools.translate import _
 
 
-class hr_employee(models.Model):
+class HrEmployee(models.Model):
 
     '''
     Inherit hr.employee to added field perception type of the employee
