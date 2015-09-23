@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# coding: utf-8
 #
 #    OpenERP, Open Source Management Solution
 #    Copyright (c) 2014 Vauxoo - http://www.vauxoo.com/
@@ -27,11 +27,6 @@
     "version": "1.0",
     "author": "Vauxoo",
     "category": "Localization/Panama",
-    "description": """
-        This module makes an extension for the marital status options
-        for  the employees, adding  "Cohabitation" to  the previously
-        expressed.
-    """,
     "website": "http://www.vauxoo.com",
     "license": "",
     "depends": [
