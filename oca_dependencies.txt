@@ -1,0 +1,2 @@
+hr https://github.com/Vauxoo/hr.git
+partner-contact https://github.com/OCA/partner-contact.git
