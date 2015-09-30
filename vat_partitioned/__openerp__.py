@@ -1,4 +1,4 @@
-# -*- encoding: utf-8 -*-
+# coding: utf-8
 #
 #    Module Writen to OpenERP, Open Source Management Solution
 #
@@ -29,17 +29,6 @@
     "version": "1.0",
     "author": "Vauxoo",
     "category": "Generic Modules",
-    "description": """
-        vat_partitioned
-
-        This module splits the VAT field into 3 fields:
-            1. vat_country_id (Country to form VAT)
-            2. vat_alone (Only VAT value)
-            3. vat_dv (Check digit)
-
-        The previous fields will be disposed to replace the directly
-        'VAT' field editing.
-    """,
     "website": "http://www.vauxoo.com/",
     "license": "AGPL-3",
     "depends": [
@@ -53,5 +42,4 @@
     ],
     "test": [],
     "installable": True,
-    "active": False,
 }

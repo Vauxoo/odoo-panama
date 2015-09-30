@@ -1,5 +1,4 @@
-#!/usr/bin/python
-# -*- encoding: utf-8 -*-
+# coding: utf-8
 #
 #    Module Writen to OpenERP, Open Source Management Solution
 #
@@ -30,11 +29,6 @@
     "version": "1.0",
     "author": "Vauxoo",
     "category": "Generic Modules",
-    "description": """This module is used to validate RUC/CEDULA of partner from Panamá.
-Before of install this module you need download this script:
-https://github.com/vauxoo/panama-dv/blob/master/ruc.py
-And add to PYTHONPATH and test import: python -c "import ruc"
-    """,
     "website": "http://www.vauxoo.com/",
     "license": "AGPL-3",
     "depends": [
@@ -49,5 +43,4 @@ And add to PYTHONPATH and test import: python -c "import ruc"
         "test/l10n_pa_vat.yml",
     ],
     "installable": True,
-    "active": False,
 }
