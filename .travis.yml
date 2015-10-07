@@ -1,16 +1,32 @@
 language: python
 
-build_image: vauxoo/odoo-80-image-shippable-auto
-# commit_container: cowardvassal/vauxoo-dev
+sudo: false
+cache:
+  apt: true
+  directories:
+    - $HOME/.pip-cache/
+
+addons:
+  apt:
+    packages:
+      - expect-dev
+      - python-lxml
+      - python-simplejson
+      - python-yaml
 
 python:
   - "2.7"
 
-env:
-  - VERSION="8.0" ODOO_REPO="odoo/odoo" UNIT_TEST="1"
-
 virtualenv:
   system_site_packages: true
+
+env:
+  global:
+  - LINT_CHECK=0 TESTS="0" VERSION="8.0" ODOO_REPO="vauxoo/odoo"
+
+  matrix:
+  - LINT_CHECK=1
+  - TESTS="1"
 
 install:
   - git clone --single-branch --depth=1 https://github.com/vauxoo/maintainer-quality-tools.git -b master ${HOME}/maintainer-quality-tools
@@ -19,7 +35,7 @@ install:
   - travis_install_nightly
 
 script:
-  - travis_run_tests ${VERSION}
+  - travis_wait travis_run_tests
 
 after_success:
-  coveralls
+  - travis_after_tests_success
