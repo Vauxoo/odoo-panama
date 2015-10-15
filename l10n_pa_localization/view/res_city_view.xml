@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!--
+          Distritos
+        -->
+
+        <record id="view_country_state_district_tree" model="ir.ui.view">
+            <field name="name">res.country.state.district.tree</field>
+            <field name="model">res.country.state.district</field>
+            <field name="arch" type="xml">
+                <tree string="Districts">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="state_id"/>
+                    <field name="country_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_country_state_district_form" model="ir.ui.view">
+            <field name="name">res.country.state.district.form</field>
+            <field name="model">res.country.state.district</field>
+            <field name="arch" type="xml">
+                <form string="District" version="7.0">
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                        <field name="state_id" options='{"no_open": True}'/>
+                        <field name="country_id" options='{"no_open": True}'/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_country_state_district" model="ir.actions.act_window">
+            <field name="name">Districts</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.country.state.district</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="view_country_state_district_tree"/>
+        </record>
+
+        <menuitem action="action_country_state_district"
+            id="menu_country_state_district_partner" parent="base.menu_localisation" sequence="2" groups="base.group_no_one"/>
+
+        <!--
+          Corregimientos
+        -->
+
+        <record id="view_country_state_district_township_tree" model="ir.ui.view">
+            <field name="name">res.country.state.district.township.tree</field>
+            <field name="model">res.country.state.district.township</field>
+            <field name="arch" type="xml">
+                <tree string="Townships">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="district_id"/>
+                    <field name="state_id"/>
+                    <field name="country_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_country_state_district_township_form" model="ir.ui.view">
+            <field name="name">res.country.state.district.township.form</field>
+            <field name="model">res.country.state.district.township</field>
+            <field name="arch" type="xml">
+                <form string="Township" version="7.0">
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                        <field name="district_id" options='{"no_open": True}'/>
+                        <field name="state_id" options='{"no_open": True}'/>
+                        <field name="country_id" options='{"no_open": True}'/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_country_state_district_township" model="ir.actions.act_window">
+            <field name="name">Township</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.country.state.district.township</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="view_country_state_district_township_tree"/>
+        </record>
+
+        <menuitem action="action_country_state_district_township"
+            id="menu_country_state_district_township_partner" parent="base.menu_localisation" sequence="3" groups="base.group_no_one"/>
+
+        <!--
+          Barrios
+        -->
+
+        <record id="view_res_country_state_district_township_hood_tree" model="ir.ui.view">
+            <field name="name">res.country.state.district.township.hood.tree</field>
+            <field name="model">res.country.state.district.township.hood</field>
+            <field name="arch" type="xml">
+                <tree string="Neighborhoods">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="township_id"/>
+                    <field name="district_id"/>
+                    <field name="state_id"/>
+                    <field name="country_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_res_country_state_district_township_hood_form" model="ir.ui.view">
+            <field name="name">res.country.state.district.township.hood.form</field>
+            <field name="model">res.country.state.district.township.hood</field>
+            <field name="arch" type="xml">
+                <form string="Neighborhood">
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                        <field name="township_id" options='{"no_open": True}'/>
+                        <field name="district_id" options='{"no_open": True}'/>
+                        <field name="state_id" options='{"no_open": True}'/>
+                        <field name="country_id" options='{"no_open": True}'/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_country_state_district_township_hood" model="ir.actions.act_window">
+            <field name="name">Neighborhood</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.country.state.district.township.hood</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="view_res_country_state_district_township_hood_tree"/>
+        </record>
+
+        <menuitem action="action_country_state_district_township_hood"
+            id="menu_country_state_district_township_hood_partner"
+            parent="base.menu_localisation" sequence="4" groups="base.group_no_one"/>
+    </data>
+</openerp>

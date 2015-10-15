@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record  model="ir.ui.view" id="res_partner_form_city_01">
+            <field name="name">res.partner.form_city_01</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">                
+                <xpath expr="//field[@name='country_id']" position="after">
+                    <field name="city_id" on_change="onchange_city(city_id)"  placeholder="Ciudad"/>
+                </xpath>
+                <xpath expr="//field[@name='state_id']" position="replace">
+                    <field name="state_id" class="oe_no_button" placeholder="State" style="width: 37%%" options='{"no_open": True}' on_change="onchange_state_city(state_id,city_id)" attrs="{'readonly': [('use_parent_address','=',True)]}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>
