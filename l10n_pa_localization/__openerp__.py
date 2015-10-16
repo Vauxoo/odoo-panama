@@ -27,7 +27,6 @@
         "view/res_city_view.xml",
         "security/localization_security.xml",
         "security/ir.model.access.csv"
-        # "view/partner_address_view.xml",
     ],
     "installable": True,
 }
