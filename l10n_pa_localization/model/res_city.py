@@ -61,7 +61,7 @@ class ResTownship(models.Model):
     country_id = fields.Many2one(related='district_id.state_id.country_id',
                                  string='Country', readonly=True)
     code = fields.Char('Township Code', size=5,
-                       help='The District code in max. five chars.')
+                       help='The Township code in max. five chars.')
 
 
 class ResNeighborhood(models.Model):
@@ -87,4 +87,4 @@ class ResNeighborhood(models.Model):
         related='township_id.district_id.state_id.country_id',
         string='Country', readonly=True)
     code = fields.Char('Township Code', size=5,
-                       help='The District code in max. five chars.')
+                       help='The Neighborhood code in max. five chars.')
