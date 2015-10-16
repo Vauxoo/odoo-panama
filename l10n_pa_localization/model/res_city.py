@@ -56,7 +56,7 @@ class ResTownship(models.Model):
                                   required=True)
     # Provincia
     state_id = fields.Many2one(related='district_id.state_id',
-                               string='Country', readonly=True)
+                               string='Province', readonly=True)
     # Pais
     country_id = fields.Many2one(related='district_id.state_id.country_id',
                                  string='Country', readonly=True)
@@ -78,13 +78,13 @@ class ResNeighborhood(models.Model):
                                   required=True)
     # Distrito
     district_id = fields.Many2one(related='township_id.district_id',
-                                  string='Country', readonly=True)
+                                  string='District', readonly=True)
     # Provincia
     state_id = fields.Many2one(related='township_id.district_id.state_id',
-                               string='Country', readonly=True)
+                               string='Province', readonly=True)
     # Pais
     country_id = fields.Many2one(
         related='township_id.district_id.state_id.country_id',
         string='Country', readonly=True)
-    code = fields.Char('Township Code', size=5,
+    code = fields.Char('Neighborhood Code', size=5,
                        help='The Neighborhood code in max. five chars.')
