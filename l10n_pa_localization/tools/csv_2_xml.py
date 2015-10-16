@@ -63,6 +63,7 @@ provincias = []
 distritos = []
 corregimientos = []
 barrios = []
+xml_id_hood = []
 
 
 def add_province(row):
@@ -249,8 +250,14 @@ def add_hood(row):
         # code = corregimiento[0:5].lower()
         id_hood = remove_accents(barrio)
         id_hood = id_hood.replace(' ', '_').lower()
-
         xml_id = 'res_country_state_hood_pa_' + id_hood[0:15]
+
+        if xml_id in xml_id_hood:
+            xml_id = xml_id + str(len(xml_id_hood)).decode('utf-8')
+            xml_id_hood.append(xml_id)
+        else:
+            xml_id_hood.append(xml_id)
+
         barrios.append(barrio)
         node_record = add_node(
             'record',
