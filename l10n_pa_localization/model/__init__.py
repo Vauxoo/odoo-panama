@@ -8,4 +8,4 @@
 #    coded by: hugo@vauxoo.com
 #    planned by: Nhomar Hernandez <nhomar@vauxoo.com>
 ############################################################################
-from . import res_city
+from . import res_city, res_partner
