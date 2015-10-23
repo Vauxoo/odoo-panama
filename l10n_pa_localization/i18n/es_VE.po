@@ -1,0 +1,170 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* l10n_pa_localization
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-16 16:17+0000\n"
+"PO-Revision-Date: 2015-10-16 16:17+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_pa_localization
+#: help:res.country.state.district,name:0
+msgid "Administrative divisions of a Province."
+msgstr "Divisiones administrativas de la Provincia."
+
+#. module: l10n_pa_localization
+#: help:res.country.state.district.township.hood,name:0
+msgid "Administrative divisions of a Township."
+msgstr "Divisiones administrativas del Corregimiento."
+
+#. module: l10n_pa_localization
+#: help:res.country.state.district.township,name:0
+msgid "Administrative divisions of a district."
+msgstr "Divisiones administrativas del Distrito"
+
+#. module: l10n_pa_localization
+#: model:ir.model,name:l10n_pa_localization.model_res_country_state_district
+msgid "Country Province District"
+msgstr "País Provincia Distrito"
+
+#. module: l10n_pa_localization
+#: model:ir.model,name:l10n_pa_localization.model_res_country_state_district_township
+msgid "Country Province District Township"
+msgstr "País Provincia Distrito Corregimiento"
+
+#. module: l10n_pa_localization
+#: model:ir.model,name:l10n_pa_localization.model_res_country_state_district_township_hood
+msgid "Country province District Township Neighborhood"
+msgstr "País Provincia Distrito Corregimiento Barrio"
+
+#. module: l10n_pa_localization
+#: field:res.country.state.district,create_uid:0
+#: field:res.country.state.district.township,create_uid:0
+#: field:res.country.state.district.township.hood,create_uid:0
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: l10n_pa_localization
+#: field:res.country.state.district,create_date:0
+#: field:res.country.state.district.township,create_date:0
+#: field:res.country.state.district.township.hood,create_date:0
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: l10n_pa_localization
+#: view:res.country.state.district:l10n_pa_localization.view_country_state_district_form
+#: field:res.country.state.district.township,district_id:0
+msgid "District"
+msgstr "Distrito"
+
+#. module: l10n_pa_localization
+#: field:res.country.state.district,code:0
+msgid "District Code"
+msgstr "Códifo del Distrito"
+
+#. module: l10n_pa_localization
+#: model:ir.actions.act_window,name:l10n_pa_localization.action_country_state_district
+#: model:ir.ui.menu,name:l10n_pa_localization.menu_country_state_district_partner
+#: view:res.country.state.district:l10n_pa_localization.view_country_state_district_tree
+msgid "Districts"
+msgstr "Distritos"
+
+#. module: l10n_pa_localization
+#: field:res.country.state.district,id:0
+#: field:res.country.state.district.township,id:0
+#: field:res.country.state.district.township.hood,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: l10n_pa_localization
+#: field:res.country.state.district,write_uid:0
+#: field:res.country.state.district.township,write_uid:0
+#: field:res.country.state.district.township.hood,write_uid:0
+msgid "Last Updated by"
+msgstr "Ultima actualización por"
+
+#. module: l10n_pa_localization
+#: field:res.country.state.district,write_date:0
+#: field:res.country.state.district.township,write_date:0
+#: field:res.country.state.district.township.hood,write_date:0
+msgid "Last Updated on"
+msgstr "Ultima actualización en"
+
+#. module: l10n_pa_localization
+#: model:res.groups,name:l10n_pa_localization.group_res_country_state_city_manager
+msgid "Localization Manager"
+msgstr "Administrador de Localización"
+
+#. module: l10n_pa_localization
+#: field:res.country.state.district,name:0
+msgid "Name District"
+msgstr "Nombre del Distrito"
+
+#. module: l10n_pa_localization
+#: field:res.country.state.district.township.hood,name:0
+msgid "Name Neighborhood"
+msgstr "Nombre del Barrio"
+
+#. module: l10n_pa_localization
+#: field:res.country.state.district.township,name:0
+msgid "Name Township"
+msgstr "Nombre del Corregimiento"
+
+#. module: l10n_pa_localization
+#: model:ir.actions.act_window,name:l10n_pa_localization.action_country_state_district_township_hood
+#: model:ir.ui.menu,name:l10n_pa_localization.menu_country_state_district_township_hood_partner
+#: view:res.country.state.district.township.hood:l10n_pa_localization.view_res_country_state_district_township_hood_form
+msgid "Neighborhood"
+msgstr "Barrio"
+
+#. module: l10n_pa_localization
+#: view:res.country.state.district.township.hood:l10n_pa_localization.view_res_country_state_district_township_hood_tree
+msgid "Neighborhoods"
+msgstr "Barrios"
+
+#. module: l10n_pa_localization
+#: field:res.country.state.district,state_id:0
+msgid "Province"
+msgstr "Provincia"
+
+#. module: l10n_pa_localization
+#: help:res.country.state.district,code:0
+msgid "The District code in max. five chars."
+msgstr "El código de Distrito de máx. cinco caracteres."
+
+#. module: l10n_pa_localization
+#: help:res.country.state.district.township.hood,code:0
+msgid "The Neighborhood code in max. five chars."
+msgstr "El código de Barrio de máx. cinco caracteres."
+
+#. module: l10n_pa_localization
+#: help:res.country.state.district.township,code:0
+msgid "The Township code in max. five chars."
+msgstr "El código de Corregimiento de máx. cinco caracteres."
+
+#. module: l10n_pa_localization
+#: model:ir.actions.act_window,name:l10n_pa_localization.action_country_state_district_township
+#: model:ir.ui.menu,name:l10n_pa_localization.menu_country_state_district_township_partner
+#: view:res.country.state.district.township:l10n_pa_localization.view_country_state_district_township_form
+#: field:res.country.state.district.township.hood,township_id:0
+msgid "Township"
+msgstr "Corregimiento"
+
+#. module: l10n_pa_localization
+#: field:res.country.state.district.township,code:0
+#: field:res.country.state.district.township.hood,code:0
+msgid "Township Code"
+msgstr "Código del Corregimiento"
+
+#. module: l10n_pa_localization
+#: view:res.country.state.district.township:l10n_pa_localization.view_country_state_district_township_tree
+msgid "Townships"
+msgstr "Corregimientos"
