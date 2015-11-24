@@ -52,7 +52,8 @@ class ResPartner(models.Model):
                         modifiers="{&quot;invisible&quot;: true}"/>' % (
                     city2, city2)
         layouts = {
-            '%(street)s %(street2)s\n%(state_name)s %(district_name)s %(township_name)s %(hood_name)s %(country_name)s': """
+            '%(street)s %(street2)s\n%(state_name)s %(district_name)s '
+            '%(township_name)s %(hood_name)s %(country_name)s': """
 <group>
     <group>
         <label for="type" attrs="{'invisible': [('parent_id','=', False)]}"/>
@@ -68,19 +69,33 @@ class ResPartner(models.Model):
         <div>
             %s
             <field name="zip" modifiers="{&quot;invisible&quot;: true}"/>
-            <field name="street" placeholder="%s" class="o_address_street"/>
-            <field name="street2" placeholder="%s" class="o_address_street"/>
+            <field name="street" placeholder="%s" class="o_address_street"
+            modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
+            &quot;=&quot;, true]]}"/>
+            <field name="street2" placeholder="%s" class="o_address_street"
+            modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
+            &quot;=&quot;, true]]}"/>
             <field name="country_id" placeholder="%s" class="o_address_country"
-            options='{"no_open": True, "no_create": True}'/>
+            options='{"no_open": True, "no_create": True}'
+            modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
+            &quot;=&quot;, true]]}"/>
             <field name="state_id" placeholder="%s" \
             class="oe_no_button" on_change="onchange_state(state_id)" \
-            options='{"no_open": True}'/>
+            options='{"no_open": True}'
+            modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
+            &quot;=&quot;, true]]}"/>
             <field name="district_id" placeholder="%s" \
-            class="oe_no_button" options='{"no_open": True}'/>
+            class="oe_no_button" options='{"no_open": True}'
+            modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
+            &quot;=&quot;, true]]}"/>
             <field name="township_id" placeholder="%s" \
-            class="oe_no_button" options='{"no_open": True}'/>
+            class="oe_no_button" options='{"no_open": True}'
+            modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
+            &quot;=&quot;, true]]}"/>
             <field name="hood_id" placeholder="%s" \
-            class="oe_no_button" options='{"no_open": True}'/>
+            class="oe_no_button" options='{"no_open": True}'
+            modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
+            &quot;=&quot;, true]]}"/>
         </div>
         <field name="website" widget="url" placeholder="e.g. www.openerp.com"/>
     </group>
@@ -125,7 +140,7 @@ class ResPartner(models.Model):
             cr, user, view_id, view_type, context, toolbar=toolbar,
             submenu=submenu)
         if view_type == 'form':
-            fields_get = self.fields_get(cr, user, [
-                'township_id', 'hood_id'], context)
+            fields_get = self.fields_get(
+                cr, user, ['township_id', 'hood_id'], context)
             res['fields'].update(fields_get)
         return res
