@@ -31,6 +31,28 @@ msgid "Administrative divisions of a district."
 msgstr "Divisiones administrativas del Distrito"
 
 #. module: l10n_pa_localization
+#: view:res.partner:l10n_pa_localization.res_partner_form_pa_localization
+msgid "Barrio"
+msgstr "Barrio"
+
+#. module: l10n_pa_localization
+#: code:addons/l10n_pa_localization/model/res_partner.py:31
+#, python-format
+msgid "Building, apartment, house..."
+msgstr "Edificio, Apartamento, Casa..."
+
+#. module: l10n_pa_localization
+#: code:addons/l10n_pa_localization/model/res_partner.py:37
+#, python-format
+msgid "City..."
+msgstr "Cuidad..."
+
+#. module: l10n_pa_localization
+#: view:res.partner:l10n_pa_localization.res_partner_form_pa_localization
+msgid "Corregimiento"
+msgstr "Corregimiento"
+
+#. module: l10n_pa_localization
 #: model:ir.model,name:l10n_pa_localization.model_res_country_state_district
 msgid "Country Province District"
 msgstr "País Provincia Distrito"
@@ -44,6 +66,12 @@ msgstr "País Provincia Distrito Corregimiento"
 #: model:ir.model,name:l10n_pa_localization.model_res_country_state_district_township_hood
 msgid "Country province District Township Neighborhood"
 msgstr "País Provincia Distrito Corregimiento Barrio"
+
+#. module: l10n_pa_localization
+#: code:addons/l10n_pa_localization/model/res_partner.py:32
+#, python-format
+msgid "Country..."
+msgstr "Pais..."
 
 #. module: l10n_pa_localization
 #: field:res.country.state.district,create_uid:0
@@ -62,6 +90,7 @@ msgstr "Creado en"
 #. module: l10n_pa_localization
 #: view:res.country.state.district:l10n_pa_localization.view_country_state_district_form
 #: field:res.country.state.district.township,district_id:0
+#: field:res.partner,district_id:0
 msgid "District"
 msgstr "Distrito"
 
@@ -71,11 +100,22 @@ msgid "District Code"
 msgstr "Códifo del Distrito"
 
 #. module: l10n_pa_localization
+#: code:addons/l10n_pa_localization/model/res_partner.py:34
+#, python-format
+msgid "District/City..."
+msgstr "Distrito/Ciudad..."
+
+#. module: l10n_pa_localization
 #: model:ir.actions.act_window,name:l10n_pa_localization.action_country_state_district
 #: model:ir.ui.menu,name:l10n_pa_localization.menu_country_state_district_partner
 #: view:res.country.state.district:l10n_pa_localization.view_country_state_district_tree
 msgid "Districts"
 msgstr "Distritos"
+
+#. module: l10n_pa_localization
+#: view:res.partner:l10n_pa_localization.res_partner_form_pa_localization
+msgid "Distrito"
+msgstr "Distrito"
 
 #. module: l10n_pa_localization
 #: field:res.country.state.district,id:0
@@ -122,8 +162,20 @@ msgstr "Nombre del Corregimiento"
 #: model:ir.actions.act_window,name:l10n_pa_localization.action_country_state_district_township_hood
 #: model:ir.ui.menu,name:l10n_pa_localization.menu_country_state_district_township_hood_partner
 #: view:res.country.state.district.township.hood:l10n_pa_localization.view_res_country_state_district_township_hood_form
+#: field:res.partner,hood_id:0
 msgid "Neighborhood"
 msgstr "Barrio"
+
+#. module: l10n_pa_localization
+#: field:res.country.state.district.township.hood,code:0
+msgid "Neighborhood Code"
+msgstr "Codigo Barrio"
+
+#. module: l10n_pa_localization
+#: code:addons/l10n_pa_localization/model/res_partner.py:36
+#, python-format
+msgid "Neighborhood..."
+msgstr "Barrio..."
 
 #. module: l10n_pa_localization
 #: view:res.country.state.district.township.hood:l10n_pa_localization.view_res_country_state_district_township_hood_tree
@@ -131,9 +183,31 @@ msgid "Neighborhoods"
 msgstr "Barrios"
 
 #. module: l10n_pa_localization
+#: model:ir.model,name:l10n_pa_localization.model_res_partner
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: l10n_pa_localization
 #: field:res.country.state.district,state_id:0
 msgid "Province"
 msgstr "Provincia"
+
+#. module: l10n_pa_localization
+#: code:addons/l10n_pa_localization/model/res_partner.py:33
+#, python-format
+msgid "Province..."
+msgstr "Provincia..."
+
+#. module: l10n_pa_localization
+#: view:res.partner:l10n_pa_localization.res_partner_form_pa_localization
+msgid "Provincia"
+msgstr "Provincia"
+
+#. module: l10n_pa_localization
+#: code:addons/l10n_pa_localization/model/res_partner.py:30
+#, python-format
+msgid "Street..."
+msgstr "Calle..."
 
 #. module: l10n_pa_localization
 #: help:res.country.state.district,code:0
@@ -155,14 +229,20 @@ msgstr "El código de Corregimiento de máx. cinco caracteres."
 #: model:ir.ui.menu,name:l10n_pa_localization.menu_country_state_district_township_partner
 #: view:res.country.state.district.township:l10n_pa_localization.view_country_state_district_township_form
 #: field:res.country.state.district.township.hood,township_id:0
+#: field:res.partner,township_id:0
 msgid "Township"
 msgstr "Corregimiento"
 
 #. module: l10n_pa_localization
 #: field:res.country.state.district.township,code:0
-#: field:res.country.state.district.township.hood,code:0
 msgid "Township Code"
 msgstr "Código del Corregimiento"
+
+#. module: l10n_pa_localization
+#: code:addons/l10n_pa_localization/model/res_partner.py:35
+#, python-format
+msgid "Township..."
+msgstr "Corregimiento..."
 
 #. module: l10n_pa_localization
 #: view:res.country.state.district.township:l10n_pa_localization.view_country_state_district_township_tree
