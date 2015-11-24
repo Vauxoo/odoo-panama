@@ -20,6 +20,7 @@
     ],
     "demo": [],
     "data": [
+        "data/country_data.xml",
         "data/res_country_states.xml",
         "data/res_country_states_district.xml",
         "data/res_country_states_district_township.xml",

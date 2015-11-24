@@ -52,7 +52,7 @@ class ResPartner(models.Model):
                         modifiers="{&quot;invisible&quot;: true}"/>' % (
                     city2, city2)
         layouts = {
-            '%(street)s\n%(street2)s\n%(city)s %(state_code)s %(zip)s\n%(country_name)s': """
+            '%(street)s %(street2)s\n%(state_name)s %(district_name)s %(township_name)s %(hood_name)s %(country_name)s': """
 <group>
     <group>
         <label for="type" attrs="{'invisible': [('parent_id','=', False)]}"/>
