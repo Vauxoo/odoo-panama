@@ -23,3 +23,10 @@ class ResPartner(models.Model):
     # Distrito
     district_id = fields.Many2one('res.country.state.district',
                                   'District')
+
+    def _address_fields(self, cr, uid, context=None):
+        """ Returns the list of address fields that are synced from the parent
+        when the `use_parent_address` flag is set. """
+        res = super(ResPartner, self)._address_fields(cr, uid, context=context)
+        res = res + ['district_id', 'township_id', 'hood_id']
+        return res
