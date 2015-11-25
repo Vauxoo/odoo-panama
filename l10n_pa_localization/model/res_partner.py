@@ -143,4 +143,10 @@ class ResPartner(models.Model):
             fields_get = self.fields_get(
                 cr, user, ['township_id', 'hood_id'], context)
             res['fields'].update(fields_get)
+
+    def _address_fields(self, cr, uid, context=None):
+        """ Returns the list of address fields that are synced from the parent
+        when the `use_parent_address` flag is set. """
+        res = super(ResPartner, self)._address_fields(cr, uid, context=context)
+        res = res + ['district_id', 'township_id', 'hood_id']
         return res
