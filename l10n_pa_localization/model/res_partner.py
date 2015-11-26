@@ -115,19 +115,15 @@ class ResPartner(models.Model):
                 city, street, street2, country, state, district, township,
                 hood)
         }
+        arch = res
         for k, v in layouts.items():
             if fmt and (k in fmt):
                 doc = etree.fromstring(
                     res)
                 for node in doc.xpath("//form/sheet/group"):
-                    tree = etree.fromstring(
-                        v)
-                    node.getparent().replace(
-                        node, tree)
-                arch = etree.tostring(
-                    doc)
-            else:
-                arch = res
+                    tree = etree.fromstring(v)
+                    node.getparent().replace(node, tree)
+                arch = etree.tostring(doc)
         return arch
 
     def fields_view_get(self, cr, user, view_id=None, view_type='form',
@@ -143,6 +139,7 @@ class ResPartner(models.Model):
             fields_get = self.fields_get(
                 cr, user, ['township_id', 'hood_id'], context)
             res['fields'].update(fields_get)
+        return res
 
     def _address_fields(self, cr, uid, context=None):
         """ Returns the list of address fields that are synced from the parent
