@@ -25,6 +25,7 @@
         "data/res_country_states_district.xml",
         "data/res_country_states_district_township.xml",
         "data/res_country_states_district_township_hood.xml",
+        "view/res_partner_view.xml",
         "view/res_city_view.xml",
         "security/localization_security.xml",
         "security/ir.model.access.csv"
