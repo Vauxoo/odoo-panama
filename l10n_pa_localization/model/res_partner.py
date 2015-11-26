@@ -63,20 +63,37 @@ class ResPartner(models.Model):
         }
         layouts2 = {
             '%(street)s %(street2)s\n%(state_name)s %(district_name)s %(township_name)s %(hood_name)s %(country_name)s': """
-        <group>
-            <label for="type"/>
-            <div name="div_type">
-                <field class="oe_inline" name="type" modifiers="{}"/>
-            </div>
-            <label for="street" string="Direcci&#243;n" attrs="{'invisible': [('use_parent_address','=', True)]}" modifiers="{&quot;invisible&quot;: [[&quot;use_parent_address&quot;, &quot;=&quot;, true]]}"/>
+
             <div attrs="{'invisible': [('use_parent_address','=', True)]}" name="div_address" modifiers="{&quot;invisible&quot;: [[&quot;use_parent_address&quot;, &quot;=&quot;, true]]}">
-                <field name="street" placeholder="Calle..." modifiers="{}"/>
-                <field name="street2" modifiers="{}"/>
-                <field name="state_id" class="oe_no_button" placeholder="Province" modifiers="{}"/>
-                <field name="country_id" placeholder="Pa&#237;s" class="oe_no_button" options="{&quot;no_open&quot;: True}" modifiers="{}"/>
+                <field name="street" placeholder="%s" class="o_address_street"
+                modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
+                &quot;=&quot;, true]]}"/>
+                <field name="street2" placeholder="%s" class="o_address_street"
+                modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
+                &quot;=&quot;, true]]}"/>
+                <field name="country_id" placeholder="%s" class="o_address_country"
+                options='{"no_open": True, "no_create": True}'
+                modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
+                &quot;=&quot;, true]]}"/>
+                <field name="state_id" placeholder="%s" \
+                class="oe_no_button" on_change="onchange_state(state_id)" \
+                options='{"no_open": True}'
+                modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
+                &quot;=&quot;, true]]}"/>
+                <field name="district_id" placeholder="%s" \
+                class="oe_no_button" options='{"no_open": True}'
+                modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
+                &quot;=&quot;, true]]}"/>
+                <field name="township_id" placeholder="%s" \
+                class="oe_no_button" options='{"no_open": True}'
+                modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
+                &quot;=&quot;, true]]}"/>
+                <field name="hood_id" placeholder="%s" \
+                class="oe_no_button" options='{"no_open": True}'
+                modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
+                &quot;=&quot;, true]]}"/>
             </div>
-        </group>
-"""
+""" % (street, street2, country, state, district, township, hood)
         }
 
 #        layouts = {
@@ -161,17 +178,11 @@ class ResPartner(models.Model):
 
         #         arch = etree.tostring(doc)
         for k, v in layouts2.items():
-            print '?'*32
-            print 'kkk', k
-            print 'fmt', fmt
             if fmt and (k in fmt):
                 doc = etree.fromstring(res)
-                # import pdb;pdb.set_trace()
                 for node in doc.xpath("//field[@name='child_ids']"):
                     node.set('context', "{'kanban_view_ref': 'l10n_pa_localization.view_partner_simple_kanban_panama', 'form_view_ref': 'l10n_pa_localization.view_partner_simple_form_panama', 'default_parent_id': active_id, 'default_street': street, 'default_street2': street2, 'default_city': city, 'default_state_id': state_id, 'default_zip': zip, 'default_country_id': country_id, 'default_supplier': supplier, 'default_customer': customer, 'default_use_parent_address': True}")
                 for node in doc.xpath("//div[@name='div_address']"):
-                    print 'node', node
-                    # import pdb;pdb.set_trace()
                     tree = etree.fromstring(v)
                     node.getparent().replace(node, tree)
 
@@ -190,7 +201,7 @@ class ResPartner(models.Model):
             submenu=submenu)
         if view_type == 'form':
             fields_get = self.fields_get(
-                cr, user, ['township_id', 'hood_id'], context)
+                cr, user, ['district_id', 'township_id', 'hood_id'], context)
             res['fields'].update(fields_get)
         return res
 
