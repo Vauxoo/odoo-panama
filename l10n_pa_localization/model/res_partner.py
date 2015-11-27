@@ -52,7 +52,8 @@ class ResPartner(models.Model):
                         modifiers="{&quot;invisible&quot;: true}"/>' % (
                     city2, city2)
         layouts = {
-            '%(street)s %(street2)s\n%(state_name)s %(district_name)s %(township_name)s %(hood_name)s %(country_name)s': """
+            '%(street)s %(street2)s\n%(state_name)s %(district_name)s '
+            '%(township_name)s %(hood_name)s %(country_name)s': """
             <div attrs="{'invisible': [('use_parent_address','=', True)]}"
                 name="div_address" modifiers="{&quot;invisible&quot;:
                 [[&quot;use_parent_address&quot;, &quot;=&quot;, true]]}">
@@ -189,3 +190,44 @@ class ResPartner(models.Model):
         res = super(ResPartner, self)._address_fields(cr, uid, context=context)
         res = res + ['district_id', 'township_id', 'hood_id']
         return res
+
+    def _display_address(
+            self, cr, uid, address, without_company=False, context=None):
+        '''
+        The purpose of this function is to build and return an address
+        formatted accordingly to the
+        standards of the country where it belongs.
+        :param address: browse record of the res.partner to format
+        :returns: the address formatted in a display that fit its country
+        habits (or the default ones
+            if not country is specified)
+        :rtype: string
+        '''
+        # get the information that will be injected into the display format
+        # get the address format
+        address_format = address.country_id.address_format or "%(street)s\n%("\
+            "street2)s\n%(city)s %(state_code)s %(zip)s\n%(country_name)s"
+        if address_format == "%(street)s\n%("\
+                "street2)s\n%(city)s %(state_code)s %(zip)s\n%(country_name)s":
+            return super(ResPartner, self)._display_address(
+                cr, uid, address, without_company=without_company,
+                context=context)
+        args = {
+            'state_code': address.state_id.code or '',
+            'state_name': address.state_id.name or '',
+            'country_code': address.country_id.code or '',
+            'country_name': address.country_id.name or '',
+            'company_name': address.parent_name or '',
+            'district_name': address.district_id and address.district_id.name
+            or '',
+            'township_name': address.township_id and address.township_id.name
+            or '',
+            'hood_name': address.hood_id and address.hood_id.name or '',
+        }
+        for field in self._address_fields(cr, uid, context=context):
+            args[field] = getattr(address, field) or ''
+        if without_company:
+            args['company_name'] = ''
+        elif address.parent_id:
+            address_format = '%(company_name)s\n' + address_format
+        return address_format % args
