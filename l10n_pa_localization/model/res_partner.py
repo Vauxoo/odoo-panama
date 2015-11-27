@@ -27,7 +27,6 @@ class ResPartner(models.Model):
 
     @api.model
     def fields_view_get_address(self, arch):
-        print '1====', arch
         street = _('Street...')
         street2 = _('Building, apartment, house...')
         country = _('Country...')
