@@ -125,9 +125,9 @@
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
-               <xpath expr='//field[@name="child_ids"]' position="attributes">
-                    <attribute name="context">{'default_parent_id': active_id, 'default_street': street, 'default_street2': street2, 'default_city': city, 'default_state_id': state_id, 'default_zip': zip, 'default_country_id': country_id, 'default_supplier': supplier, 'default_customer': customer, 'default_use_parent_address': True, 'kanban_view_ref': 'l10n_pa_localization.view_partner_simple_kanban_panama', 'form_view_ref': 
-                    'l10n_pa_localization.view_partner_simple_form_panama'}</attribute>
+               <xpath expr='//field[@name="child_ids"]' position="replace">
+                    <field name="child_ids" mode="kanban" context="{'default_parent_id': active_id, 'default_street': street, 'default_street2': street2, 'default_city': city, 'default_state_id': state_id, 'default_zip': zip, 'default_country_id': country_id, 'default_supplier': supplier, 'default_customer': customer, 'default_use_parent_address': True, 'kanban_view_ref': 'l10n_pa_localization.view_partner_simple_kanban_panama', 'form_view_ref': 
+                    'l10n_pa_localization.view_partner_simple_form_panama'}"/>
                 </xpath>
             </field>
         </record>

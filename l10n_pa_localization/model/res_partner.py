@@ -162,18 +162,6 @@ class ResPartner(models.Model):
         for k, v in layouts.items():
             if fmt and (k in fmt):
                 doc = etree.fromstring(arch)
-                for node in doc.xpath("//field[@name='child_ids']"):
-                    node.set(
-                        'context',
-                        "{'kanban_view_ref': 'l10n_pa_localization."
-                        "view_partner_simple_kanban_panama', 'form_view_ref': "
-                        "'l10n_pa_localization.view_partner_simple_form_panama"
-                        "', 'default_parent_id': active_id, 'default_street': "
-                        "street, 'default_street2': street2, 'default_city': "
-                        "city, 'default_state_id': state_id, 'default_zip': "
-                        "zip, 'default_country_id': country_id, "
-                        "'default_supplier': supplier, 'default_customer': "
-                        "customer, 'default_use_parent_address': True}")
                 for node in doc.xpath("//div[@name='div_address']"):
                     tree = etree.fromstring(v)
                     node.getparent().replace(node, tree)
