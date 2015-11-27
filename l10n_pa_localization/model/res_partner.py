@@ -52,142 +52,133 @@ class ResPartner(models.Model):
                         placeholder="%s" style="width: 40%%" \
                         modifiers="{&quot;invisible&quot;: true}"/>' % (
                     city2, city2)
-        print 'self._context', self._context
         layouts = {
             '%(street)s %(street2)s\n%(state_name)s %(district_name)s %(township_name)s %(hood_name)s %(country_name)s': """
-<page string="Contactos" attrs="{'invisible': [('is_company','=',False), ('child_ids', '=', [])]}" autofocus="autofocus" modifiers="{&quot;invisible&quot;: [[&quot;is_company&quot;, &quot;=&quot;, false], [&quot;child_ids&quot;, &quot;=&quot;, []]]}">
-    <field name="child_ids" mode="tree" context="{'form_view_ref': 'l10n_pa_localization.view_partner_simple_form_panama', 'default_parent_id': active_id, 'default_street': street, 'default_street2': street2, 'default_city': city, 'default_state_id': state_id, 'default_zip': zip, 'default_country_id': country_id, 'default_supplier': supplier, 'default_customer': customer, 'default_use_parent_address': True}" modifiers="{}">
-    </field>
-</page>
-"""
-        }
-        layouts2 = {
-            '%(street)s %(street2)s\n%(state_name)s %(district_name)s %(township_name)s %(hood_name)s %(country_name)s': """
-
-            <div attrs="{'invisible': [('use_parent_address','=', True)]}" name="div_address" modifiers="{&quot;invisible&quot;: [[&quot;use_parent_address&quot;, &quot;=&quot;, true]]}">
+            <div attrs="{'invisible': [('use_parent_address','=', True)]}"
+                name="div_address" modifiers="{&quot;invisible&quot;:
+                [[&quot;use_parent_address&quot;, &quot;=&quot;, true]]}">
                 <field name="street" placeholder="%s" class="o_address_street"
-                modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
-                &quot;=&quot;, true]]}"/>
+                modifiers="{&quot;readonly&quot;:
+                [[&quot;use_parent_address&quot;, &quot;=&quot;, true]]}"/>
                 <field name="street2" placeholder="%s" class="o_address_street"
-                modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
-                &quot;=&quot;, true]]}"/>
-                <field name="country_id" placeholder="%s" class="o_address_country"
-                options='{"no_open": True, "no_create": True}'
-                modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
-                &quot;=&quot;, true]]}"/>
+                modifiers="{&quot;readonly&quot;:
+                [[&quot;use_parent_address&quot;, &quot;=&quot;, true]]}"/>
+                <field name="country_id" placeholder="%s"
+                class="o_address_country" options='{"no_open": True,
+                "no_create": True}'
+                modifiers="{&quot;readonly&quot;:
+                [[&quot;use_parent_address&quot;, &quot;=&quot;, true]]}"/>
                 <field name="state_id" placeholder="%s" \
                 class="oe_no_button" on_change="onchange_state(state_id)" \
                 options='{"no_open": True}'
-                modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
-                &quot;=&quot;, true]]}"/>
+                modifiers="{&quot;readonly&quot;:
+                [[&quot;use_parent_address&quot;, &quot;=&quot;, true]]}"/>
                 <field name="district_id" placeholder="%s" \
                 class="oe_no_button" options='{"no_open": True}'
-                modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
-                &quot;=&quot;, true]]}"/>
+                modifiers="{&quot;readonly&quot;:
+                [[&quot;use_parent_address&quot;, &quot;=&quot;, true]]}"/>
                 <field name="township_id" placeholder="%s" \
                 class="oe_no_button" options='{"no_open": True}'
-                modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
-                &quot;=&quot;, true]]}"/>
+                modifiers="{&quot;readonly&quot;:
+                [[&quot;use_parent_address&quot;, &quot;=&quot;, true]]}"/>
                 <field name="hood_id" placeholder="%s" \
                 class="oe_no_button" options='{"no_open": True}'
-                modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
-                &quot;=&quot;, true]]}"/>
+                modifiers="{&quot;readonly&quot;:
+                [[&quot;use_parent_address&quot;, &quot;=&quot;, true]]}"/>
             </div>
 """ % (street, street2, country, state, district, township, hood)
         }
+        layouts_main = {
+            '%(street)s %(street2)s\n%(state_name)s %(district_name)s '
+            '%(township_name)s %(hood_name)s %(country_name)s': """
+<group>
+    <group>
+        <label for="type" attrs="{'invisible': [('parent_id','=', False)]}"/>
+        <div attrs="{'invisible': [('parent_id','=', False)]}" name="div_type">
+            <field class="oe_inline"
+                name="type"/>
+            <label for="use_parent_address" class="oe_edit_only"/>
+            <field name="use_parent_address" class="oe_edit_only oe_inline"
+                on_change="onchange_address(use_parent_address, parent_id)"/>
+        </div>
 
-#        layouts = {
-#             '%(street)s %(street2)s\n%(state_name)s %(district_name)s '
-#             '%(township_name)s %(hood_name)s %(country_name)s': """
-# <group>
-#     <group>
-#         <label for="type" attrs="{'invisible': [('parent_id','=', False)]}"/>
-#         <div attrs="{'invisible': [('parent_id','=', False)]}" name="div_type">
-#             <field class="oe_inline"
-#                 name="type"/>
-#             <label for="use_parent_address" class="oe_edit_only"/>
-#             <field name="use_parent_address" class="oe_edit_only oe_inline"
-#                 on_change="onchange_address(use_parent_address, parent_id)"/>
-#         </div>
-
-#         <label for="street" string="Address"/>
-#         <div>
-#             %s
-#             <field name="zip" modifiers="{&quot;invisible&quot;: true}"/>
-#             <field name="street" placeholder="%s" class="o_address_street"
-#             modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
-#             &quot;=&quot;, true]]}"/>
-#             <field name="street2" placeholder="%s" class="o_address_street"
-#             modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
-#             &quot;=&quot;, true]]}"/>
-#             <field name="country_id" placeholder="%s" class="o_address_country"
-#             options='{"no_open": True, "no_create": True}'
-#             modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
-#             &quot;=&quot;, true]]}"/>
-#             <field name="state_id" placeholder="%s" \
-#             class="oe_no_button" on_change="onchange_state(state_id)" \
-#             options='{"no_open": True}'
-#             modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
-#             &quot;=&quot;, true]]}"/>
-#             <field name="district_id" placeholder="%s" \
-#             class="oe_no_button" options='{"no_open": True}'
-#             modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
-#             &quot;=&quot;, true]]}"/>
-#             <field name="township_id" placeholder="%s" \
-#             class="oe_no_button" options='{"no_open": True}'
-#             modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
-#             &quot;=&quot;, true]]}"/>
-#             <field name="hood_id" placeholder="%s" \
-#             class="oe_no_button" options='{"no_open": True}'
-#             modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
-#             &quot;=&quot;, true]]}"/>
-#         </div>
-#         <field name="website" widget="url" placeholder="e.g. www.openerp.com"/>
-#     </group>
-#     <group>
-#         <field name="function" placeholder="e.g. Sales Director"
-#             attrs="{'invisible': [('is_company','=', True)]}"/>
-#         <field name="phone" placeholder="e.g. +32.81.81.37.00"/>
-#         <field name="mobile"/>
-#         <field name="fax"/>
-#         <field name="email" widget="email"/>
-#         <field name="title" domain="[('domain', '=', 'contact')]"
-#             options='{"no_open": True}' \
-#             attrs="{'invisible': [('is_company','=', True)]}" />
-#     </group>
-# </group>
-#             """ % (
-#                 city, street, street2, country, state, district, township,
-#                 hood)
-#         }
-        
-
+        <label for="street" string="Address"/>
+        <div>
+            %s
+            <field name="zip" modifiers="{&quot;invisible&quot;: true}"/>
+            <field name="street" placeholder="%s" class="o_address_street"
+            modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
+            &quot;=&quot;, true]]}"/>
+            <field name="street2" placeholder="%s" class="o_address_street"
+            modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
+            &quot;=&quot;, true]]}"/>
+            <field name="country_id" placeholder="%s" class="o_address_country"
+            options='{"no_open": True, "no_create": True}'
+            modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
+            &quot;=&quot;, true]]}"/>
+            <field name="state_id" placeholder="%s" \
+            class="oe_no_button" on_change="onchange_state(state_id)" \
+            options='{"no_open": True}'
+            modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
+            &quot;=&quot;, true]]}"/>
+            <field name="district_id" placeholder="%s" \
+            class="oe_no_button" options='{"no_open": True}'
+            modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
+            &quot;=&quot;, true]]}"/>
+            <field name="township_id" placeholder="%s" \
+            class="oe_no_button" options='{"no_open": True}'
+            modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
+            &quot;=&quot;, true]]}"/>
+            <field name="hood_id" placeholder="%s" \
+            class="oe_no_button" options='{"no_open": True}'
+            modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
+            &quot;=&quot;, true]]}"/>
+        </div>
+        <field name="website" widget="url" placeholder="e.g. www.openerp.com"/>
+    </group>
+    <group>
+        <field name="function" placeholder="e.g. Sales Director"
+            attrs="{'invisible': [('is_company','=', True)]}"/>
+        <field name="phone" placeholder="e.g. +32.81.81.37.00"/>
+        <field name="mobile"/>
+        <field name="fax"/>
+        <field name="email" widget="email"/>
+        <field name="title" domain="[('domain', '=', 'contact')]"
+            options='{"no_open": True}' \
+            attrs="{'invisible': [('is_company','=', True)]}" />
+    </group>
+</group>
+            """ % (
+                city, street, street2, country, state, district, township,
+                hood)
+        }
         arch = res
-        # for k, v in layouts.items():
-        #     print '?'*32
-        #     print 'kkk', k
-        #     print 'fmt', fmt
-        #     if fmt and (k in fmt):
-        #         doc = etree.fromstring(res)
-        #         # import pdb;pdb.set_trace()
-        #         for node in doc.xpath("//field[@name='child_ids']"):
-        #             print 'node', node
-        #             # import pdb;pdb.set_trace()
-        #             tree = etree.fromstring(v)
-        #             node.getparent().replace(node, tree)
-
-        #         arch = etree.tostring(doc)
-        for k, v in layouts2.items():
+        for k, v in layouts_main.items():
             if fmt and (k in fmt):
-                doc = etree.fromstring(res)
+                doc = etree.fromstring(arch)
+                for node in doc.xpath("//form/sheet/group"):
+                    tree = etree.fromstring(v)
+                    node.getparent().replace(node, tree)
+                arch = etree.tostring(doc)
+        for k, v in layouts.items():
+            if fmt and (k in fmt):
+                doc = etree.fromstring(arch)
                 for node in doc.xpath("//field[@name='child_ids']"):
-                    node.set('context', "{'kanban_view_ref': 'l10n_pa_localization.view_partner_simple_kanban_panama', 'form_view_ref': 'l10n_pa_localization.view_partner_simple_form_panama', 'default_parent_id': active_id, 'default_street': street, 'default_street2': street2, 'default_city': city, 'default_state_id': state_id, 'default_zip': zip, 'default_country_id': country_id, 'default_supplier': supplier, 'default_customer': customer, 'default_use_parent_address': True}")
+                    node.set(
+                        'context',
+                        "{'kanban_view_ref': 'l10n_pa_localization."
+                        "view_partner_simple_kanban_panama', 'form_view_ref': "
+                        "'l10n_pa_localization.view_partner_simple_form_panama"
+                        "', 'default_parent_id': active_id, 'default_street': "
+                        "street, 'default_street2': street2, 'default_city': "
+                        "city, 'default_state_id': state_id, 'default_zip': "
+                        "zip, 'default_country_id': country_id, "
+                        "'default_supplier': supplier, 'default_customer': "
+                        "customer, 'default_use_parent_address': True}")
                 for node in doc.xpath("//div[@name='div_address']"):
                     tree = etree.fromstring(v)
                     node.getparent().replace(node, tree)
-
                 arch = etree.tostring(doc)
-        print 'arch', arch
         return arch
 
     def fields_view_get(self, cr, user, view_id=None, view_type='form',
