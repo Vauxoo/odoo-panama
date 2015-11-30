@@ -16,6 +16,11 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: l10n_pa_localization
+#: view:res.partner:l10n_pa_localization.view_partner_simple_form_panama
+msgid "Address"
+msgstr "Dirección"
+
+#. module: l10n_pa_localization
 #: help:res.country.state.district,name:0
 msgid "Administrative divisions of a Province."
 msgstr "Divisiones administrativas de la Provincia."
@@ -31,6 +36,33 @@ msgid "Administrative divisions of a district."
 msgstr "Divisiones administrativas del Distrito"
 
 #. module: l10n_pa_localization
+#: code:addons/l10n_pa_localization/model/res_partner.py:31
+#, python-format
+msgid "Building, apartment, house..."
+msgstr "Edificio, Apartamento, Casa..."
+
+#. module: l10n_pa_localization
+#: view:res.partner:l10n_pa_localization.view_partner_simple_form_panama
+msgid "City"
+msgstr "Ciudad"
+
+#. module: l10n_pa_localization
+#: code:addons/l10n_pa_localization/model/res_partner.py:37
+#, python-format
+msgid "City..."
+msgstr "Cuidad..."
+
+#. module: l10n_pa_localization
+#: view:res.partner:l10n_pa_localization.view_partner_simple_form_panama
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: l10n_pa_localization
+#: view:res.partner:l10n_pa_localization.view_partner_simple_form_panama
+msgid "Country"
+msgstr "País"
+
+#. module: l10n_pa_localization
 #: model:ir.model,name:l10n_pa_localization.model_res_country_state_district
 msgid "Country Province District"
 msgstr "País Provincia Distrito"
@@ -44,6 +76,12 @@ msgstr "País Provincia Distrito Corregimiento"
 #: model:ir.model,name:l10n_pa_localization.model_res_country_state_district_township_hood
 msgid "Country province District Township Neighborhood"
 msgstr "País Provincia Distrito Corregimiento Barrio"
+
+#. module: l10n_pa_localization
+#: code:addons/l10n_pa_localization/model/res_partner.py:32
+#, python-format
+msgid "Country..."
+msgstr "Pais..."
 
 #. module: l10n_pa_localization
 #: field:res.country.state.district,create_uid:0
@@ -62,13 +100,20 @@ msgstr "Creado en"
 #. module: l10n_pa_localization
 #: view:res.country.state.district:l10n_pa_localization.view_country_state_district_form
 #: field:res.country.state.district.township,district_id:0
+#: field:res.partner,district_id:0
 msgid "District"
 msgstr "Distrito"
 
 #. module: l10n_pa_localization
 #: field:res.country.state.district,code:0
 msgid "District Code"
-msgstr "Códifo del Distrito"
+msgstr "Código del Distrito"
+
+#. module: l10n_pa_localization
+#: code:addons/l10n_pa_localization/model/res_partner.py:34
+#, python-format
+msgid "District/City..."
+msgstr "Distrito/Ciudad..."
 
 #. module: l10n_pa_localization
 #: model:ir.actions.act_window,name:l10n_pa_localization.action_country_state_district
@@ -76,6 +121,11 @@ msgstr "Códifo del Distrito"
 #: view:res.country.state.district:l10n_pa_localization.view_country_state_district_tree
 msgid "Districts"
 msgstr "Distritos"
+
+#. module: l10n_pa_localization
+#: view:res.partner:l10n_pa_localization.view_partner_simple_kanban_panama
+msgid "Fax:"
+msgstr "Fax:"
 
 #. module: l10n_pa_localization
 #: field:res.country.state.district,id:0
@@ -89,19 +139,24 @@ msgstr "ID"
 #: field:res.country.state.district.township,write_uid:0
 #: field:res.country.state.district.township.hood,write_uid:0
 msgid "Last Updated by"
-msgstr "Ultima actualización por"
+msgstr "Última actualización por"
 
 #. module: l10n_pa_localization
 #: field:res.country.state.district,write_date:0
 #: field:res.country.state.district.township,write_date:0
 #: field:res.country.state.district.township.hood,write_date:0
 msgid "Last Updated on"
-msgstr "Ultima actualización en"
+msgstr "Última actualización en"
 
 #. module: l10n_pa_localization
 #: model:res.groups,name:l10n_pa_localization.group_res_country_state_city_manager
 msgid "Localization Manager"
 msgstr "Administrador de Localización"
+
+#. module: l10n_pa_localization
+#: view:res.partner:l10n_pa_localization.view_partner_simple_kanban_panama
+msgid "Mobile:"
+msgstr "Móvil:"
 
 #. module: l10n_pa_localization
 #: field:res.country.state.district,name:0
@@ -122,8 +177,20 @@ msgstr "Nombre del Corregimiento"
 #: model:ir.actions.act_window,name:l10n_pa_localization.action_country_state_district_township_hood
 #: model:ir.ui.menu,name:l10n_pa_localization.menu_country_state_district_township_hood_partner
 #: view:res.country.state.district.township.hood:l10n_pa_localization.view_res_country_state_district_township_hood_form
+#: field:res.partner,hood_id:0
 msgid "Neighborhood"
 msgstr "Barrio"
+
+#. module: l10n_pa_localization
+#: field:res.country.state.district.township.hood,code:0
+msgid "Neighborhood Code"
+msgstr "Código Barrio"
+
+#. module: l10n_pa_localization
+#: code:addons/l10n_pa_localization/model/res_partner.py:36
+#, python-format
+msgid "Neighborhood..."
+msgstr "Barrio..."
 
 #. module: l10n_pa_localization
 #: view:res.country.state.district.township.hood:l10n_pa_localization.view_res_country_state_district_township_hood_tree
@@ -131,9 +198,42 @@ msgid "Neighborhoods"
 msgstr "Barrios"
 
 #. module: l10n_pa_localization
+#: model:ir.model,name:l10n_pa_localization.model_res_partner
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: l10n_pa_localization
+#: view:res.partner:l10n_pa_localization.view_partner_simple_kanban_panama
+msgid "Phone:"
+msgstr "Teléfono:"
+
+#. module: l10n_pa_localization
 #: field:res.country.state.district,state_id:0
 msgid "Province"
 msgstr "Provincia"
+
+#. module: l10n_pa_localization
+#: code:addons/l10n_pa_localization/model/res_partner.py:33
+#, python-format
+msgid "Province..."
+msgstr "Provincia..."
+
+#. module: l10n_pa_localization
+#: view:res.partner:l10n_pa_localization.view_partner_simple_form_panama
+msgid "State"
+msgstr "Provincia"
+
+#. module: l10n_pa_localization
+#: code:addons/l10n_pa_localization/model/res_partner.py:30
+#: view:res.partner:l10n_pa_localization.view_partner_simple_form_panama
+#, python-format
+msgid "Street..."
+msgstr "Calle..."
+
+#. module: l10n_pa_localization
+#: view:res.partner:l10n_pa_localization.view_partner_simple_form_panama
+msgid "Tags..."
+msgstr "Etiquetas..."
 
 #. module: l10n_pa_localization
 #: help:res.country.state.district,code:0
@@ -155,16 +255,39 @@ msgstr "El código de Corregimiento de máx. cinco caracteres."
 #: model:ir.ui.menu,name:l10n_pa_localization.menu_country_state_district_township_partner
 #: view:res.country.state.district.township:l10n_pa_localization.view_country_state_district_township_form
 #: field:res.country.state.district.township.hood,township_id:0
+#: field:res.partner,township_id:0
 msgid "Township"
 msgstr "Corregimiento"
 
 #. module: l10n_pa_localization
 #: field:res.country.state.district.township,code:0
-#: field:res.country.state.district.township.hood,code:0
 msgid "Township Code"
 msgstr "Código del Corregimiento"
+
+#. module: l10n_pa_localization
+#: code:addons/l10n_pa_localization/model/res_partner.py:35
+#, python-format
+msgid "Township..."
+msgstr "Corregimiento..."
 
 #. module: l10n_pa_localization
 #: view:res.country.state.district.township:l10n_pa_localization.view_country_state_district_township_tree
 msgid "Townships"
 msgstr "Corregimientos"
+
+#. module: l10n_pa_localization
+#: view:res.partner:l10n_pa_localization.view_partner_simple_form_panama
+msgid "ZIP"
+msgstr "C.P."
+
+#. module: l10n_pa_localization
+#: view:res.partner:l10n_pa_localization.view_partner_simple_form_panama
+msgid "e.g. Sales Director"
+msgstr "Por ejemplo, Director de ventas"
+
+#. module: l10n_pa_localization
+#: view:res.partner:l10n_pa_localization.view_partner_form_inh_panama
+msgid "{'default_parent_id': active_id, 'default_street': street, 'default_street2': street2, 'default_city': city, 'default_state_id': state_id, 'default_zip': zip, 'default_country_id': country_id, 'default_supplier': supplier, 'default_customer': customer, 'default_use_parent_address': True, 'kanban_view_ref': 'l10n_pa_localization.view_partner_simple_kanban_panama', 'form_view_ref': \n"
+"                    'l10n_pa_localization.view_partner_simple_form_panama'}"
+msgstr "{'default_parent_id': active_id, 'default_street': street, 'default_street2': street2, 'default_city': city, 'default_state_id': state_id, 'default_zip': zip, 'default_country_id': country_id, 'default_supplier': supplier, 'default_customer': customer, 'default_use_parent_address': True, 'kanban_view_ref': 'l10n_pa_localization.view_partner_simple_kanban_panama', 'form_view_ref': \n"
+"                    'l10n_pa_localization.view_partner_simple_form_panama'}"
