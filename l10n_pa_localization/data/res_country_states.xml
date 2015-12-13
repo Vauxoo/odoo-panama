@@ -38,6 +38,11 @@
         </record>
         <record id="res_country_state_pa_pan" model="res.country.state">
             <field name="country_id" ref="base.pa"/>
+            <field name="name">PANAMÁ OESTE</field>
+            <field name="code">pan</field>
+        </record>
+        <record id="res_country_state_pa_pan" model="res.country.state">
+            <field name="country_id" ref="base.pa"/>
             <field name="name">PANAMÁ</field>
             <field name="code">pan</field>
         </record>
@@ -45,6 +50,21 @@
             <field name="country_id" ref="base.pa"/>
             <field name="name">VERAGUAS</field>
             <field name="code">ver</field>
+        </record>
+        <record id="res_country_state_pa_com" model="res.country.state">
+            <field name="country_id" ref="base.pa"/>
+            <field name="name">COMARCA KUNA YALA</field>
+            <field name="code">com</field>
+        </record>
+        <record id="res_country_state_pa_com" model="res.country.state">
+            <field name="country_id" ref="base.pa"/>
+            <field name="name">COMARCA EMBERÁ</field>
+            <field name="code">com</field>
+        </record>
+        <record id="res_country_state_pa_com" model="res.country.state">
+            <field name="country_id" ref="base.pa"/>
+            <field name="name">COMARCA NGÖBE BUGLÉ</field>
+            <field name="code">com</field>
         </record>
     </data>
 </openerp>
