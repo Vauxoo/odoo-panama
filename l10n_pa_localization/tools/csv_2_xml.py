@@ -70,11 +70,11 @@ xml_id_state = []
 
 
 def add_province(row):
-    """ xml_id: res_country_state_pa_ + provincia_code"""
+    """ xml_id: state_ + provincia_code"""
     if row[0].decode('utf-8') not in provincias:
         provincia = row[0].decode('utf-8')
         code = provincia[0:3].lower()
-        xml_id = 'res_country_state_pa_' + code
+        xml_id = 'state_' + code
 
         if xml_id in xml_id_state:
             xml_id = xml_id + str(len(xml_id_state)).decode('utf-8')
@@ -120,13 +120,13 @@ def add_province(row):
 
 
 def add_distric(row):
-    """ xml_id: res_country_state_district_pa_ + provincia_code"""
+    """ xml_id: district_ + provincia_code"""
     if row[1].decode('utf-8') not in distritos:
         distrito = row[1].decode('utf-8')
         # code = distrito[0:5].lower()
         id_district = remove_accents(distrito)
         id_district = id_district.replace(' ', '_').lower()
-        xml_id = 'res_country_state_district_pa_' + id_district
+        xml_id = 'district_' + id_district
 
         if xml_id in xml_id_district:
             xml_id = xml_id + str(len(xml_id_district)).decode('utf-8')
@@ -154,7 +154,7 @@ def add_distric(row):
         # Provincia
         state = row[0].decode('utf-8')
         code = state[0:3].lower()
-        state_id = 'l10n_pa_localization.res_country_state_pa_' + code
+        state_id = 'l10n_pa_localization.state_' + code
         order = ['name', 'ref', ]
         node_field_state = add_node(
             'field',
@@ -184,13 +184,13 @@ def add_distric(row):
 
 
 def add_township(row):
-    """ xml_id: res_country_state_township_pa_ + provincia_code"""
+    """ xml_id: township_ + provincia_code"""
     if row[2].decode('utf-8') not in corregimientos:
         corregimiento = row[2].decode('utf-8')
         # code = corregimiento[0:5].lower()
         id_township = remove_accents(corregimiento)
         id_township = id_township.replace(' ', '_').lower()
-        xml_id = 'res_country_state_township_pa_' + id_township
+        xml_id = 'township_' + id_township[0:15]
 
         if xml_id in xml_id_township:
             xml_id = xml_id + str(len(xml_id_township)).decode('utf-8')
@@ -219,7 +219,7 @@ def add_township(row):
         # PROVINCIA
         state = row[0].decode('utf-8')
         code = state[0:3].lower()
-        state_id = 'l10n_pa_localization.res_country_state_pa_' + code
+        state_id = 'l10n_pa_localization.state_' + code
         order = ['name', 'ref', ]
         node_field_state = add_node(
             'field',
@@ -233,7 +233,7 @@ def add_township(row):
         distrito = row[1].decode('utf-8')
         id_district = remove_accents(distrito)
         id_district = id_district.replace(' ', '_').lower()
-        district_id = 'l10n_pa_localization.res_country_state_district_pa_'\
+        district_id = 'l10n_pa_localization.district_'\
             + id_district
         order = ['name', 'ref', ]
         node_field_district = add_node(
@@ -265,13 +265,13 @@ def add_township(row):
 
 
 def add_hood(row):
-    """ xml_id: res_country_state_township_pa_ + provincia_code"""
+    """ xml_id: hood_ + provincia_code"""
     if row[3].decode('utf-8') not in barrios:
         barrio = row[3].decode('utf-8')
         # code = corregimiento[0:5].lower()
         id_hood = remove_accents(barrio)
         id_hood = id_hood.replace(' ', '_').lower()
-        xml_id = 'res_country_state_hood_pa_' + id_hood[0:15]
+        xml_id = 'hood_' + id_hood[0:15]
 
         if xml_id in xml_id_hood:
             xml_id = xml_id + str(len(xml_id_hood)).decode('utf-8')
@@ -301,7 +301,7 @@ def add_hood(row):
         # PROVINCIA
         state = row[0].decode('utf-8')
         code = state[0:3].lower()
-        state_id = 'l10n_pa_localization.res_country_state_pa_' + code
+        state_id = 'l10n_pa_localization.state_' + code
         order = ['name', 'ref', ]
         node_field_state = add_node(
             'field',
@@ -315,7 +315,7 @@ def add_hood(row):
         distrito = row[1].decode('utf-8')
         id_district = remove_accents(distrito)
         id_district = id_district.replace(' ', '_').lower()
-        district_id = 'l10n_pa_localization.res_country_state_district_pa_'\
+        district_id = 'l10n_pa_localization.district_'\
             + id_district
         order = ['name', 'ref', ]
         node_field_district = add_node(
@@ -330,8 +330,8 @@ def add_hood(row):
         township = row[2].decode('utf-8')
         id_township = remove_accents(township)
         id_township = id_township.replace(' ', '_').lower()
-        township_id = 'l10n_pa_localization.res_country_state_township_pa_'\
-            + id_township
+        township_id = 'l10n_pa_localization.township_'\
+            + id_township[0:15]
         order = ['name', 'ref', ]
         node_field_township = add_node(
             'field',
