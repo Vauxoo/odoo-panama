@@ -68,6 +68,7 @@ xml_id_township = []
 xml_id_district = []
 xml_id_state = []
 
+
 def add_province(row):
     """ xml_id: res_country_state_pa_ + provincia_code"""
     if row[0].decode('utf-8') not in provincias:
