@@ -41,7 +41,7 @@
             <field name="name">PANAMÁ OESTE</field>
             <field name="code">pan</field>
         </record>
-        <record id="res_country_state_pa_pan" model="res.country.state">
+        <record id="res_country_state_pa_pan8" model="res.country.state">
             <field name="country_id" ref="base.pa"/>
             <field name="name">PANAMÁ</field>
             <field name="code">pan</field>
@@ -56,12 +56,12 @@
             <field name="name">COMARCA KUNA YALA</field>
             <field name="code">com</field>
         </record>
-        <record id="res_country_state_pa_com" model="res.country.state">
+        <record id="res_country_state_pa_com11" model="res.country.state">
             <field name="country_id" ref="base.pa"/>
             <field name="name">COMARCA EMBERÁ</field>
             <field name="code">com</field>
         </record>
-        <record id="res_country_state_pa_com" model="res.country.state">
+        <record id="res_country_state_pa_com12" model="res.country.state">
             <field name="country_id" ref="base.pa"/>
             <field name="name">COMARCA NGÖBE BUGLÉ</field>
             <field name="code">com</field>

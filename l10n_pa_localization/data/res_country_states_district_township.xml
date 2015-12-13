@@ -1933,7 +1933,7 @@
             <field name="district_id" ref="l10n_pa_localization.res_country_state_district_pa_pocri"/>
             <field name="name">LAJAMINA</field>
         </record>
-        <record id="res_country_state_township_pa_paraiso" model="res.country.state.district.township">
+        <record id="res_country_state_township_pa_paraiso322" model="res.country.state.district.township">
             <field name="country_id" ref="base.pa"/>
             <field name="state_id" ref="l10n_pa_localization.res_country_state_pa_los"/>
             <field name="district_id" ref="l10n_pa_localization.res_country_state_district_pa_pocri"/>
@@ -3013,7 +3013,7 @@
             <field name="district_id" ref="l10n_pa_localization.res_country_state_district_pa_santiago"/>
             <field name="name">EDWIN FABREGA</field>
         </record>
-        <record id="res_country_state_township_pa_san_martin_de_porres" model="res.country.state.district.township">
+        <record id="res_country_state_township_pa_san_martin_de_porres502" model="res.country.state.district.township">
             <field name="country_id" ref="base.pa"/>
             <field name="state_id" ref="l10n_pa_localization.res_country_state_pa_ver"/>
             <field name="district_id" ref="l10n_pa_localization.res_country_state_district_pa_santiago"/>
@@ -3481,49 +3481,49 @@
             <field name="district_id" ref="l10n_pa_localization.res_country_state_district_pa_kusapin"/>
             <field name="name">VALLE BONITO</field>
         </record>
-        <record id="res_country_state_township_pa_barrios_unidos" model="res.country.state.district.township">
+        <record id="res_country_state_township_pa_barrios_unidos580" model="res.country.state.district.township">
             <field name="country_id" ref="base.pa"/>
             <field name="state_id" ref="l10n_pa_localization.res_country_state_pa_coc"/>
             <field name="district_id" ref="l10n_pa_localization.res_country_state_district_pa_aguadulce"/>
             <field name="name">BARRIOS UNIDOS</field>
         </record>
-        <record id="res_country_state_township_pa_barrio_norte" model="res.country.state.district.township">
+        <record id="res_country_state_township_pa_barrio_norte581" model="res.country.state.district.township">
             <field name="country_id" ref="base.pa"/>
             <field name="state_id" ref="l10n_pa_localization.res_country_state_pa_col"/>
             <field name="district_id" ref="l10n_pa_localization.res_country_state_district_pa_colon"/>
             <field name="name">BARRIO NORTE</field>
         </record>
-        <record id="res_country_state_township_pa_barrio_sur" model="res.country.state.district.township">
+        <record id="res_country_state_township_pa_barrio_sur582" model="res.country.state.district.township">
             <field name="country_id" ref="base.pa"/>
             <field name="state_id" ref="l10n_pa_localization.res_country_state_pa_col"/>
             <field name="district_id" ref="l10n_pa_localization.res_country_state_district_pa_colon"/>
             <field name="name">BARRIO SUR</field>
         </record>
-        <record id="res_country_state_township_pa_boqueron_cabecera" model="res.country.state.district.township">
+        <record id="res_country_state_township_pa_boqueron_cabecera583" model="res.country.state.district.township">
             <field name="country_id" ref="base.pa"/>
             <field name="state_id" ref="l10n_pa_localization.res_country_state_pa_chi"/>
             <field name="district_id" ref="l10n_pa_localization.res_country_state_district_pa_boqueron"/>
             <field name="name">BOQUERÓN (CABECERA)</field>
         </record>
-        <record id="res_country_state_township_pa_arraijan_cabecera" model="res.country.state.district.township">
+        <record id="res_country_state_township_pa_arraijan_cabecera584" model="res.country.state.district.township">
             <field name="country_id" ref="base.pa"/>
             <field name="state_id" ref="l10n_pa_localization.res_country_state_pa_pan"/>
             <field name="district_id" ref="l10n_pa_localization.res_country_state_district_pa_arraijan"/>
             <field name="name">ARRAIJAN (CABECERA)</field>
         </record>
-        <record id="res_country_state_township_pa_villa_rosario" model="res.country.state.district.township">
+        <record id="res_country_state_township_pa_villa_rosario585" model="res.country.state.district.township">
             <field name="country_id" ref="base.pa"/>
             <field name="state_id" ref="l10n_pa_localization.res_country_state_pa_pan"/>
             <field name="district_id" ref="l10n_pa_localization.res_country_state_district_pa_capira"/>
             <field name="name">VILLA ROSARIO</field>
         </record>
-        <record id="res_country_state_township_pa_alcalde_diaz" model="res.country.state.district.township">
+        <record id="res_country_state_township_pa_alcalde_diaz586" model="res.country.state.district.township">
             <field name="country_id" ref="base.pa"/>
             <field name="state_id" ref="l10n_pa_localization.res_country_state_pa_pan"/>
             <field name="district_id" ref="l10n_pa_localization.res_country_state_district_pa_panama"/>
             <field name="name">ALCALDE DIAZ</field>
         </record>
-        <record id="res_country_state_township_pa_belisario_porras" model="res.country.state.district.township">
+        <record id="res_country_state_township_pa_belisario_porras587" model="res.country.state.district.township">
             <field name="country_id" ref="base.pa"/>
             <field name="state_id" ref="l10n_pa_localization.res_country_state_pa_pan"/>
             <field name="district_id" ref="l10n_pa_localization.res_country_state_district_pa_san_miguelito"/>

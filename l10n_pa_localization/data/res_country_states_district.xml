@@ -381,7 +381,7 @@
             <field name="state_id" ref="l10n_pa_localization.res_country_state_pa_com"/>
             <field name="name">KUSAPÍN</field>
         </record>
-        <record id="res_country_state_district_pa_panama" model="res.country.state.district">
+        <record id="res_country_state_district_pa_panama76" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
             <field name="state_id" ref="l10n_pa_localization.res_country_state_pa_pan"/>
             <field name="name">PANAMA</field>

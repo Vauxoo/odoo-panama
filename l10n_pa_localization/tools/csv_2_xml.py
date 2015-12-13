@@ -64,6 +64,10 @@ distritos = []
 corregimientos = []
 barrios = []
 xml_id_hood = []
+xml_id_township = []
+xml_id_district = []
+xml_id_state = []
+
 
 
 def add_province(row):
@@ -72,6 +76,13 @@ def add_province(row):
         provincia = row[0].decode('utf-8')
         code = provincia[0:3].lower()
         xml_id = 'res_country_state_pa_' + code
+
+        if xml_id in xml_id_state:
+            xml_id = xml_id + str(len(xml_id_state)).decode('utf-8')
+            xml_id_state.append(xml_id)
+        else:
+            xml_id_state.append(xml_id)
+
         provincias.append(provincia)
         node_record = add_node(
             'record',
@@ -116,8 +127,14 @@ def add_distric(row):
         # code = distrito[0:5].lower()
         id_district = remove_accents(distrito)
         id_district = id_district.replace(' ', '_').lower()
-
         xml_id = 'res_country_state_district_pa_' + id_district
+
+        if xml_id in xml_id_district:
+            xml_id = xml_id + str(len(xml_id_district)).decode('utf-8')
+            xml_id_district.append(xml_id)
+        else:
+            xml_id_district.append(xml_id)
+
         distritos.append(distrito)
         node_record = add_node(
             'record',
@@ -174,8 +191,13 @@ def add_township(row):
         # code = corregimiento[0:5].lower()
         id_township = remove_accents(corregimiento)
         id_township = id_township.replace(' ', '_').lower()
-
         xml_id = 'res_country_state_township_pa_' + id_township
+
+        if xml_id in xml_id_township:
+            xml_id = xml_id + str(len(xml_id_township)).decode('utf-8')
+            xml_id_township.append(xml_id)
+        else:
+            xml_id_township.append(xml_id)
         corregimientos.append(corregimiento)
         node_record = add_node(
             'record',
