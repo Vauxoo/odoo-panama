@@ -3,387 +3,387 @@
     <data noupdate="True">
         <record id="district_bocas_del_toro" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_boc"/>
+            <field name="state_id" ref="l10n_pa_localization.state_bocas_del_toro"/>
             <field name="name">BOCAS DEL TORO</field>
         </record>
         <record id="district_changuinola" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_boc"/>
+            <field name="state_id" ref="l10n_pa_localization.state_bocas_del_toro"/>
             <field name="name">CHANGUINOLA</field>
         </record>
         <record id="district_chiriqui_grande" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_boc"/>
+            <field name="state_id" ref="l10n_pa_localization.state_bocas_del_toro"/>
             <field name="name">CHIRIQUÍ GRANDE</field>
         </record>
         <record id="district_aguadulce" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_coc"/>
+            <field name="state_id" ref="l10n_pa_localization.state_cocle"/>
             <field name="name">AGUADULCE</field>
         </record>
         <record id="district_anton" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_coc"/>
+            <field name="state_id" ref="l10n_pa_localization.state_cocle"/>
             <field name="name">ANTÓN</field>
         </record>
         <record id="district_la_pintada" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_coc"/>
+            <field name="state_id" ref="l10n_pa_localization.state_cocle"/>
             <field name="name">LA PINTADA</field>
         </record>
         <record id="district_nata" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_coc"/>
+            <field name="state_id" ref="l10n_pa_localization.state_cocle"/>
             <field name="name">NATÁ</field>
         </record>
         <record id="district_ola" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_coc"/>
+            <field name="state_id" ref="l10n_pa_localization.state_cocle"/>
             <field name="name">OLÁ</field>
         </record>
         <record id="district_penonome" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_coc"/>
+            <field name="state_id" ref="l10n_pa_localization.state_cocle"/>
             <field name="name">PENONOMÉ</field>
         </record>
         <record id="district_colon" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_col"/>
+            <field name="state_id" ref="l10n_pa_localization.state_colon"/>
             <field name="name">COLÓN</field>
         </record>
         <record id="district_chagres" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_col"/>
+            <field name="state_id" ref="l10n_pa_localization.state_colon"/>
             <field name="name">CHAGRES</field>
         </record>
         <record id="district_donoso" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_col"/>
+            <field name="state_id" ref="l10n_pa_localization.state_colon"/>
             <field name="name">DONOSO</field>
         </record>
         <record id="district_portobelo" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_col"/>
+            <field name="state_id" ref="l10n_pa_localization.state_colon"/>
             <field name="name">PORTOBELO</field>
         </record>
         <record id="district_santa_isabel" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_col"/>
+            <field name="state_id" ref="l10n_pa_localization.state_colon"/>
             <field name="name">SANTA ISABEL</field>
         </record>
         <record id="district_alanje" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_chi"/>
+            <field name="state_id" ref="l10n_pa_localization.state_chiriqui"/>
             <field name="name">ALANJE</field>
         </record>
         <record id="district_baru" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_chi"/>
+            <field name="state_id" ref="l10n_pa_localization.state_chiriqui"/>
             <field name="name">BARÚ</field>
         </record>
         <record id="district_boqueron" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_chi"/>
+            <field name="state_id" ref="l10n_pa_localization.state_chiriqui"/>
             <field name="name">BOQUERÓN</field>
         </record>
         <record id="district_boquete" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_chi"/>
+            <field name="state_id" ref="l10n_pa_localization.state_chiriqui"/>
             <field name="name">BOQUETE</field>
         </record>
         <record id="district_bugaba" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_chi"/>
+            <field name="state_id" ref="l10n_pa_localization.state_chiriqui"/>
             <field name="name">BUGABA</field>
         </record>
         <record id="district_david" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_chi"/>
+            <field name="state_id" ref="l10n_pa_localization.state_chiriqui"/>
             <field name="name">DAVID</field>
         </record>
         <record id="district_dolega" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_chi"/>
+            <field name="state_id" ref="l10n_pa_localization.state_chiriqui"/>
             <field name="name">DOLEGA</field>
         </record>
         <record id="district_gualaca" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_chi"/>
+            <field name="state_id" ref="l10n_pa_localization.state_chiriqui"/>
             <field name="name">GUALACA</field>
         </record>
         <record id="district_remedios" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_chi"/>
+            <field name="state_id" ref="l10n_pa_localization.state_chiriqui"/>
             <field name="name">REMEDIOS</field>
         </record>
         <record id="district_renacimiento" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_chi"/>
+            <field name="state_id" ref="l10n_pa_localization.state_chiriqui"/>
             <field name="name">RENACIMIENTO</field>
         </record>
         <record id="district_san_felix" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_chi"/>
+            <field name="state_id" ref="l10n_pa_localization.state_chiriqui"/>
             <field name="name">SAN FÉLIX</field>
         </record>
         <record id="district_san_lorenzo" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_chi"/>
+            <field name="state_id" ref="l10n_pa_localization.state_chiriqui"/>
             <field name="name">SAN LORENZO</field>
         </record>
         <record id="district_tole" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_chi"/>
+            <field name="state_id" ref="l10n_pa_localization.state_chiriqui"/>
             <field name="name">TOLÉ</field>
         </record>
         <record id="district_chepigana" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_dar"/>
+            <field name="state_id" ref="l10n_pa_localization.state_darien"/>
             <field name="name">CHEPIGANA</field>
         </record>
         <record id="district_pinogana" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_dar"/>
+            <field name="state_id" ref="l10n_pa_localization.state_darien"/>
             <field name="name">PINOGANA</field>
         </record>
         <record id="district_chitre" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_her"/>
+            <field name="state_id" ref="l10n_pa_localization.state_herrera"/>
             <field name="name">CHITRÉ</field>
         </record>
         <record id="district_las_minas" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_her"/>
+            <field name="state_id" ref="l10n_pa_localization.state_herrera"/>
             <field name="name">LAS MINAS</field>
         </record>
         <record id="district_los_pozos" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_her"/>
+            <field name="state_id" ref="l10n_pa_localization.state_herrera"/>
             <field name="name">LOS POZOS</field>
         </record>
         <record id="district_ocu" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_her"/>
+            <field name="state_id" ref="l10n_pa_localization.state_herrera"/>
             <field name="name">OCÚ</field>
         </record>
         <record id="district_parita" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_her"/>
+            <field name="state_id" ref="l10n_pa_localization.state_herrera"/>
             <field name="name">PARITA</field>
         </record>
         <record id="district_pese" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_her"/>
+            <field name="state_id" ref="l10n_pa_localization.state_herrera"/>
             <field name="name">PESÉ</field>
         </record>
         <record id="district_santa_maria" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_her"/>
+            <field name="state_id" ref="l10n_pa_localization.state_herrera"/>
             <field name="name">SANTA MARÍA</field>
         </record>
         <record id="district_guarare" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_los"/>
+            <field name="state_id" ref="l10n_pa_localization.state_los_santos"/>
             <field name="name">GUARARÉ</field>
         </record>
         <record id="district_las_tablas" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_los"/>
+            <field name="state_id" ref="l10n_pa_localization.state_los_santos"/>
             <field name="name">LAS TABLAS</field>
         </record>
         <record id="district_los_santos" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_los"/>
+            <field name="state_id" ref="l10n_pa_localization.state_los_santos"/>
             <field name="name">LOS SANTOS</field>
         </record>
         <record id="district_macaracas" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_los"/>
+            <field name="state_id" ref="l10n_pa_localization.state_los_santos"/>
             <field name="name">MACARACAS</field>
         </record>
         <record id="district_pedasi" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_los"/>
+            <field name="state_id" ref="l10n_pa_localization.state_los_santos"/>
             <field name="name">PEDASÍ</field>
         </record>
         <record id="district_pocri" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_los"/>
+            <field name="state_id" ref="l10n_pa_localization.state_los_santos"/>
             <field name="name">POCRÍ</field>
         </record>
         <record id="district_tonosi" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_los"/>
+            <field name="state_id" ref="l10n_pa_localization.state_los_santos"/>
             <field name="name">TONOSÍ</field>
         </record>
         <record id="district_arraijan" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_pan"/>
+            <field name="state_id" ref="l10n_pa_localization.state_panama_oeste"/>
             <field name="name">ARRAIJÁN</field>
         </record>
         <record id="district_balboa" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_pan"/>
+            <field name="state_id" ref="l10n_pa_localization.state_panama"/>
             <field name="name">BALBOA</field>
         </record>
         <record id="district_capira" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_pan"/>
+            <field name="state_id" ref="l10n_pa_localization.state_panama_oeste"/>
             <field name="name">CAPIRA</field>
         </record>
         <record id="district_chame" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_pan"/>
+            <field name="state_id" ref="l10n_pa_localization.state_panama_oeste"/>
             <field name="name">CHAME</field>
         </record>
         <record id="district_chepo" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_pan"/>
+            <field name="state_id" ref="l10n_pa_localization.state_panama"/>
             <field name="name">CHEPO</field>
         </record>
         <record id="district_chiman" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_pan"/>
+            <field name="state_id" ref="l10n_pa_localization.state_panama"/>
             <field name="name">CHIMÁN</field>
         </record>
         <record id="district_la_chorrera" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_pan"/>
+            <field name="state_id" ref="l10n_pa_localization.state_panama_oeste"/>
             <field name="name">LA CHORRERA</field>
         </record>
         <record id="district_panama" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_pan"/>
+            <field name="state_id" ref="l10n_pa_localization.state_panama"/>
             <field name="name">PANAMÁ</field>
         </record>
         <record id="district_san_carlos" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_pan"/>
+            <field name="state_id" ref="l10n_pa_localization.state_panama_oeste"/>
             <field name="name">SAN CARLOS</field>
         </record>
         <record id="district_san_miguelito" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_pan"/>
+            <field name="state_id" ref="l10n_pa_localization.state_panama"/>
             <field name="name">SAN MIGUELITO</field>
         </record>
         <record id="district_taboga" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_pan"/>
+            <field name="state_id" ref="l10n_pa_localization.state_panama"/>
             <field name="name">TABOGA</field>
         </record>
         <record id="district_atalaya" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_ver"/>
+            <field name="state_id" ref="l10n_pa_localization.state_veraguas"/>
             <field name="name">ATALAYA</field>
         </record>
         <record id="district_calobre" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_ver"/>
+            <field name="state_id" ref="l10n_pa_localization.state_veraguas"/>
             <field name="name">CALOBRE</field>
         </record>
         <record id="district_canazas" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_ver"/>
+            <field name="state_id" ref="l10n_pa_localization.state_veraguas"/>
             <field name="name">CAÑAZAS</field>
         </record>
         <record id="district_la_mesa" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_ver"/>
+            <field name="state_id" ref="l10n_pa_localization.state_veraguas"/>
             <field name="name">LA MESA</field>
         </record>
         <record id="district_las_palmas" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_ver"/>
+            <field name="state_id" ref="l10n_pa_localization.state_veraguas"/>
             <field name="name">LAS PALMAS</field>
         </record>
         <record id="district_montijo" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_ver"/>
+            <field name="state_id" ref="l10n_pa_localization.state_veraguas"/>
             <field name="name">MONTIJO</field>
         </record>
         <record id="district_rio_de_jesus" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_ver"/>
+            <field name="state_id" ref="l10n_pa_localization.state_veraguas"/>
             <field name="name">RÍO DE JESUS</field>
         </record>
         <record id="district_san_francisco" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_ver"/>
+            <field name="state_id" ref="l10n_pa_localization.state_veraguas"/>
             <field name="name">SAN FRANCISCO</field>
         </record>
         <record id="district_santa_fe" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_ver"/>
+            <field name="state_id" ref="l10n_pa_localization.state_veraguas"/>
             <field name="name">SANTA FE</field>
         </record>
         <record id="district_santiago" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_ver"/>
+            <field name="state_id" ref="l10n_pa_localization.state_veraguas"/>
             <field name="name">SANTIAGO</field>
         </record>
         <record id="district_sona" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_ver"/>
+            <field name="state_id" ref="l10n_pa_localization.state_veraguas"/>
             <field name="name">SONÁ</field>
         </record>
         <record id="district_mariato" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_ver"/>
+            <field name="state_id" ref="l10n_pa_localization.state_veraguas"/>
             <field name="name">MARÍATO</field>
         </record>
         <record id="district_comarca_kuna_yala" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_com"/>
+            <field name="state_id" ref="l10n_pa_localization.state_comarca_kuna_yala"/>
             <field name="name">COMARCA KUNA YALA</field>
         </record>
         <record id="district_cemaco" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_com"/>
+            <field name="state_id" ref="l10n_pa_localization.state_comarca_embera"/>
             <field name="name">CÉMACO</field>
         </record>
         <record id="district_sambu" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_com"/>
+            <field name="state_id" ref="l10n_pa_localization.state_comarca_embera"/>
             <field name="name">SAMBÚ</field>
         </record>
         <record id="district_besiko" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_com"/>
+            <field name="state_id" ref="l10n_pa_localization.state_comarca_ngobe_bugle"/>
             <field name="name">BESIKO</field>
         </record>
         <record id="district_mirono" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_com"/>
+            <field name="state_id" ref="l10n_pa_localization.state_comarca_ngobe_bugle"/>
             <field name="name">MIRONÓ</field>
         </record>
         <record id="district_muna" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_com"/>
+            <field name="state_id" ref="l10n_pa_localization.state_comarca_ngobe_bugle"/>
             <field name="name">MÜNA</field>
         </record>
         <record id="district_nole_duima" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_com"/>
+            <field name="state_id" ref="l10n_pa_localization.state_comarca_ngobe_bugle"/>
             <field name="name">NOLE DUIMA</field>
         </record>
         <record id="district_nurum" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_com"/>
+            <field name="state_id" ref="l10n_pa_localization.state_comarca_ngobe_bugle"/>
             <field name="name">ÑÜRÜM</field>
         </record>
         <record id="district_kankintu" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_com"/>
+            <field name="state_id" ref="l10n_pa_localization.state_comarca_ngobe_bugle"/>
             <field name="name">KANKINTÚ</field>
         </record>
         <record id="district_kusapin" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_com"/>
+            <field name="state_id" ref="l10n_pa_localization.state_comarca_ngobe_bugle"/>
             <field name="name">KUSAPÍN</field>
         </record>
         <record id="district_panama76" model="res.country.state.district">
             <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_pan"/>
+            <field name="state_id" ref="l10n_pa_localization.state_panama"/>
             <field name="name">PANAMA</field>
         </record>
     </data>

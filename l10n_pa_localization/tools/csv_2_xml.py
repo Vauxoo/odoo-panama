@@ -67,18 +67,23 @@ xml_id_hood = []
 xml_id_township = []
 xml_id_district = []
 xml_id_state = []
+codes = []
 
 
 def add_province(row):
     """ xml_id: state_ + provincia_code"""
     if row[0].decode('utf-8') not in provincias:
         provincia = row[0].decode('utf-8')
+        id_province = remove_accents(provincia)
+        id_province = id_province.replace(' ', '_').lower()
         code = provincia[0:3].lower()
-        xml_id = 'state_' + code
+        xml_id = 'state_' + id_province
 
         if xml_id in xml_id_state:
             xml_id = xml_id + str(len(xml_id_state)).decode('utf-8')
             xml_id_state.append(xml_id)
+            codes.append(code)
+            code = provincia[0:2].lower() + str(len(codes))
         else:
             xml_id_state.append(xml_id)
 
@@ -152,9 +157,10 @@ def add_distric(row):
             order)
         node_record.appendChild(node_field_country)
         # Provincia
-        state = row[0].decode('utf-8')
-        code = state[0:3].lower()
-        state_id = 'l10n_pa_localization.state_' + code
+        provincia = row[0].decode('utf-8')
+        id_province = remove_accents(provincia)
+        id_province = id_province.replace(' ', '_').lower()
+        state_id = 'l10n_pa_localization.state_' + id_province
         order = ['name', 'ref', ]
         node_field_state = add_node(
             'field',
@@ -217,9 +223,10 @@ def add_township(row):
         node_record.appendChild(node_field_country)
 
         # PROVINCIA
-        state = row[0].decode('utf-8')
-        code = state[0:3].lower()
-        state_id = 'l10n_pa_localization.state_' + code
+        provincia = row[0].decode('utf-8')
+        id_province = remove_accents(provincia)
+        id_province = id_province.replace(' ', '_').lower()
+        state_id = 'l10n_pa_localization.state_' + id_province
         order = ['name', 'ref', ]
         node_field_state = add_node(
             'field',
@@ -299,9 +306,10 @@ def add_hood(row):
         node_record.appendChild(node_field_country)
 
         # PROVINCIA
-        state = row[0].decode('utf-8')
-        code = state[0:3].lower()
-        state_id = 'l10n_pa_localization.state_' + code
+        provincia = row[0].decode('utf-8')
+        id_province = remove_accents(provincia)
+        id_province = id_province.replace(' ', '_').lower()
+        state_id = 'l10n_pa_localization.state_' + id_province
         order = ['name', 'ref', ]
         node_field_state = add_node(
             'field',
