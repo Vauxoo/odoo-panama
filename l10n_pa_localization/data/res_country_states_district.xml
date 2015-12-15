@@ -381,10 +381,5 @@
             <field name="state_id" ref="l10n_pa_localization.state_comarca_ngobe_bugle"/>
             <field name="name">KUSAPÍN</field>
         </record>
-        <record id="district_panama76" model="res.country.state.district">
-            <field name="country_id" ref="base.pa"/>
-            <field name="state_id" ref="l10n_pa_localization.state_panama"/>
-            <field name="name">PANAMA</field>
-        </record>
     </data>
 </openerp>
