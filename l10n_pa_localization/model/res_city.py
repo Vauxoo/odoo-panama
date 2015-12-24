@@ -23,7 +23,7 @@ class ResDistrict(models.Model):
     state_id = fields.Many2one('res.country.state', 'Province', required=True)
     # Pais
     country_id = fields.Many2one(related='state_id.country_id',
-                                 string='Country', readonly=True, sotore=True)
+                                 string='Country', readonly=True, store=True)
     code = fields.Char('District Code', size=5,
                        help='The District code in max. five chars.')
 
@@ -40,10 +40,10 @@ class ResTownship(models.Model):
                                   required=True)
     # Provincia
     state_id = fields.Many2one(related='district_id.state_id',
-                               string='Province', readonly=True, sotore=True)
+                               string='Province', readonly=True, store=True)
     # Pais
     country_id = fields.Many2one(related='district_id.state_id.country_id',
-                                 string='Country', readonly=True, sotore=True)
+                                 string='Country', readonly=True, store=True)
     code = fields.Char('Township Code', size=5,
                        help='The Township code in max. five chars.')
 
@@ -63,14 +63,14 @@ class ResNeighborhood(models.Model):
     # Distrito
     district_id = fields.Many2one(related='township_id.district_id',
                                   string='District', readonly=True,
-                                  sotore=True)
+                                  store=True)
     # Provincia
     state_id = fields.Many2one(related='township_id.district_id.state_id',
-                               string='Province', readonly=True, sotore=True)
+                               string='Province', readonly=True, store=True)
     # Pais
     country_id = fields.Many2one(
         related='township_id.district_id.state_id.country_id',
-        string='Country', readonly=True, sotore=True)
+        string='Country', readonly=True, store=True)
     code = fields.Char('Neighborhood Code', size=5,
                        help='The Neighborhood code in max. five chars.')
 
