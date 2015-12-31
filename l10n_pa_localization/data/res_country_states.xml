@@ -1,50 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
     <data noupdate="True">
-        <record id="res_country_state_pa_boc" model="res.country.state">
+        <record id="state_bocas_del_toro" model="res.country.state">
             <field name="country_id" ref="base.pa"/>
             <field name="name">BOCAS DEL TORO</field>
             <field name="code">boc</field>
         </record>
-        <record id="res_country_state_pa_coc" model="res.country.state">
+        <record id="state_cocle" model="res.country.state">
             <field name="country_id" ref="base.pa"/>
             <field name="name">COCLÉ</field>
             <field name="code">coc</field>
         </record>
-        <record id="res_country_state_pa_col" model="res.country.state">
+        <record id="state_colon" model="res.country.state">
             <field name="country_id" ref="base.pa"/>
             <field name="name">COLÓN</field>
             <field name="code">col</field>
         </record>
-        <record id="res_country_state_pa_chi" model="res.country.state">
+        <record id="state_chiriqui" model="res.country.state">
             <field name="country_id" ref="base.pa"/>
             <field name="name">CHIRIQUÍ</field>
             <field name="code">chi</field>
         </record>
-        <record id="res_country_state_pa_dar" model="res.country.state">
+        <record id="state_darien" model="res.country.state">
             <field name="country_id" ref="base.pa"/>
             <field name="name">DARIÉN</field>
             <field name="code">dar</field>
         </record>
-        <record id="res_country_state_pa_her" model="res.country.state">
+        <record id="state_herrera" model="res.country.state">
             <field name="country_id" ref="base.pa"/>
             <field name="name">HERRERA</field>
             <field name="code">her</field>
         </record>
-        <record id="res_country_state_pa_los" model="res.country.state">
+        <record id="state_los_santos" model="res.country.state">
             <field name="country_id" ref="base.pa"/>
             <field name="name">LOS SANTOS</field>
             <field name="code">los</field>
         </record>
-        <record id="res_country_state_pa_pan" model="res.country.state">
+        <record id="state_panama_oeste" model="res.country.state">
+            <field name="country_id" ref="base.pa"/>
+            <field name="name">PANAMÁ OESTE</field>
+            <field name="code">pao</field>
+        </record>
+        <record id="state_panama" model="res.country.state">
             <field name="country_id" ref="base.pa"/>
             <field name="name">PANAMÁ</field>
             <field name="code">pan</field>
         </record>
-        <record id="res_country_state_pa_ver" model="res.country.state">
+        <record id="state_veraguas" model="res.country.state">
             <field name="country_id" ref="base.pa"/>
             <field name="name">VERAGUAS</field>
             <field name="code">ver</field>
+        </record>
+        <record id="state_comarca_kuna_yala" model="res.country.state">
+            <field name="country_id" ref="base.pa"/>
+            <field name="name">COMARCA KUNA YALA</field>
+            <field name="code">com</field>
+        </record>
+        <record id="state_comarca_embera" model="res.country.state">
+            <field name="country_id" ref="base.pa"/>
+            <field name="name">COMARCA EMBERÁ</field>
+            <field name="code">com</field>
+        </record>
+        <record id="state_comarca_ngobe_bugle" model="res.country.state">
+            <field name="country_id" ref="base.pa"/>
+            <field name="name">COMARCA NGÖBE BUGLÉ</field>
+            <field name="code">com</field>
         </record>
     </data>
 </openerp>

@@ -9,3 +9,5 @@ Panama's *Distritos, Corregimientos y barrios*.
 
 The data information were got from INEC website http://www.contraloria.gob.pa/INEC/
 http://www.contraloria.gob.pa/INEC/archivos/P3551cuadro2.xls
+https://www.contraloria.gob.pa/inec/archivos/P3551P3551cuadro3.xls
+
