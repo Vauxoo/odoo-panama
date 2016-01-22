@@ -53,3 +53,17 @@ msgstr "Valor del RUC para formar el campo TIN"
 msgid "TIN"
 msgstr "TIN"
 
+#. module: vat_partitioned
+#: help:res.partner,vat_country_id:0
+msgid "Country to form the TIN field"
+msgstr "País para formar el campo RUC"
+
+#. module: vat_partitioned
+#: help:res.partner,vat_dv:0
+msgid "DV value to form the TIN field"
+msgstr "Valor DV paraformar el campo RUC"
+
+#. module: vat_partitioned
+#: help:res.partner,vat_alone:0
+msgid "RUC value to form the TIN field"
+msgstr "Valor del RUC para formar el campo RUC"
