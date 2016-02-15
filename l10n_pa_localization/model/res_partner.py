@@ -218,10 +218,10 @@ class ResPartner(models.Model):
             'country_code': address.country_id.code or '',
             'country_name': address.country_id.name or '',
             'company_name': address.parent_name or '',
-            'district_name': address.district_id and address.district_id.name
-            or '',
-            'township_name': address.township_id and address.township_id.name
-            or '',
+            'district_name': address.district_id and
+            address.district_id.name or '',
+            'township_name': address.township_id and
+            address.township_id.name or '',
             'hood_name': address.hood_id and address.hood_id.name or '',
         }
         for field in self._address_fields(cr, uid, context=context):
