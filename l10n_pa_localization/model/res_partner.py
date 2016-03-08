@@ -69,19 +69,22 @@ class ResPartner(models.Model):
                 modifiers="{&quot;readonly&quot;:
                 [[&quot;use_parent_address&quot;, &quot;=&quot;, true]]}"/>
                 <field name="state_id" placeholder="%s" \
-                class="oe_no_button" on_change="onchange_state(state_id)" \
+                class="oe_no_button" on_change="onchange_state_id(state_id)" \
                 options='{"no_open": True}'
                 modifiers="{&quot;readonly&quot;:
                 [[&quot;use_parent_address&quot;, &quot;=&quot;, true]]}"/>
                 <field name="district_id" placeholder="%s" \
+                on_change="onchange_district_id(district_id)" \
                 class="oe_no_button" options='{"no_open": True}'
                 modifiers="{&quot;readonly&quot;:
                 [[&quot;use_parent_address&quot;, &quot;=&quot;, true]]}"/>
                 <field name="township_id" placeholder="%s" \
+                on_change="onchange_township_id(township_id)" \
                 class="oe_no_button" options='{"no_open": True}'
                 modifiers="{&quot;readonly&quot;:
                 [[&quot;use_parent_address&quot;, &quot;=&quot;, true]]}"/>
                 <field name="hood_id" placeholder="%s" \
+                on_change="onchange_hood_id(hood_id)" \
                 class="oe_no_button" options='{"no_open": True}'
                 modifiers="{&quot;readonly&quot;:
                 [[&quot;use_parent_address&quot;, &quot;=&quot;, true]]}"/>
@@ -117,19 +120,22 @@ class ResPartner(models.Model):
             modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
             &quot;=&quot;, true]]}"/>
             <field name="state_id" placeholder="%s" \
-            class="oe_no_button" on_change="onchange_state(state_id)" \
+            class="oe_no_button" on_change="onchange_state_id(state_id)" \
             options='{"no_open": True}'
             modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
             &quot;=&quot;, true]]}"/>
             <field name="district_id" placeholder="%s" \
-            class="oe_no_button" options='{"no_open": True}'
+            on_change="onchange_district_id(district_id)" \
+            class="oe_no_button"  options='{"no_open": True}'
             modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
             &quot;=&quot;, true]]}"/>
             <field name="township_id" placeholder="%s" \
+            on_change="onchange_township_id(township_id)" \
             class="oe_no_button" options='{"no_open": True}'
             modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
             &quot;=&quot;, true]]}"/>
             <field name="hood_id" placeholder="%s" \
+            on_change="onchange_hood_id(hood_id)" \
             class="oe_no_button" options='{"no_open": True}'
             modifiers="{&quot;readonly&quot;: [[&quot;use_parent_address&quot;,
             &quot;=&quot;, true]]}"/>
@@ -231,3 +237,62 @@ class ResPartner(models.Model):
         elif address.parent_id:
             address_format = '%(company_name)s\n' + address_format
         return address_format % args
+
+    @api.multi
+    def onchange_hood_id(self, hood_id):
+        hood_id = self.env['res.country.state.district.township.hood'].browse(
+            hood_id)
+        value = {}
+        for par in self:
+            value = {
+                'hood_id': hood_id.id,
+                'township_id': hood_id.township_id.id or par.township_id.id,
+                'district_id': hood_id.district_id.id or par.district_id.id,
+                'state_id': hood_id.state_id.id or par.state_id.id,
+                'country_id': hood_id.country_id.id or par. country_id.id
+            }
+        self.write(value)
+        return {'value': value}
+
+    @api.multi
+    def onchange_township_id(self, township_id):
+        township = self.env['res.country.state.district.township'].browse(
+            township_id)
+        value = {}
+        for par in self:
+            value = {
+                'township_id': township.id,
+                'district_id': township.district_id.id or par.district_id.id,
+                'state_id': township.state_id.id or par.state_id.id,
+                'country_id': township.country_id.id or par.country_id.id,
+            }
+            if par.hood_id.township_id != township:
+                value['hood_id'] = None
+        self.write(value)
+        return {'value': value}
+
+    @api.multi
+    def onchange_district_id(self, district_id):
+        district = self.env['res.country.state.district'].browse(
+            district_id)
+        value = {}
+        for par in self:
+            if par.township_id.district_id != district:
+                value['township_id'] = None
+            value['district_id'] = district.id
+            value['state_id'] = district.state_id.id or par.state_id.id
+            value['country_id'] = district.country_id.id or par.country_id.id
+        self.write(value)
+        return {'value': value}
+
+    @api.multi
+    def onchange_state_id(self, state_id):
+        state = self.env['res.country.state'].browse(state_id)
+        value = {}
+        for par in self:
+            if par.district_id.state_id != state:
+                value['district_id'] = None
+            value['state_id'] = state.id
+            value['country_id'] = state.country_id.id or par.country_id.id
+        self.write(value)
+        return {'value': value}
