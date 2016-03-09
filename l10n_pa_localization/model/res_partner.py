@@ -235,17 +235,12 @@ class ResPartner(models.Model):
     def _onchange_hood_id(self):
         for par in self:
             par.township_id = par.hood_id.township_id or par.township_id
-            par.district_id = par.hood_id.district_id or par.district_id
-            par.state_id = par.hood_id.state_id or par.state_id
-            par.country_id = par.hood_id.country_id or par.country_id
 
     @api.onchange("township_id")
     @api.multi
     def _onchange_township_id(self):
         for par in self:
             par.district_id = par.township_id.district_id or par.district_id
-            par.state_id = par.township_id.state_id or par.state_id
-            par.country_id = par.township_id.country_id or par.country_id
             if par.hood_id.township_id != par.township_id:
                 par.hood_id = None
 
@@ -256,7 +251,6 @@ class ResPartner(models.Model):
             if par.township_id.district_id != par.district_id:
                 par.township_id = None
             par.state_id = par.district_id.state_id or par.state_id
-            par.country_id = par.district_id.country_id or par.country_id
 
     @api.onchange("state_id")
     @api.multi
@@ -271,4 +265,4 @@ class ResPartner(models.Model):
     def _onchange_country_id(self):
         for par in self:
             if par.state_id.country_id != par.country_id:
-                par.sate_id = None
+                par.state_id = None
