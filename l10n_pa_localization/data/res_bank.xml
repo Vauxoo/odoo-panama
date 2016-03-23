@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data noupdate="True">
+    <record id="bank_allbank_corp" model="res.bank">
+      <field name="name">Allbank Corp.</field>
+    </record>
+    <record id="bank_bac_international_bank_inc" model="res.bank">
+      <field name="name">Bac International Bank, Inc.</field>
+    </record>
+    <record id="bank_balboa_bank_trust_corp" model="res.bank">
+      <field name="name">Balboa Bank &amp; Trust, Corp. </field>
+    </record>
+    <record id="bank_banco_aliado_sa" model="res.bank">
+      <field name="name">Banco Aliado, S.A.</field>
+    </record>
+    <record id="bank_banco_azteca_panama_sa" model="res.bank">
+      <field name="name">Banco Azteca (Panamá), S.A.  </field>
+    </record>
+    <record id="bank_banco_citibank_panama_sa" model="res.bank">
+      <field name="name">Banco Citibank (Panamá), S.A.</field>
+    </record>
+    <record id="bank_banco_davivienda_panama_sa" model="res.bank">
+      <field name="name">Banco Davivienda (Panamá), S.A.</field>
+    </record>
+    <record id="bank_banco_del_pacifico_panama_sa" model="res.bank">
+      <field name="name">Banco del Pacífico (Panamá), S.A.</field>
+    </record>
+    <record id="bank_banco_delta_sa_bmf" model="res.bank">
+      <field name="name">Banco Delta, S.A. (BMF)</field>
+    </record>
+    <record id="bank_banco_ficohsa_panama_sa" model="res.bank">
+      <field name="name">Banco Ficohsa (Panamá), S.A.</field>
+    </record>
+    <record id="bank_banco_general_sa" model="res.bank">
+      <field name="name">Banco General, S.A.</field>
+    </record>
+    <record id="bank_banco_g&amp;t_continental_panama_sa_bmf" model="res.bank">
+      <field name="name">Banco G&amp;T Continental (Panamá), S.A. (BMF)</field>
+    </record>
+    <record id="bank_banco_internacional_de_costa_rica_sa_bicsa" model="res.bank">
+      <field name="name">Banco Internacional de Costa Rica, S.A., (BICSA)</field>
+    </record>
+    <record id="bank_banco_lafise_panama_sa" model="res.bank">
+      <field name="name">Banco Lafise Panamá, S.A.</field>
+    </record>
+    <record id="bank_banco_la_hipotecaria_sa" model="res.bank">
+      <field name="name">Banco La Hipotecaria, S.A.</field>
+    </record>
+    <record id="bank_banco_latinoamericano_de_comercio_exterior_sa_bladex" model="res.bank">
+      <field name="name">Banco Latinoamericano de Comercio Exterior, S.A. (BLADEX)</field>
+    </record>
+    <record id="bank_bancolombia_sucursal_panama" model="res.bank">
+      <field name="name">Bancolombia (Sucursal Panamá)</field>
+    </record>
+    <record id="bank_banco_nacional_de_panama" model="res.bank">
+      <field name="name">Banco Nacional de Panamá</field>
+    </record>
+    <record id="bank_banco_panama_sa" model="res.bank">
+      <field name="name">Banco Panamá, S.A.</field>
+    </record>
+    <record id="bank_banco_panameno_de_la_vivienda_sa_banvivienda" model="res.bank">
+      <field name="name">Banco Panameño de la Vivienda, S.A. (BANVIVIENDA)</field>
+    </record>
+    <record id="bank_banco_pichincha_panama_sa" model="res.bank">
+      <field name="name">Banco Pichincha Panamá, S.A.</field>
+    </record>
+    <record id="bank_banco_universal_sa" model="res.bank">
+      <field name="name">Banco Universal, S.A.</field>
+    </record>
+    <record id="bank_banesco_sa" model="res.bank">
+      <field name="name">Banesco, S.A.</field>
+    </record>
+    <record id="bank_andbanc_panama_sa" model="res.bank">
+      <field name="name">Andbanc  (Panamá), S.A.</field>
+    </record>
+    <record id="bank_atlantic_security_bank_sucursal_panama" model="res.bank">
+      <field name="name">Atlantic Security Bank (Sucursal Panamá)</field>
+    </record>
+    <record id="bank_austrobank_overseas_panama_sa" model="res.bank">
+      <field name="name">Austrobank Overseas (Panamá), S.A.</field>
+    </record>
+    <record id="bank_banco_corficolombiana_panama_sa" model="res.bank">
+      <field name="name">Banco Corficolombiana (Panamá), S.A.</field>
+    </record>
+    <record id="bank_banco_credit_andorra_panama_sa" model="res.bank">
+      <field name="name">Banco Credit Andorra (Panamá), S.A.</field>
+    </record>
+    <record id="bank_banco_de_bogota" model="res.bank">
+      <field name="name">Banco de Bogotá</field>
+    </record>
+    <record id="bank_banco_de_credito_del_peru_sucursal_panama" model="res.bank">
+      <field name="name">Banco de Crédito del Perú (Sucursal Panamá)</field>
+    </record>
+    <record id="bank_banco_de_la_nacion_argentina" model="res.bank">
+      <field name="name">Banco de la Nación Argentina</field>
+    </record>
+    <record id="bank_banco_de_occidente_panama_sa" model="res.bank">
+      <field name="name">Banco de Occidente (Panamá), S.A</field>
+    </record>
+    <record id="bank_banco_internacional_de_peru_saa_interbank" model="res.bank">
+      <field name="name">Banco Internacional de Perú, S.A.A. (INTERBANK)</field>
+    </record>
+    <record id="bank_bancolombia_panama_sa" model="res.bank">
+      <field name="name">Bancolombia (Panamá), S.A </field>
+    </record>
+    <record id="bank_banco_de_la_provincia_de_buenos_aires" model="res.bank">
+      <field name="name">Banco de la Provincia de Buenos Aires</field>
+    </record>
+    <record id="bank_banco_do_brasil_sa" model="res.bank">
+      <field name="name">Banco Do Brasil, S.A.</field>
+    </record>
+    <record id="bank_banisi_sa" model="res.bank">
+      <field name="name">Banisi, S.A.</field>
+    </record>
+    <record id="bank_banistmo_sa" model="res.bank">
+      <field name="name">Banistmo, S.A.</field>
+    </record>
+    <record id="bank_bank_of_china_sucursal_panama_sa" model="res.bank">
+      <field name="name">Bank of China (Sucursal Panamá), S.A.</field>
+    </record>
+    <record id="bank_bbp_bank_sa" model="res.bank">
+      <field name="name">BBP Bank, S.A.</field>
+    </record>
+    <record id="bank_bct_bank_international_sa" model="res.bank">
+      <field name="name">BCT Bank International, S.A.</field>
+    </record>
+    <record id="bank_caja_de_ahorros" model="res.bank">
+      <field name="name">Caja de Ahorros</field>
+    </record>
+    <record id="bank_canal_bank_sa_bmf" model="res.bank">
+      <field name="name">Canal Bank, S.A. (BMF)</field>
+    </record>
+    <record id="bank_capital_bank_inc" model="res.bank">
+      <field name="name">Capital Bank, Inc.</field>
+    </record>
+    <record id="bank_citibank_na_sucursal_panama" model="res.bank">
+      <field name="name">Citibank, N.A. – Sucursal Panamá</field>
+    </record>
+    <record id="bank_credicorp_bank_sa" model="res.bank">
+      <field name="name">Credicorp Bank, S.A.</field>
+    </record>
+    <record id="bank_fpb_bank_inc" model="res.bank">
+      <field name="name">FPB Bank Inc.</field>
+    </record>
+    <record id="bank_global_bank_corporation" model="res.bank">
+      <field name="name">Global Bank Corporation</field>
+    </record>
+    <record id="bank_korea_exchange_bank" model="res.bank">
+      <field name="name">Korea Exchange Bank</field>
+    </record>
+    <record id="bank_mega_international_commercial_bank_co_ltd_mega_icbc" model="res.bank">
+      <field name="name">Mega International Commercial Bank Co., Ltd. (MEGA ICBC)</field>
+    </record>
+    <record id="bank_mercantil_bank_panama_sa" model="res.bank">
+      <field name="name">Mercantil Bank (Panamá), S.A.</field>
+    </record>
+    <record id="bank_metrobank_sa" model="res.bank">
+      <field name="name">Metrobank, S.A.</field>
+    </record>
+    <record id="bank_mmg_bank_corporation" model="res.bank">
+      <field name="name">MMG Bank Corporation</field>
+    </record>
+    <record id="bank_multibank_inc" model="res.bank">
+      <field name="name">Multibank, Inc.</field>
+    </record>
+    <record id="bank_prival_bank_sa" model="res.bank">
+      <field name="name">Prival Bank, S.A.</field>
+    </record>
+    <record id="bank_st_georges_bank" model="res.bank">
+      <field name="name">St. Georges Bank</field>
+    </record>
+    <record id="bank_the_bank_of_nova_scotia" model="res.bank">
+      <field name="name">The Bank of Nova Scotia</field>
+    </record>
+    <record id="bank_towerbank_international_inc" model="res.bank">
+      <field name="name">Towerbank International, Inc.</field>
+    </record>
+    <record id="bank_unibank_sa" model="res.bank">
+      <field name="name">Unibank, S.A.</field>
+    </record>
+    <record id="bank_banco_santander_panama_sa" model="res.bank">
+      <field name="name">Banco Santander (Panamá), S.A.</field>
+    </record>
+    <record id="bank_bhd_international_bank_panama_sa" model="res.bank">
+      <field name="name">BHD International Bank (Panamá), S.A.</field>
+    </record>
+    <record id="bank_bsi_bank_panama_sa" model="res.bank">
+      <field name="name">BSI Bank (Panamá), S.A.</field>
+    </record>
+    <record id="bank_gnb_sudameris_bank_sa" model="res.bank">
+      <field name="name">GNB Sudameris Bank, S.A.</field>
+    </record>
+    <record id="bank_gtc_bank_inc" model="res.bank">
+      <field name="name">GTC Bank, Inc.</field>
+    </record>
+    <record id="bank_helm_bank_panama_sa" model="res.bank">
+      <field name="name">Helm Bank (Panamá), S.A.</field>
+    </record>
+    <record id="bank_inteligo_bank_ltd" model="res.bank">
+      <field name="name">Inteligo Bank Ltd.</field>
+    </record>
+    <record id="bank_international_union_bank_sa" model="res.bank">
+      <field name="name">International Union Bank, S.A.</field>
+    </record>
+    <record id="bank_pkb_banca_privada_panama_sa" model="res.bank">
+      <field name="name">PKB Banca Privada (Panamá), S.A.</field>
+    </record>
+    <record id="bank_popular_bank_ltd_inc" model="res.bank">
+      <field name="name">Popular Bank Ltd., Inc.</field>
+    </record>
+    <record id="bank_lombard_odier_cie_bahamas_limited" model="res.bank">
+      <field name="name">Lombard Odier &amp; Cie (Bahamas) Limited</field>
+    </record>
+  </data>
+</openerp>
