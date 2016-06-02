@@ -143,7 +143,7 @@
       <field name="name">FPB Bank Inc.</field>
     </record>
     <record id="bank_global_bank_corporation" model="res.bank">
-      <field name="name">Global Bank Corporation</field>
+      <field name="name">Global Bank</field>
     </record>
     <record id="bank_korea_exchange_bank" model="res.bank">
       <field name="name">Korea Exchange Bank</field>
