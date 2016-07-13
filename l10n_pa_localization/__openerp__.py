@@ -10,7 +10,7 @@
 ############################################################################
 {
     "name": "OpenERP Panama Location",
-    "version": "1.0",
+    "version": "8.0.0.1.0",
     "author": "Vauxoo",
     "category": "Localization/Panama",
     "website": "http://www.vauxoo.com/",
