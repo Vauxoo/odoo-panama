@@ -191,8 +191,7 @@ class ResPartner(models.Model):
 
     def _display_address(
             self, cr, uid, address, without_company=False, context=None):
-        '''
-        The purpose of this function is to build and return an address
+        '''The purpose of this function is to build and return an address
         formatted accordingly to the
         standards of the country where it belongs.
         :param address: browse record of the res.partner to format

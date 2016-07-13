@@ -78,43 +78,46 @@ class ResNeighborhood(models.Model):
         res = super(ResNeighborhood, self)._auto_init(
             cr, context=context)
         # index Hood name, country_id
-        indexname = 'res_hood_name_country_id'
         cr.execute(
             "SELECT indexname FROM pg_indexes "
-            "WHERE indexname = \'%s\'" % (indexname))
+            "WHERE indexname = 'res_hood_name_country_id'")
         if not cr.fetchone():
             cr.execute(
-                'CREATE INDEX %s ON res_country_state_district_township_hood '
-                '(name, country_id)' % (indexname))
+                "CREATE INDEX res_hood_name_country_id ON "
+                "res_country_state_district_township_hood (name, country_id)")
 
         # index Hood name, country_id, state_id
-        indexname = 'res_hood_name_country_id_state_id'
         cr.execute(
             "SELECT indexname FROM pg_indexes "
-            "WHERE indexname =\'%s\'" % (indexname))
+            "WHERE indexname = 'res_hood_name_country_id_state_id'")
         if not cr.fetchone():
             cr.execute(
-                'CREATE INDEX %s ON res_country_state_district_township_hood '
-                '(name, country_id, state_id)' % (indexname))
+                "CREATE INDEX res_hood_name_country_id_state_id ON "
+                "res_country_state_district_township_hood "
+                "(name, country_id, state_id)")
 
         # index Hood name, country_id, state_id, district_id
-        indexname = 'res_hood_name_country_id_state_id_district_id'
         cr.execute(
             "SELECT indexname FROM pg_indexes "
-            "WHERE indexname =\'%s\'" % (indexname))
+            "WHERE indexname = "
+            "'res_hood_name_country_id_state_id_district_id'")
         if not cr.fetchone():
             cr.execute(
-                'CREATE INDEX %s ON res_country_state_district_township_hood '
-                '(name, country_id, state_id)' % (indexname))
+                "CREATE INDEX "
+                "res_hood_name_country_id_state_id_district_id ON "
+                "res_country_state_district_township_hood "
+                "(name, country_id, state_id)")
 
         # index Hood name, country_id, state_id, district_id, township_id
-        indexname = 'res_hood_name_country_id_state_id_district_id_township_id'
         cr.execute(
             "SELECT indexname FROM pg_indexes "
-            "WHERE indexname =\'%s\'" % (indexname))
+            "WHERE indexname = "
+            "'res_hood_name_country_id_state_id_district_id_township_id'")
         if not cr.fetchone():
             cr.execute(
-                'CREATE INDEX %s ON res_country_state_district_township_hood '
-                '(name, country_id, state_id)' % (indexname))
+                "CREATE INDEX "
+                "res_hood_name_country_id_state_id_district_id_township_id "
+                "ON res_country_state_district_township_hood "
+                "(name, country_id, state_id)")
 
         return res
