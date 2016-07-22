@@ -84,6 +84,8 @@ class ResPartner(models.Model):
                 class="oe_no_button" on_change="1" options='{"no_open": True}'
                 modifiers="{&quot;readonly&quot;:
                 [[&quot;use_parent_address&quot;, &quot;=&quot;, true]]}"/>
+                <field name="zip"
+                modifiers="{&quot;invisible&quot;: true}"/>
             </div>
 """ % (street, street2, country, state, district, township, hood)
         }
