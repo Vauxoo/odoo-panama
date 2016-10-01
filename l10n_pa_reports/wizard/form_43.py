@@ -49,10 +49,10 @@ class AccountForm43Report(models.TransientModel):
         the previous period to the current
         """
         data = super(AccountForm43Report, self).default_get(fieldnames)
-        data.update({
-            'company_id': self.env['res.company']._company_default_get(
-                'account.form43.report').id,
-        })
+        # data.update({
+        #     'company_id': self.env['res.company']._company_default_get(
+        #         'account.pa.form43.report').id,
+        # })
         return data
 
     @api.model
@@ -79,71 +79,42 @@ class AccountForm43Report(models.TransientModel):
 
     @api.multi
     def create_form43(self):
-        """This function create the file for report to form43, take the amount
-        base paid by partner in each tax, in the period and company selected.
-        TODO Complete doc.
-        """
-        move_line_obj = self.env['account.move.line']
-        acc_tax_obj = self.env['account.tax']
-        acc_tax_category_obj = self.env['account.tax.category']
-        partner_company_id = self.company_id.partner_id.id
-        # TODO, Y si marco las categorias que son para el form43 con un booleano?
-        category_tax_ids = acc_tax_category_obj.search([
-            ('name', 'in', ('IVA', 'IVA-EXENTO', 'IVA-RET', 'IVA-PART',
-                            'IVA-IMP'))])
-        tax_ids = acc_tax_obj.search([
-            ('type_tax_use', '=', 'purchase'),
-            ('category_id', 'in', category_tax_ids.ids)])
-        journal = self.company_id.tax_cash_basis_journal_id
-        account_ids_tax = tax_ids.mapped('cash_basis_account')
-        attrs = [
-            '|', ('partner_id', '=', False),
-            ('partner_id', '!=', partner_company_id),
-            ('date', '>=', self.date_from),
-            ('date', '<=', self.date_to),
-            ('account_id', 'in', account_ids_tax.ids),
-            ('not_move_form43', '=', False),
-            ('journal_id', '=', journal.id),
+        """This function create the file for report to Form 43"""
+        ai_obj = self.env['account.invoice']
+
+        domain_args = [
+            ('type', '=', 'in_invoice'),
+            ('period_id', '=', self.period_id.id),
         ]
-        if self.entries_to_print == 'posted':
-            attrs.append(('move_id.state', '=', 'posted'))
-        lines_form43 = move_line_obj.search(attrs)
+        lines_form43 = ai_obj.search(domain_args)
+
         dict_return = {
             'type': 'ir.actions.act_window',
             'view_type': 'form',
             'view_mode': 'form',
             'res_id': self.id,
             'views': [(False, 'form')],
-            'res_model': 'account.form43.report',
+            'res_model': 'account.pa.form43.report',
             'target': 'new',
         }
         if not lines_form43:
             self.write({'state': 'not_file'})
             return dict_return
-        moves_wo_partner = lines_form43.filtered(lambda r: not r.partner_id)
-        if moves_wo_partner:
-            return {
-                'name': _('Moves without supplier'),
-                'view_type': 'form',
-                'view_mode': 'tree,form',
-                'res_model': 'account.move.line',
-                'type': 'ir.actions.act_window',
-                'domain': [('id', 'in', moves_wo_partner.ids), ],
-            }
-        partner_to_fix = lines_form43.mapped(
-            'partner_id')._get_not_partners_form43()
-        if partner_to_fix:
-            return {
-                'name': _(
-                    'Suppliers without information necessary for form43'),
-                'view_type': 'form',
-                'view_mode': 'tree,form',
-                'res_model': 'res.partner',
-                'type': 'ir.actions.act_window',
-                'domain': [
-                    ('id', 'in', partner_to_fix.ids),
-                    '|', ('active', '=', False), ('active', '=', True)],
-            }
+        # /!\ TODO: Implement method
+        # partner_to_fix = lines_form43.mapped(
+        #     'partner_id')._get_not_partners_form43()
+        # if partner_to_fix:
+        #     return {
+        #         'name': _(
+        #             'Suppliers without information necessary for form43'),
+        #         'view_type': 'form',
+        #         'view_mode': 'tree,form',
+        #         'res_model': 'res.partner',
+        #         'type': 'ir.actions.act_window',
+        #         'domain': [
+        #             ('id', 'in', partner_to_fix.ids),
+        #             '|', ('active', '=', False), ('active', '=', True)],
+        #     }
         dict_move_line, amount_0 = lines_form43.get_dict_moves()
         if amount_0:
             return {

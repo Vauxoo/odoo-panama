@@ -11,14 +11,9 @@
                 <field name="name" invisible="1"/>
                 <group states="choose" colspan="4">
                     <separator string="Period" colspan="4"/>
-                    <group>
-                        <field name="date_from"/> -
-                    </group>
-                    <group>
-                        <field name="date_to"/>
-                    </group>
                     <group colspan="4">
                         <field name="company_id" groups="base.group_multi_company"/>
+                        <field name="period_id" domain="[('special','=',False)]"/>
                         <field name="entries_to_print" />
                     </group>
                 </group>
@@ -30,10 +25,10 @@
                     <p><field name="file_txt" readonly="1" filename="filename"/> TXT format.</p>
                 </div>
                 <div states="not_file">
-                    <h2>form43 report not has been created!</h2>
+                    <h2>Form 43 Report has not been created!</h2>
                     <p>Probably by:</p>
-                    <p>- Not exists movements in the selected period.</p>
-                    <p>- You do not have configured taxes correctly.</p>
+                    <p>- There are no Invoices Posted in Selected Period.</p>
+                    <p>- You Have selected a Wrong Period.</p>
                 </div>
                 <footer states="choose">
                     <button icon='gtk-cancel' special="cancel"  string="Cancel" />
@@ -56,11 +51,11 @@
             <field name="help"></field>
         </record>
 
-        <!-- <menuitem name="Transactions with third parties [ form43 ] " -->
-        <!--             parent="l10n_mx_accountinge_mexican_statements_menu" -->
-        <!--             action="action_account_pa_form43_report" -->
-        <!--             id="menu_account_form43_declaration" -->
-        <!--     /> -->
+        <menuitem name="(PA) Form 43"
+                    parent="account.menu_finance_reporting"
+                    action="action_account_pa_form43_report"
+                    id="menu_account_form43_declaration"
+            />
 
     </data>
 </openerp>
