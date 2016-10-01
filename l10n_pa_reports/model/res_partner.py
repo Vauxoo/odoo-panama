@@ -176,10 +176,5 @@ class ResPartner(models.Model):
         ]))
 
     @api.multi
-    def _get_not_partners_diot(self):
-        partners = self.mapped('commercial_partner_id')
-        return partners.filtered(lambda r: any([
-            (not r.vat_split and r.type_of_third == '04'),
-            not r.type_of_third, not r.type_of_operation,
-            (r.type_of_third == '05' and not r.country_id.code),
-            (r.type_of_third == '04' and not r.check_vat_mx(r.vat_split))]))
+    def _get_not_partners_form43(self):
+        return self.mapped('commercial_partner_id')
