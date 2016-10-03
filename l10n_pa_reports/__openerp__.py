@@ -8,7 +8,7 @@
     "website": "http://www.vauxoo.com/",
     "license": "AGPL-3",
     "depends": [
-            "base_vat",
+            "vat_partitioned",
     ],
     "demo": [
         'demo/demo.xml',

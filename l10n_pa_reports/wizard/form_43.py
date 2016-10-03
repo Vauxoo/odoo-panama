@@ -6,16 +6,20 @@ import cgi
 import csv
 import os
 import tempfile
-import xlwt
 import StringIO
+import xlwt
 
-from openerp import fields, models, api, _
+from openerp import fields, models, api
 
 
 class AccountForm43Report(models.TransientModel):
     """Formulario 43"""
 
     _name = 'account.pa.form43.report'
+
+    form43_columns = [
+        'entity', 'vat', 'dv', 'name', 'supplier_invoice_number', 'date',
+        'concept', 'type', 'subtotal', 'tax']
 
     name = fields.Char(readonly=True)
     company_id = fields.Many2one(
@@ -114,16 +118,16 @@ class AccountForm43Report(models.TransientModel):
         #             ('id', 'in', partner_to_fix.ids),
         #             '|', ('active', '=', False), ('active', '=', True)],
         #     }
-        dict_move_line, amount_0 = lines_form43.get_dict_moves()
-        if amount_0:
-            return {
-                'name': _('Movements to corroborate the amounts of taxes'),
-                'view_type': 'form',
-                'view_mode': 'tree,form',
-                'res_model': 'account.move.line',
-                'type': 'ir.actions.act_window',
-                'domain': [('id', 'in', amount_0)],
-            }
+        dict_move_line = lines_form43.get_dict_moves()
+        # if amount_0:
+        #     return {
+        #         'name': _('Movements to corroborate the amounts of taxes'),
+        #         'view_type': 'form',
+        #         'view_mode': 'tree,form',
+        #         'res_model': 'account.move.line',
+        #         'type': 'ir.actions.act_window',
+        #         'domain': [('id', 'in', amount_0)],
+        #     }
         name = "Informe43_{ruc}_{period}.{ext}"
         txt = self._get_file_txt(dict_move_line)
         csv_file = self._get_file_csv(dict_move_line)
@@ -150,35 +154,15 @@ class AccountForm43Report(models.TransientModel):
         (fileno, fname) = tempfile.mkstemp('.txt', 'tmp')
         os.close(fileno)
         f_write = open(fname, 'wb')
-        fcsv = csv.DictWriter(f_write, ['entity', 'vat', 'dv', 'name',
-            'supplier_invoice_number', 'date', 'concept', 'type', 'subtotal',
-            'tax'], delimiter=',')
-        fcsv.writerow({
-                'entity': 'entity',
-                'vat': 'ruc',
-                'dv': 'dv',
-                'name': 'name',
-                'supplier_invoice_number': 'supplier_invoice_number',
-                'date': 'date',
-                'concept': 'concept',
-                'type': 'type',
-                'subtotal': 'subtotal',
-                'tax': 'tax',
-        })
+        fcsv = csv.DictWriter(f_write, self.form43_columns, delimiter=',')
+        small_dict = {}
+        for f43c in self.form43_columns:
+            small_dict[f43c] = f43c
+        fcsv.writerow(small_dict)
         for form43 in dict_data:
-            values = dict_data.get(form43, False)
-            fcsv.writerow({
-                'entity': values[0],
-                'vat': values[1],
-                'dv': values[2],
-                'name': values[3],
-                'supplier_invoice_number': self.str_format(values[4]),
-                'date': values[5],
-                'concept': self.str_format(values[6]),
-                'type': int(round((values[7]), 0)) or '',
-                'subtotal': int(round((values[8]), 0)) or '',
-                'tax': int(round((values[9]), 0)) or '',
-            })
+            for f43c in self.form43_columns:
+                small_dict[f43c] = form43[f43c]
+            fcsv.writerow(small_dict)
         f_write.close()
         with open(fname, "rb") as f_read:
             fdata = f_read.read()
@@ -189,9 +173,8 @@ class AccountForm43Report(models.TransientModel):
         (fileno, fname_csv) = tempfile.mkstemp('.csv', 'tmp_csv')
         os.close(fileno)
         f_write_csv = open(fname_csv, 'wb')
-        fcsv_csv = csv.DictWriter(f_write_csv, ['entity', 'vat', 'dv', 'name',
-            'supplier_invoice_number', 'date', 'concept', 'type', 'subtotal',
-            'tax'], delimiter=',')
+        fcsv_csv = csv.DictWriter(
+            f_write_csv, self.form43_columns, delimiter=',')
         fcsv_csv.writerow({
                 'entity': 'Tipo de Persona',
                 'vat': 'RUC',
