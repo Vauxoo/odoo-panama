@@ -154,11 +154,8 @@ class AccountForm43Report(models.TransientModel):
         (fileno, fname) = tempfile.mkstemp('.txt', 'tmp')
         os.close(fileno)
         f_write = open(fname, 'wb')
-        fcsv = csv.DictWriter(f_write, self.form43_columns, delimiter=',')
+        fcsv = csv.DictWriter(f_write, self.form43_columns, delimiter='\t')
         small_dict = {}
-        for f43c in self.form43_columns:
-            small_dict[f43c] = f43c
-        fcsv.writerow(small_dict)
         for form43 in dict_data:
             for f43c in self.form43_columns:
                 small_dict[f43c] = form43[f43c]
