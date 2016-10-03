@@ -2,14 +2,12 @@
 # Copyright 2016 Vauxoo (https://www.vauxoo.com) <info@vauxoo.com>
 
 import base64
+import cgi
 import csv
 import os
 import tempfile
-import cgi
 import xlwt
 import StringIO
-from calendar import monthrange
-from dateutil.relativedelta import relativedelta
 
 from openerp import fields, models, api, _
 
@@ -85,6 +83,7 @@ class AccountForm43Report(models.TransientModel):
         domain_args = [
             ('type', '=', 'in_invoice'),
             ('period_id', '=', self.period_id.id),
+            ('state', 'in', ['open', 'paid']),
         ]
         lines_form43 = ai_obj.search(domain_args)
 
@@ -100,7 +99,7 @@ class AccountForm43Report(models.TransientModel):
         if not lines_form43:
             self.write({'state': 'not_file'})
             return dict_return
-        # /!\ TODO: Implement method
+
         # partner_to_fix = lines_form43.mapped(
         #     'partner_id')._get_not_partners_form43()
         # if partner_to_fix:
@@ -153,7 +152,19 @@ class AccountForm43Report(models.TransientModel):
         f_write = open(fname, 'wb')
         fcsv = csv.DictWriter(f_write, ['entity', 'vat', 'dv', 'name',
             'supplier_invoice_number', 'date', 'concept', 'type', 'subtotal',
-            'tax'], delimiter='|')
+            'tax'], delimiter=',')
+        fcsv.writerow({
+                'entity': 'entity',
+                'vat': 'ruc',
+                'dv': 'dv',
+                'name': 'name',
+                'supplier_invoice_number': 'supplier_invoice_number',
+                'date': 'date',
+                'concept': 'concept',
+                'type': 'type',
+                'subtotal': 'subtotal',
+                'tax': 'tax',
+        })
         for form43 in dict_data:
             values = dict_data.get(form43, False)
             fcsv.writerow({
@@ -178,7 +189,7 @@ class AccountForm43Report(models.TransientModel):
         (fileno, fname_csv) = tempfile.mkstemp('.csv', 'tmp_csv')
         os.close(fileno)
         f_write_csv = open(fname_csv, 'wb')
-        fcsv_csv = csv.DictWriter(f_write, ['entity', 'vat', 'dv', 'name',
+        fcsv_csv = csv.DictWriter(f_write_csv, ['entity', 'vat', 'dv', 'name',
             'supplier_invoice_number', 'date', 'concept', 'type', 'subtotal',
             'tax'], delimiter=',')
         fcsv_csv.writerow({
