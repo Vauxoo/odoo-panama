@@ -9,7 +9,7 @@ import tempfile
 import StringIO
 import xlwt
 
-from openerp import fields, models, api
+from openerp import fields, models, api, _
 
 
 class AccountForm43Report(models.TransientModel):
@@ -115,19 +115,19 @@ class AccountForm43Report(models.TransientModel):
         #             ('id', 'in', partner_to_fix.ids),
         #             '|', ('active', '=', False), ('active', '=', True)],
         #     }
-        dict_move_line = lines_form43.get_dict_moves()
-        # if amount_0:
-        #     return {
-        #         'name': _('Movements to corroborate the amounts of taxes'),
-        #         'view_type': 'form',
-        #         'view_mode': 'tree,form',
-        #         'res_model': 'account.move.line',
-        #         'type': 'ir.actions.act_window',
-        #         'domain': [('id', 'in', amount_0)],
-        #     }
+        data_lines, partner_ids = lines_form43.get_data()
+        if partner_ids:
+            return {
+                'name': _('Partners to fix Data for Form 43'),
+                'view_type': 'form',
+                'view_mode': 'tree,form',
+                'res_model': 'res.partner',
+                'type': 'ir.actions.act_window',
+                'domain': [('id', 'in', partner_ids)],
+            }
         name = "Informe43_{ruc}_{period}.{ext}"
-        txt = self._get_file_txt(dict_move_line)
-        csv_file = self._get_file_csv(dict_move_line)
+        txt = self._get_file_txt(data_lines)
+        csv_file = self._get_file_csv(data_lines)
         file_xls = self.csv2xls(csv_file)
         self.write({
             'state': 'get',
