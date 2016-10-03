@@ -39,9 +39,6 @@ class AccountForm43Report(models.TransientModel):
     state = fields.Selection(
         [('choose', 'Choose'), ('get', 'Get'), ('not_file', 'Not File')],
         default='choose')
-    entries_to_print = fields.Selection(
-        [('all', 'All Entries'), ('posted', 'Posted Entries')],
-        required=True, default='all')
     period_id = fields.Many2one(
         'account.period', 'Period', required=True)
 
