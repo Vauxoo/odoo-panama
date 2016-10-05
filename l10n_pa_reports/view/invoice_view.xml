@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="view_account_invoice_supplier_form_inh_form43">
+            <field name="name">view.account.invoice.supplier.form.inh.form43</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page name='fiscal_information' string="Fiscal Information">
+                        <group>
+                            <field name="l10n_pa_concept" required="True"/>
+                            <field name="l10n_pa_prd_srv" required="True"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>
