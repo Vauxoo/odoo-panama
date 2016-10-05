@@ -28,24 +28,33 @@ class AccountInvoice(models.Model):
     def get_data(self):
         data_lines = []
         partner_ids = []
+        invoice_ids = []
         for line in self:
             partner_brw = line.partner_id.commercial_partner_id
             vat = partner_brw.vat_alone
             entity = partner_brw.l10n_pa_entity
             dv = partner_brw.vat_dv
-            args = [vat, dv, entity]
-            if not all(args) and partner_brw.id not in partner_ids:
+            args_part = [vat, dv, entity]
+            if not all(args_part) and partner_brw.id not in partner_ids:
                 partner_ids.append(partner_brw.id)
+
+            inv_number = line.supplier_invoice_number
+            concept = line.l10n_pa_concept
+            prd_srv = line.l10n_pa_prd_srv
+            args_inv = [inv_number, concept, prd_srv]
+            if not all(args_inv) and line.id not in invoice_ids:
+                invoice_ids.append(line.id)
+
             data_lines.append({
                 'entity': entity,
                 'vat': vat,
                 'dv': dv,
                 'name': partner_brw.name,
-                'supplier_invoice_number': line.supplier_invoice_number,
+                'supplier_invoice_number': inv_number,
                 'date': line.date_invoice,
-                'concept': 'concept',
-                'type': 'type',
+                'concept': concept,
+                'type': prd_srv,
                 'subtotal': line.amount_untaxed,
                 'tax': line.amount_tax
             })
-        return data_lines, partner_ids
+        return data_lines, partner_ids, invoice_ids

@@ -115,7 +115,7 @@ class AccountForm43Report(models.TransientModel):
         #             ('id', 'in', partner_to_fix.ids),
         #             '|', ('active', '=', False), ('active', '=', True)],
         #     }
-        data_lines, partner_ids = lines_form43.get_data()
+        data_lines, partner_ids, invoice_ids = lines_form43.get_data()
         if partner_ids:
             return {
                 'name': _('Partners to fix Data for Form 43'),
@@ -124,6 +124,15 @@ class AccountForm43Report(models.TransientModel):
                 'res_model': 'res.partner',
                 'type': 'ir.actions.act_window',
                 'domain': [('id', 'in', partner_ids)],
+            }
+        if invoice_ids:
+            return {
+                'name': _('Invoices to fix Data for Form 43'),
+                'view_type': 'form',
+                'view_mode': 'tree,form',
+                'res_model': 'account.invoice',
+                'type': 'ir.actions.act_window',
+                'domain': [('id', 'in', invoice_ids)],
             }
         name = "Informe43_{ruc}_{period}.{ext}"
         txt = self._get_file_txt(data_lines)
