@@ -15,11 +15,12 @@ class AccountInvoice(models.Model):
         for line in self:
             partner_brw = line.partner_id.commercial_partner_id
             vat = partner_brw.vat_alone
+            entity = partner_brw.l10n_pa_entity
             dv = partner_brw.vat_dv
             if not all([vat, dv]) and partner_brw.id not in partner_ids:
                 partner_ids.append(partner_brw.id)
             data_lines.append({
-                'entity': 'entity',
+                'entity': entity,
                 'vat': vat,
                 'dv': dv,
                 'name': partner_brw.name,
