@@ -1,7 +1,7 @@
 # coding: utf-8
 # Copyright 2016 Vauxoo (https://www.vauxoo.com) <info@vauxoo.com>
 from __future__ import division
-
+import time
 from openerp import models, api, fields
 
 
@@ -34,7 +34,12 @@ class AccountInvoice(models.Model):
             vat = partner_brw.vat_alone
             entity = partner_brw.l10n_pa_entity
             dv = partner_brw.vat_dv
-            args_part = [vat, dv, entity]
+            args_part = [entity]
+            if entity != 'E':
+                args_part = [vat, dv, entity]
+            else:
+                dv = ''
+                vat = ''
             if not all(args_part) and partner_brw.id not in partner_ids:
                 partner_ids.append(partner_brw.id)
 
@@ -45,13 +50,16 @@ class AccountInvoice(models.Model):
             if not all(args_inv) and line.id not in invoice_ids:
                 invoice_ids.append(line.id)
 
+            date = time.strftime(
+                '%Y%m%d', time.strptime(line.date_invoice, '%Y-%m-%d'))
+
             data_lines.append({
                 'entity': entity,
                 'vat': vat,
                 'dv': dv,
                 'name': partner_brw.name,
                 'supplier_invoice_number': inv_number,
-                'date': line.date_invoice,
+                'date': date,
                 'concept': concept,
                 'type': prd_srv,
                 'subtotal': line.amount_untaxed,
