@@ -4,6 +4,7 @@
 import base64
 import cgi
 import csv
+import time
 import os
 import tempfile
 import StringIO
@@ -135,6 +136,10 @@ class AccountForm43Report(models.TransientModel):
                 'domain': [('id', 'in', invoice_ids)],
             }
         name = "Informe43_{ruc}_{period}.{ext}"
+        ruc = self.company_id.partner_id.vat_alone or 'fix-ruc-on-company'
+        period = time.strftime(
+            '%Y%m', time.strptime(self.period_id.date_start, '%Y-%m-%d'))
+        name = name.format(ruc=ruc, period=period, ext='{ext}')
         txt = self._get_file_txt(data_lines)
         csv_file = self._get_file_csv(data_lines)
         file_xls = self.csv2xls(csv_file)
@@ -142,10 +147,10 @@ class AccountForm43Report(models.TransientModel):
             'state': 'get',
             'file_txt': txt,
             'file_csv': csv_file,
-            'filename': name.format(ruc='ruc', period='period', ext='txt'),
-            'filename_csv': name.format(ruc='ruc', period='period', ext='cvs'),
+            'filename': name.format(ext='txt'),
+            'filename_csv': name.format(ext='cvs'),
             'file_xls': file_xls,
-            'filename_xls': name.format(ruc='ruc', period='period', ext='xls'),
+            'filename_xls': name.format(ext='xls'),
         })
         return dict_return
 
