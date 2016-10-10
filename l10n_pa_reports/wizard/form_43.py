@@ -190,16 +190,16 @@ class AccountForm43Report(models.TransientModel):
         fcsv_csv = csv.DictWriter(
             f_write_csv, self.form43_columns, delimiter=',')
         fcsv_csv.writerow({
-                'entity': 'Tipo de Persona',
-                'vat': 'RUC',
-                'dv': 'DV',
-                'name': 'Nombre o Razon Social',
-                'supplier_invoice_number': 'Factura',
-                'date': 'Fecha',
-                'concept': 'Concepto',
-                'type': 'Compra de Bienes y Servicios',
-                'subtotal': 'Monto en Balboas',
-                'tax': 'ITBMS Pagado en Balboas',
+            'entity': 'Tipo de Persona',
+            'vat': 'RUC',
+            'dv': 'DV',
+            'name': 'Nombre o Razon Social',
+            'supplier_invoice_number': 'Factura',
+            'date': 'Fecha',
+            'concept': 'Concepto',
+            'type': 'Compra de Bienes y Servicios',
+            'subtotal': 'Monto en Balboas',
+            'tax': 'ITBMS Pagado en Balboas',
         })
         f_write_csv.close()
         with open(fname_csv, "rb") as f_read_csv:
