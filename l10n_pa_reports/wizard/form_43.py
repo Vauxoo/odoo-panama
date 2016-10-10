@@ -4,13 +4,19 @@
 import base64
 import cgi
 import csv
+import logging
 import time
 import os
 import tempfile
 import StringIO
-import xlwt
 
 from openerp import fields, models, api, _
+_logger = logging.getLogger(__name__)
+
+try:
+    import xlwt
+except ImportError:
+    _logger.debug('Cannot `import xlwt`.')
 
 
 class AccountForm43Report(models.TransientModel):
@@ -135,11 +141,11 @@ class AccountForm43Report(models.TransientModel):
                 'type': 'ir.actions.act_window',
                 'domain': [('id', 'in', invoice_ids)],
             }
-        name = "Informe43_{ruc}_{period}.{ext}"
+        name = "Informe43_%s_%s.%s"
         ruc = self.company_id.partner_id.vat_alone or 'fix-ruc-on-company'
         period = time.strftime(
             '%Y%m', time.strptime(self.period_id.date_start, '%Y-%m-%d'))
-        name = name.format(ruc=ruc, period=period, ext='{ext}')
+        name = name % (ruc, period, '%s')
         txt = self._get_file_txt(data_lines)
         csv_file = self._get_file_csv(data_lines)
         file_xls = self.csv2xls(csv_file)
@@ -147,10 +153,10 @@ class AccountForm43Report(models.TransientModel):
             'state': 'get',
             'file_txt': txt,
             'file_csv': csv_file,
-            'filename': name.format(ext='txt'),
-            'filename_csv': name.format(ext='cvs'),
+            'filename': name % 'txt',
+            'filename_csv': name % 'cvs',
             'file_xls': file_xls,
-            'filename_xls': name.format(ext='xls'),
+            'filename_xls': name % 'xls',
         })
         return dict_return
 

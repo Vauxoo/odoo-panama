@@ -6,7 +6,7 @@
             <field name="name">view.account.pa.form43.report</field>
             <field name="model">account.pa.form43.report</field>
             <field name="arch" type="xml">
-            <form string="form43 Report" version="7.0">
+            <form string="Form 43 Report" version="7.0">
                 <field invisible="1" name="state"/>
                 <field name="name" invisible="1"/>
                 <group states="choose" colspan="4">

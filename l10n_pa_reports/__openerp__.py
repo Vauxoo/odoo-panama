@@ -2,7 +2,7 @@
 
 {
     "name": "Panama Report Wizards",
-    "version": "1.0",
+    "version": "8.0.0.1.0",
     "author": "Vauxoo",
     "category": "Generic Modules",
     "website": "http://www.vauxoo.com/",
@@ -20,4 +20,9 @@
     ],
     "test": [],
     "installable": True,
+    "external_dependencies": {
+        "python": [
+            'xlwt'
+        ]
+    }
 }

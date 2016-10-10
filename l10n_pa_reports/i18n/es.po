@@ -108,7 +108,7 @@ msgstr "Tipo de Persona"
 #. module: l10n_pa_reports
 #: view:account.pa.form43.report:l10n_pa_reports.view_account_pa_form43_report
 msgid "Excel format."
-msgstr "Formato Hoja de Cálculo."
+msgstr "Formato hoja de cálculo."
 
 #. module: l10n_pa_reports
 #: selection:res.partner,l10n_pa_entity:0
@@ -123,7 +123,7 @@ msgstr "Archivo csv"
 #. module: l10n_pa_reports
 #: field:account.pa.form43.report,filename_xls:0
 msgid "File name"
-msgstr "Nombre del Archivo"
+msgstr "Nombre del archivo"
 
 #. module: l10n_pa_reports
 #: field:account.pa.form43.report,file_txt:0
@@ -138,12 +138,12 @@ msgstr "Archivo xls"
 #. module: l10n_pa_reports
 #: field:account.pa.form43.report,filename:0
 msgid "Filename"
-msgstr "Nombre de Archivo"
+msgstr "Nombre de archivo"
 
 #. module: l10n_pa_reports
 #: field:account.pa.form43.report,filename_csv:0
 msgid "Filename csv"
-msgstr "Nombre de Archivo csv"
+msgstr "Nombre de archivo csv"
 
 #. module: l10n_pa_reports
 #: view:account.invoice:l10n_pa_reports.view_account_invoice_supplier_form_inh_form43
@@ -272,7 +272,7 @@ msgstr "Período"
 #. module: l10n_pa_reports
 #: view:account.pa.form43.report:l10n_pa_reports.view_account_pa_form43_report
 msgid "Plain CSV format."
-msgstr "Formato CSV plano"
+msgstr "Formato CSV plano."
 
 #. module: l10n_pa_reports
 #: view:account.pa.form43.report:l10n_pa_reports.view_account_pa_form43_report
@@ -317,7 +317,7 @@ msgstr "Este es el Nombre del Fichero"
 #. module: l10n_pa_reports
 #: view:account.pa.form43.report:l10n_pa_reports.view_account_pa_form43_report
 #: model:ir.actions.act_window,name:l10n_pa_reports.action_account_pa_form43_report
-msgid "form43 Report"
+msgid "Form 43 Report"
 msgstr "Reporte Formulario 43"
 
 #. module: l10n_pa_reports
