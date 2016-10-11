@@ -50,18 +50,6 @@ class AccountForm43Report(models.TransientModel):
         'account.period', 'Period', required=True)
 
     @api.model
-    def default_get(self, fieldnames):
-        """This function load in the wizard, the company used by the user, and
-        the previous period to the current
-        """
-        data = super(AccountForm43Report, self).default_get(fieldnames)
-        # data.update({
-        #     'company_id': self.env['res.company']._company_default_get(
-        #         'account.pa.form43.report').id,
-        # })
-        return data
-
-    @api.model
     def csv2xls(self, csv_content):
         wbk = xlwt.Workbook(encoding='UTF-8')
         xls_path = tempfile.NamedTemporaryFile(suffix='.xls', delete=False)
@@ -108,20 +96,6 @@ class AccountForm43Report(models.TransientModel):
             self.write({'state': 'not_file'})
             return dict_return
 
-        # partner_to_fix = lines_form43.mapped(
-        #     'partner_id')._get_not_partners_form43()
-        # if partner_to_fix:
-        #     return {
-        #         'name': _(
-        #             'Suppliers without information necessary for form43'),
-        #         'view_type': 'form',
-        #         'view_mode': 'tree,form',
-        #         'res_model': 'res.partner',
-        #         'type': 'ir.actions.act_window',
-        #         'domain': [
-        #             ('id', 'in', partner_to_fix.ids),
-        #             '|', ('active', '=', False), ('active', '=', True)],
-        #     }
         data_lines, partner_ids, invoice_ids = lines_form43.get_data()
         if partner_ids:
             return {
