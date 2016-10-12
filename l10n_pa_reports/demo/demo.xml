@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <openerp>
-    <data noupdate="1">
+    <data noupdate="0">
         <record id="res_partner_panama" model="res.partner">
             <field name="name">Panamanian Partner (test)</field>
             <field name="supplier" eval="1"/>
@@ -26,7 +26,7 @@
             <field name="date_invoice" eval="time.strftime('%Y')+'-01-01'"/>
             <field eval="14.0" name="amount_untaxed"/>
             <field eval="14.0" name="amount_total"/>
-            <field name="partner_id" ref="base.res_partner_17"/>
+            <field name="partner_id" ref="l10n_pa_reports.res_partner_panama"/>
         </record>
         <record id="demo_invoice_0_line_rpanrearpanelshe0" model="account.invoice.line">
             <field name="invoice_id" ref="demo_invoice_0"/>

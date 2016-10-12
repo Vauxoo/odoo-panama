@@ -21,9 +21,24 @@ class TestAccountPaForm43Report(TransactionCase):
         self.period_id = self.ref(
             'account.period_%s' % self.date.month)
         self.company_id = self.ref('base.main_company')
+        self.date_str = fields.Datetime.to_string(self.date)
+        self.inv_obj = self.env['account.invoice']
+        self.invoice_id = self.inv_obj.browse(
+            self.ref('l10n_pa_reports.demo_invoice_0'))
+        self.invoice_id.date_invoice = fields.Datetime.to_string(self.date)
 
     def test_001_form43_without_moves(self):
         """Send to generate form43 report without movements"""
+        wizard = self.form43_obj.create({
+            'period_id': self.period_id,
+            'company_id': self.company_id,
+        })
+        wizard.create_form43()
+        self.assertFalse(wizard.file_txt, "File generated without documents.")
+
+    def test_002_move_without_partner(self):
+        """Create manually an move with Form 43 data, but without partner."""
+        self.invoice_id.signal_workflow('invoice_open')
         wizard = self.form43_obj.create({
             'period_id': self.period_id,
             'company_id': self.company_id,
