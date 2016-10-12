@@ -7,6 +7,7 @@
             <field name="customer" eval="1"/>
             <field name="is_company" eval="1"/>
             <field name="country_id" ref="base.pa"/>
+            <field name="vat_country_id" ref="base.pa"/>
             <field name="vat_alone">123456-7-890123</field>
             <field name="vat_dv">40</field>
             <field name="l10n_pa_entity">J</field>
