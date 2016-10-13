@@ -10,7 +10,9 @@ class TestAccountPaForm43Report(TransactionCase):
     def setUp(self):
         super(TestAccountPaForm43Report, self).setUp()
         self.invoice_obj = self.env['account.invoice']
-        self.partner = self.env.ref('l10n_pa_reports.res_partner_panama')
+        self.partner_obj = self.env['res.partner']
+        self.partner_id = self.partner_obj.browse(
+            self.ref('l10n_pa_reports.res_partner_panama'))
         self.form43_obj = self.env['account.pa.form43.report']
         self.date = fields.Datetime.from_string(fields.Datetime.now())
         self.date = self.date.replace(day=1)
@@ -47,3 +49,29 @@ class TestAccountPaForm43Report(TransactionCase):
         filename = "Informe43_fix-ruc-on-company_%s%s.txt" % (
             self.date.year, self.date.month)
         self.assertEqual(wizard.filename, filename)
+
+    def test_003_partners_to_fix(self):
+        """Cannot create txt because of Partners to fix Form 43"""
+        self.partner_id.l10n_pa_entity = False
+        self.invoice_id.signal_workflow('invoice_open')
+        wizard = self.form43_obj.create({
+            'period_id': self.period_id,
+            'company_id': self.company_id,
+        })
+        res = wizard.create_form43()
+        self.assertEqual(
+            res.get('domain'),
+            [('id', 'in', [self.partner_id.id])])
+
+    def test_004_invoices_to_fix(self):
+        """Cannot create txt because of Invoices to fix Form 43"""
+        self.invoice_id.l10n_pa_concept = False
+        self.invoice_id.signal_workflow('invoice_open')
+        wizard = self.form43_obj.create({
+            'period_id': self.period_id,
+            'company_id': self.company_id,
+        })
+        res = wizard.create_form43()
+        self.assertEqual(
+            res.get('domain'),
+            [('id', 'in', [self.invoice_id.id])])
