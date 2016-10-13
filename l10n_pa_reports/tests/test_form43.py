@@ -27,7 +27,7 @@ class TestAccountPaForm43Report(TransactionCase):
             self.ref('l10n_pa_reports.demo_invoice_0'))
         self.invoice_id.date_invoice = fields.Datetime.to_string(self.date)
 
-    def test_001_form43_without_moves(self):
+    def test_001_form43_without_txt(self):
         """Send to generate form43 report without movements"""
         wizard = self.form43_obj.create({
             'period_id': self.period_id,
@@ -36,12 +36,14 @@ class TestAccountPaForm43Report(TransactionCase):
         wizard.create_form43()
         self.assertFalse(wizard.file_txt, "File generated without documents.")
 
-    def test_002_move_without_partner(self):
-        """Create manually an move with Form 43 data, but without partner."""
+    def test_002_create_txt_file(self):
+        """Create a txt file for Form 43"""
         self.invoice_id.signal_workflow('invoice_open')
         wizard = self.form43_obj.create({
             'period_id': self.period_id,
             'company_id': self.company_id,
         })
         wizard.create_form43()
-        self.assertFalse(wizard.file_txt, "File generated without documents.")
+        filename = "Informe43_fix-ruc-on-company_%s%s.txt" %(
+            self.date.year, self.date.month)
+        self.assertEqual(wizard.filename, filename)
