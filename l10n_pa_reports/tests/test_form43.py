@@ -44,6 +44,6 @@ class TestAccountPaForm43Report(TransactionCase):
             'company_id': self.company_id,
         })
         wizard.create_form43()
-        filename = "Informe43_fix-ruc-on-company_%s%s.txt" %(
+        filename = "Informe43_fix-ruc-on-company_%s%s.txt" % (
             self.date.year, self.date.month)
         self.assertEqual(wizard.filename, filename)
