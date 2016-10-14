@@ -22,8 +22,6 @@
     "test": [],
     "installable": True,
     "external_dependencies": {
-        "python": [
-            'xlwt'
-        ]
+        "python": []
     }
 }

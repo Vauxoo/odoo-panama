@@ -19,8 +19,6 @@
                 <div states="get">
                     <h2>form43 report has been successfully created!</h2>
                     <p>Here is the exported form43 Report file:</p>
-                    <p><field name="file_csv" readonly="1" filename="filename_csv"/> Plain CSV format.</p>
-                    <p><field name="file_xls" readonly="1" filename="filename_xls"/> Excel format.</p>
                     <p><field name="file_txt" readonly="1" filename="filename"/> TXT format.</p>
                 </div>
                 <div states="not_file">
