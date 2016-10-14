@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_account_pa_form43_report" model="ir.ui.view">
+            <field name="name">view.account.pa.form43.report</field>
+            <field name="model">account.pa.form43.report</field>
+            <field name="arch" type="xml">
+            <form string="Form 43 Report" version="7.0">
+                <field invisible="1" name="state"/>
+                <field name="name" invisible="1"/>
+                <group states="choose" colspan="4">
+                    <separator string="Period" colspan="4"/>
+                    <group colspan="4">
+                        <field name="company_id" groups="base.group_multi_company"/>
+                        <field name="period_id" domain="[('special','=',False)]"/>
+                    </group>
+                </group>
+                <div states="get">
+                    <h2>form43 report has been successfully created!</h2>
+                    <p>Here is the exported form43 Report file:</p>
+                    <p><field name="file_txt" readonly="1" filename="filename"/> TXT format.</p>
+                </div>
+                <div states="not_file">
+                    <h2>Form 43 Report has not been created!</h2>
+                    <p>Probably by:</p>
+                    <p>- There are no Invoices Posted in Selected Period.</p>
+                    <p>- You Have selected a Wrong Period.</p>
+                </div>
+                <footer states="choose">
+                    <button icon='gtk-cancel' special="cancel"  string="Cancel" />
+                    <button name="create_form43" string="Create" colspan="1" type="object" icon="gtk-ok"/>
+                </footer>
+                <footer attrs="{'invisible':[('state','not in', ('get', 'not_file'))]}">
+                    <button special="cancel" string="Close" type="object"/>
+                </footer>
+            </form>
+            </field>
+        </record>
+
+        <record id="action_account_pa_form43_report" model="ir.actions.act_window">
+            <field name="name">form43 Report</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.pa.form43.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="help"></field>
+        </record>
+
+        <menuitem name="(PA) Form 43"
+                    parent="account.menu_finance_reporting"
+                    action="action_account_pa_form43_report"
+                    id="menu_account_form43_declaration"
+            />
+
+    </data>
+</openerp>
