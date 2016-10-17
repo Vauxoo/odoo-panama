@@ -11,6 +11,8 @@
                     <page name='fiscal_information' string="Fiscal Information">
                         <group>
                             <field name="l10n_pa_entity" colspan="2"/>
+                            <field name="l10n_pa_concept"/>
+                            <field name="l10n_pa_prd_srv"/>
                         </group>
                     </page>
                 </xpath>

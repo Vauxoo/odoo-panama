@@ -65,7 +65,7 @@ class TestAccountPaForm43Report(TransactionCase):
 
     def test_004_invoices_to_fix(self):
         """Cannot create txt because of Invoices to fix Form 43"""
-        self.invoice_id.l10n_pa_concept = False
+        self.invoice_id.supplier_invoice_number = ''
         self.invoice_id.signal_workflow('invoice_open')
         wizard = self.form43_obj.create({
             'period_id': self.period_id,
@@ -79,6 +79,8 @@ class TestAccountPaForm43Report(TransactionCase):
     def test_005_foreign_partner(self):
         """create txt for Foreign Partner in Form 43"""
         self.partner_id.l10n_pa_entity = 'E'
+        self.partner_id.l10n_pa_concept = 6
+        self.partner_id.l10n_pa_prd_srv = 2
         self.invoice_id.signal_workflow('invoice_open')
         wizard = self.form43_obj.create({
             'period_id': self.period_id,
@@ -86,3 +88,14 @@ class TestAccountPaForm43Report(TransactionCase):
         })
         wizard.create_form43()
         self.assertEqual(wizard.filename, self.filename)
+
+    def test_006_foreign_partner(self):
+        """create txt for Foreign Partner in Form 43"""
+        self.partner_id.l10n_pa_entity = 'E'
+        self.invoice_id.signal_workflow('invoice_open')
+        wizard = self.form43_obj.create({
+            'period_id': self.period_id,
+            'company_id': self.company_id,
+        })
+        wizard.create_form43()
+        self.assertFalse(wizard.file_txt, "File generated without documents.")
