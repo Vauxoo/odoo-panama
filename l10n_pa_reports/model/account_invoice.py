@@ -2,27 +2,11 @@
 # Copyright 2016 Vauxoo (https://www.vauxoo.com) <info@vauxoo.com>
 from __future__ import division
 import time
-from openerp import models, api, fields
+from openerp import models, api
 
 
 class AccountInvoice(models.Model):
     _inherit = 'account.invoice'
-
-    l10n_pa_concept = fields.Selection([
-        (1, 'Compras o Adquisiciones de Bienes Muebles'),
-        (2, 'Servicios Básicos'),
-        (3, 'Honorarios y Comisiones por Servicios'),
-        (4, 'Alquileres por Arrendamientos Comerciales'),
-        (5, 'Cargos Bancarios, Intereses y Otros Gastos Financieros'),
-        (6, 'Compras o Servicios del Exterior'),
-        (7, 'Compras o Servicios Consolidados')],
-        string='Supplier Invoice Concept',
-        help='Indicates the Concept of the Supplier Invoice.')
-    l10n_pa_prd_srv = fields.Selection([
-        (1, 'Locales'),
-        (2, 'Importaciones')],
-        string='Purchase of Goods or Services',
-        help='Indicates Source of Purchase of Goods or Services.')
 
     @api.multi
     def get_data(self):
@@ -35,18 +19,22 @@ class AccountInvoice(models.Model):
             entity = partner_brw.l10n_pa_entity
             dv = partner_brw.vat_dv
             args_part = [entity]
+            concept = partner_brw.l10n_pa_concept
+            prd_srv = partner_brw.l10n_pa_prd_srv
             if entity != 'E':
                 args_part = [vat, dv, entity]
             else:
                 dv = ''
                 vat = ''
+                if (concept != 6 or prd_srv != 2) and \
+                        partner_brw.id not in partner_ids:
+                    partner_ids.append(partner_brw.id)
+
             if not all(args_part) and partner_brw.id not in partner_ids:
                 partner_ids.append(partner_brw.id)
 
             inv_number = line.supplier_invoice_number
-            concept = line.l10n_pa_concept
-            prd_srv = line.l10n_pa_prd_srv
-            args_inv = [inv_number, concept, prd_srv]
+            args_inv = [inv_number]
             if not all(args_inv) and line.id not in invoice_ids:
                 invoice_ids.append(line.id)
 
