@@ -8,8 +8,7 @@
     "website": "http://www.vauxoo.com/",
     "license": "AGPL-3",
     "depends": [
-            "account",
-            "vat_partitioned",
+            "l10n_pa_withholding",
     ],
     "demo": [
         'demo/demo.xml',

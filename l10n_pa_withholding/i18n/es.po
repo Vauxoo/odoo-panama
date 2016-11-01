@@ -1,0 +1,645 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* l10n_pa_withholding
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-01 23:37+0000\n"
+"PO-Revision-Date: 2016-11-01 23:53+0000\n"
+"Last-Translator: Humberto Arocha <hbto@vauxoo.com>\n"
+"Language-Team: Spanish <http://example.com/projects/odoo-"
+"panama/l10n_pa_withholding/es/>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.2-dev\n"
+
+#. module: l10n_pa_withholding
+#: view:account.invoice:l10n_pa_withholding.invoice_customer_wh_itbms_form
+msgid "(apply withholding)"
+msgstr "(aplicar retención)"
+
+#. module: l10n_pa_withholding
+#: help:res.company,wh_sale_itbms_account_id:0
+#: help:res.company,wh_sale_itbms_journal_id:0
+msgid "Account to be used for withholding ITBMS on Customer Invoice"
+msgstr "Cuenta que se usará para retener el ITBMS en las Facturas de Cliente"
+
+#. module: l10n_pa_withholding
+#: view:res.company:l10n_pa_withholding.res_company_view_act
+msgid "Accounting Information for ITBMS"
+msgstr "Información Contable para ITBMS"
+
+#. module: l10n_pa_withholding
+#: selection:account.invoice,l10n_pa_concept:0
+#: selection:l10n.pa.common.abstract,l10n_pa_concept:0
+#: selection:res.partner,l10n_pa_concept:0
+#: selection:sale.order,l10n_pa_concept:0
+msgid "Alquileres por Arrendamientos Comerciales"
+msgstr "Alquileres por Arrendamientos Comerciales"
+
+#. module: l10n_pa_withholding
+#: field:account.invoice.tax.wh,amount:0
+msgid "Amount"
+msgstr "Monto"
+
+#. module: l10n_pa_withholding
+#: help:account.invoice.tax.wh,wh_amount:0
+msgid "Amount Withheld from the Tax"
+msgstr "Cantidad Retenida en el Impuesto"
+
+#. module: l10n_pa_withholding
+#: field:account.invoice.tax.wh,account_analytic_id:0
+msgid "Analytic account"
+msgstr "Cuenta analítica"
+
+#. module: l10n_pa_withholding
+#: field:account.invoice.tax.wh,base:0
+msgid "Base"
+msgstr "Base"
+
+#. module: l10n_pa_withholding
+#: field:account.invoice.tax.wh,base_code_id:0
+msgid "Base Code"
+msgstr "Código Base"
+
+#. module: l10n_pa_withholding
+#: field:account.invoice.tax.wh,base_amount:0
+msgid "Base Code Amount"
+msgstr "Monto Código Base"
+
+#. module: l10n_pa_withholding
+#: model:account.tax.code,name:l10n_pa_withholding.sale_base_code_exempt
+msgid "Base de Exenta - Ventas (test)"
+msgstr "Base de Exenta - Ventas (test)"
+
+#. module: l10n_pa_withholding
+#: model:account.tax.code,name:l10n_pa_withholding.sale_base_code
+msgid "Base de Impuestos - Ventas (test)"
+msgstr "Base de Impuestos - Ventas (test)"
+
+#. module: l10n_pa_withholding
+#: model:account.tax.code,name:l10n_pa_withholding.sale_neg_base_code
+msgid "Base de Impuestos - Ventas Negativo (test)"
+msgstr "Base de Impuestos - Ventas Negativo (test)"
+
+#. module: l10n_pa_withholding
+#: selection:account.invoice,l10n_pa_concept:0
+#: selection:l10n.pa.common.abstract,l10n_pa_concept:0
+#: selection:res.partner,l10n_pa_concept:0
+#: selection:sale.order,l10n_pa_concept:0
+msgid "Cargos Bancarios, Intereses y Otros Gastos Financieros"
+msgstr "Cargos Bancarios, Intereses y Otros Gastos Financieros"
+
+#. module: l10n_pa_withholding
+#: model:ir.model,name:l10n_pa_withholding.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: l10n_pa_withholding
+#: field:account.invoice.tax.wh,company_id:0
+msgid "Company"
+msgstr "Compañía"
+
+#. module: l10n_pa_withholding
+#: selection:account.invoice,l10n_pa_concept:0
+#: selection:l10n.pa.common.abstract,l10n_pa_concept:0
+#: selection:res.partner,l10n_pa_concept:0
+#: selection:sale.order,l10n_pa_concept:0
+msgid "Compras o Adquisiciones de Bienes Muebles"
+msgstr "Compras o Adquisiciones de Bienes Muebles"
+
+#. module: l10n_pa_withholding
+#: selection:account.invoice,l10n_pa_concept:0
+#: selection:l10n.pa.common.abstract,l10n_pa_concept:0
+#: selection:res.partner,l10n_pa_concept:0
+#: selection:sale.order,l10n_pa_concept:0
+msgid "Compras o Servicios Consolidados"
+msgstr "Compras o Servicios Consolidados"
+
+#. module: l10n_pa_withholding
+#: selection:account.invoice,l10n_pa_concept:0
+#: selection:l10n.pa.common.abstract,l10n_pa_concept:0
+#: selection:res.partner,l10n_pa_concept:0
+#: selection:sale.order,l10n_pa_concept:0
+msgid "Compras o Servicios del Exterior"
+msgstr "Compras o Servicios del Exterior"
+
+#. module: l10n_pa_withholding
+#: field:account.invoice.tax.wh,create_uid:0
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: l10n_pa_withholding
+#: field:account.invoice.tax.wh,create_date:0
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: l10n_pa_withholding
+#: field:account.invoice.tax.wh,display_name:0
+#: field:l10n.pa.common.abstract,display_name:0
+msgid "Display Name"
+msgstr "Nombre a Mostrar"
+
+#. module: l10n_pa_withholding
+#: field:account.invoice,l10n_pa_entity:0
+#: field:l10n.pa.common.abstract,l10n_pa_entity:0
+#: field:res.partner,l10n_pa_entity:0
+#: field:sale.order,l10n_pa_entity:0
+msgid "Entity Type"
+msgstr "Tipo de Persona"
+
+#. module: l10n_pa_withholding
+#: code:addons/l10n_pa_withholding/model/account_invoice.py:86
+#: code:addons/l10n_pa_withholding/model/account_invoice.py:94
+#: code:addons/l10n_pa_withholding/model/account_invoice.py:256
+#, python-format
+msgid "Error!"
+msgstr "¡Error!"
+
+#. module: l10n_pa_withholding
+#: selection:account.invoice,l10n_pa_entity:0
+#: selection:l10n.pa.common.abstract,l10n_pa_entity:0
+#: selection:res.partner,l10n_pa_entity:0
+#: selection:sale.order,l10n_pa_entity:0
+msgid "Extranjero"
+msgstr "Extranjero"
+
+#. module: l10n_pa_withholding
+#: view:account.invoice:l10n_pa_withholding.invoice_customer_wh_itbms_form
+#: view:sale.order:l10n_pa_withholding.sale_order_wh_itbms_form
+msgid "Fiscal Info"
+msgstr "Información Fiscal"
+
+#. module: l10n_pa_withholding
+#: view:res.partner:l10n_pa_withholding.res_partner_wh_itbms_form
+msgid "Fiscal Information"
+msgstr "Información Fiscal"
+
+#. module: l10n_pa_withholding
+#: view:res.partner:l10n_pa_withholding.res_partner_wh_itbms_form
+msgid "Fiscal-related settings are managed on"
+msgstr "Las configuraciones fiscales se administran en"
+
+#. module: l10n_pa_withholding
+#: help:account.invoice.tax.wh,sequence:0
+msgid "Gives the sequence order when displaying a list of invoice tax."
+msgstr ""
+"Proporciona el orden secuencial cuando se muestra una lista de los impuestos "
+"de la factura."
+
+#. module: l10n_pa_withholding
+#: selection:account.invoice,l10n_pa_concept:0
+#: selection:l10n.pa.common.abstract,l10n_pa_concept:0
+#: selection:res.partner,l10n_pa_concept:0
+#: selection:sale.order,l10n_pa_concept:0
+msgid "Honorarios y Comisiones por Servicios"
+msgstr "Honorarios y Comisiones por Servicios"
+
+#. module: l10n_pa_withholding
+#: field:account.invoice.tax.wh,id:0
+#: field:l10n.pa.common.abstract,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: l10n_pa_withholding
+#: model:account.tax,name:l10n_pa_withholding.itbms_sale_neg
+msgid "ITBMS - -7% - Ventas (test)"
+msgstr "ITBMS - -7% - Ventas (test)"
+
+#. module: l10n_pa_withholding
+#: model:account.tax,name:l10n_pa_withholding.itbms_sale_exempt
+msgid "ITBMS - 0% - Ventas (test)"
+msgstr "ITBMS - 0% - Ventas (test)"
+
+#. module: l10n_pa_withholding
+#: model:account.tax,name:l10n_pa_withholding.itbms_sale1
+msgid "ITBMS - 7% - Ventas (test)"
+msgstr "ITBMS - 7% - Ventas (test)"
+
+#. module: l10n_pa_withholding
+#: code:addons/l10n_pa_withholding/model/account_invoice.py:119
+#, python-format
+msgid "ITBMS Withheld on Invoice"
+msgstr "ITBMOS Retenido en Factura"
+
+#. module: l10n_pa_withholding
+#: field:account.invoice,wh_agent_itbms:0
+#: field:l10n.pa.common.abstract,wh_agent_itbms:0
+#: field:res.partner,wh_agent_itbms:0
+#: field:sale.order,wh_agent_itbms:0
+msgid "ITBMS Withholding Agent"
+msgstr "Agente de Retención del ITBMS"
+
+#. module: l10n_pa_withholding
+#: model:ir.actions.server,name:l10n_pa_withholding.wh_iva_srv_act
+msgid "ITBMS Withholding Server Action"
+msgstr "Acción de Servidor la Retención de ITBMS"
+
+#. module: l10n_pa_withholding
+#: field:account.invoice,l10n_pa_wh_subject:0
+#: field:l10n.pa.common.abstract,l10n_pa_wh_subject:0
+#: field:res.partner,l10n_pa_wh_subject:0
+#: field:sale.order,l10n_pa_wh_subject:0
+msgid "ITBMS Withholding Subject"
+msgstr "Objeto de Retención del ITBMS"
+
+#. module: l10n_pa_withholding
+#: help:account.invoice,l10n_pa_wh_subject:0
+#: help:l10n.pa.common.abstract,l10n_pa_wh_subject:0
+#: help:res.partner,l10n_pa_wh_subject:0
+#: help:sale.order,l10n_pa_wh_subject:0
+msgid "If Apply. Indicates how much ITBMS to withholding on Payment"
+msgstr "Si Aplica. Indica cuanto ITBS retener en el Pago"
+
+#. module: l10n_pa_withholding
+#: selection:account.invoice,l10n_pa_prd_srv:0
+#: selection:l10n.pa.common.abstract,l10n_pa_prd_srv:0
+#: selection:res.partner,l10n_pa_prd_srv:0
+#: selection:sale.order,l10n_pa_prd_srv:0
+msgid "Importaciones"
+msgstr "Importaciones"
+
+#. module: l10n_pa_withholding
+#: model:account.tax.code,name:l10n_pa_withholding.sale_tax_code
+msgid "Impuesto - Ventas (test)"
+msgstr "Impuesto - Ventas (test)"
+
+#. module: l10n_pa_withholding
+#: model:account.tax.code,name:l10n_pa_withholding.sale_neg_tax_code
+msgid "Impuesto - Ventas Negativo (test)"
+msgstr "Impuesto - Ventas Negativo (test)"
+
+#. module: l10n_pa_withholding
+#: model:account.tax.code,name:l10n_pa_withholding.sale_tax_code_exempt
+msgid "Impuesto Exento - Ventas (test)"
+msgstr "Impuesto Exento - Ventas (test)"
+
+#. module: l10n_pa_withholding
+#: help:account.invoice,wh_agent_itbms:0
+#: help:l10n.pa.common.abstract,wh_agent_itbms:0
+#: help:res.partner,wh_agent_itbms:0
+#: help:sale.order,wh_agent_itbms:0
+msgid "Indicate if the Partner is a ITBMS Withholding Agent"
+msgstr "Indica si la Empresa es un Agente de Retención del ITBMS"
+
+#. module: l10n_pa_withholding
+#: help:account.invoice,l10n_pa_prd_srv:0
+#: help:l10n.pa.common.abstract,l10n_pa_prd_srv:0
+#: help:res.partner,l10n_pa_prd_srv:0
+#: help:sale.order,l10n_pa_prd_srv:0
+msgid "Indicates Source of Purchase of Goods or Services."
+msgstr "Indica el Origen de la Compra de los Bienes o Servicios."
+
+#. module: l10n_pa_withholding
+#: help:account.tax,withholdable:0
+msgid "Indicates if the tax must be withheld"
+msgstr "Indica si el impuesto debe ser retenido"
+
+#. module: l10n_pa_withholding
+#: help:account.invoice,l10n_pa_concept:0
+#: help:l10n.pa.common.abstract,l10n_pa_concept:0
+#: help:res.partner,l10n_pa_concept:0
+#: help:sale.order,l10n_pa_concept:0
+msgid "Indicates the Concept of the Supplier Invoice."
+msgstr "Indica el Concepto de la Factura del Proveedor."
+
+#. module: l10n_pa_withholding
+#: help:account.invoice,l10n_pa_entity:0
+#: help:l10n.pa.common.abstract,l10n_pa_entity:0
+#: help:res.partner,l10n_pa_entity:0
+#: help:sale.order,l10n_pa_entity:0
+msgid "Indicates the nature of the Supplier Entity."
+msgstr "Indica la naturaleza  de la Entidad Proveedora."
+
+#. module: l10n_pa_withholding
+#: model:ir.model,name:l10n_pa_withholding.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: l10n_pa_withholding
+#: field:account.invoice.tax.wh,invoice_id:0
+msgid "Invoice Line"
+msgstr "Línea de Factura"
+
+#. module: l10n_pa_withholding
+#: model:ir.model,name:l10n_pa_withholding.model_account_invoice_refund
+msgid "Invoice Refund"
+msgstr "Nota de Crédito"
+
+#. module: l10n_pa_withholding
+#: model:ir.model,name:l10n_pa_withholding.model_account_invoice_tax_wh
+msgid "Invoice Tax"
+msgstr "Impuesto en Factura"
+
+#. module: l10n_pa_withholding
+#: selection:account.invoice,l10n_pa_entity:0
+#: selection:l10n.pa.common.abstract,l10n_pa_entity:0
+#: selection:res.partner,l10n_pa_entity:0
+#: selection:sale.order,l10n_pa_entity:0
+msgid "Juridico"
+msgstr "Jurídico"
+
+#. module: l10n_pa_withholding
+#: field:account.invoice.tax.wh,__last_update:0
+#: field:l10n.pa.common.abstract,__last_update:0
+msgid "Last Modified on"
+msgstr "Última Modificación el"
+
+#. module: l10n_pa_withholding
+#: field:account.invoice.tax.wh,write_uid:0
+msgid "Last Updated by"
+msgstr "Última Vez actualizado por"
+
+#. module: l10n_pa_withholding
+#: field:account.invoice.tax.wh,write_date:0
+msgid "Last Updated on"
+msgstr "Última Vez actualizado el"
+
+#. module: l10n_pa_withholding
+#: help:account.invoice,wh_move_id:0
+msgid "Link to the automatically generated Withholding Journal Entry."
+msgstr "Vincula al Asiento Contable de Retencion generado automáticamente."
+
+#. module: l10n_pa_withholding
+#: selection:account.invoice,l10n_pa_prd_srv:0
+#: selection:l10n.pa.common.abstract,l10n_pa_prd_srv:0
+#: selection:res.partner,l10n_pa_prd_srv:0
+#: selection:sale.order,l10n_pa_prd_srv:0
+msgid "Locales"
+msgstr "Locales"
+
+#. module: l10n_pa_withholding
+#: field:account.invoice.tax.wh,manual:0
+msgid "Manual"
+msgstr "Manual"
+
+#. module: l10n_pa_withholding
+#: model:ir.actions.server,name:l10n_pa_withholding.multiact_wh_srv_act
+msgid "Multi-Actions Withholding Server Action"
+msgstr "Acción de Servidor Retención Multi-Acciones"
+
+#. module: l10n_pa_withholding
+#: field:account.invoice.tax.wh,factor_tax:0
+msgid "Multipication factor Tax code"
+msgstr "Factor de multiplicacion de código de Impuesto"
+
+#. module: l10n_pa_withholding
+#: field:account.invoice.tax.wh,factor_base:0
+msgid "Multipication factor for Base code"
+msgstr "Factor de multiplicacion de código de base"
+
+#. module: l10n_pa_withholding
+#: selection:account.invoice,l10n_pa_entity:0
+#: selection:l10n.pa.common.abstract,l10n_pa_entity:0
+#: selection:res.partner,l10n_pa_entity:0
+#: selection:sale.order,l10n_pa_entity:0
+msgid "Natural"
+msgstr "Natural"
+
+#. module: l10n_pa_withholding
+#: selection:account.invoice,l10n_pa_wh_subject:0
+#: selection:l10n.pa.common.abstract,l10n_pa_wh_subject:0
+#: selection:res.partner,l10n_pa_wh_subject:0
+#: selection:sale.order,l10n_pa_wh_subject:0
+msgid "No Aplica"
+msgstr "No Aplica"
+
+#. module: l10n_pa_withholding
+#: selection:account.invoice,l10n_pa_wh_subject:0
+#: selection:l10n.pa.common.abstract,l10n_pa_wh_subject:0
+#: selection:res.partner,l10n_pa_wh_subject:0
+#: selection:sale.order,l10n_pa_wh_subject:0
+msgid "Pago a Comercio Afiliado a Sistema de TC/TD 1%"
+msgstr "Pago a Comercio Afiliado a Sistema de TC/TD 1%"
+
+#. module: l10n_pa_withholding
+#: selection:account.invoice,l10n_pa_wh_subject:0
+#: selection:l10n.pa.common.abstract,l10n_pa_wh_subject:0
+#: selection:res.partner,l10n_pa_wh_subject:0
+#: selection:sale.order,l10n_pa_wh_subject:0
+msgid "Pago a Comercio Afiliado a Sistema de TC/TD 2%"
+msgstr "Pago a Comercio Afiliado a Sistema de TC/TD 2%"
+
+#. module: l10n_pa_withholding
+#: selection:account.invoice,l10n_pa_wh_subject:0
+#: selection:l10n.pa.common.abstract,l10n_pa_wh_subject:0
+#: selection:res.partner,l10n_pa_wh_subject:0
+#: selection:sale.order,l10n_pa_wh_subject:0
+msgid "Pago a Comercio Afiliado a Sistema de TC/TD 50%"
+msgstr "Pago a Comercio Afiliado a Sistema de TC/TD 50%"
+
+#. module: l10n_pa_withholding
+#: selection:account.invoice,l10n_pa_wh_subject:0
+#: selection:l10n.pa.common.abstract,l10n_pa_wh_subject:0
+#: selection:res.partner,l10n_pa_wh_subject:0
+#: selection:sale.order,l10n_pa_wh_subject:0
+msgid "Pago o Acreditacion a No Domiciliado o Empresa Constituida en el Exterior 100%"
+msgstr ""
+"Pago o Acreditacion a No Domiciliado o Empresa Constituida en el Exterior "
+"100%"
+
+#. module: l10n_pa_withholding
+#: selection:account.invoice,l10n_pa_wh_subject:0
+#: selection:l10n.pa.common.abstract,l10n_pa_wh_subject:0
+#: selection:res.partner,l10n_pa_wh_subject:0
+#: selection:sale.order,l10n_pa_wh_subject:0
+msgid "Pago o Acreditacion por Compra de Bienes/Servicios 50%"
+msgstr "Pago o Acreditacion por Compra de Bienes/Servicios 50%"
+
+#. module: l10n_pa_withholding
+#: selection:account.invoice,l10n_pa_wh_subject:0
+#: selection:l10n.pa.common.abstract,l10n_pa_wh_subject:0
+#: selection:res.partner,l10n_pa_wh_subject:0
+#: selection:sale.order,l10n_pa_wh_subject:0
+msgid "Pago por Servicio Profesional al Estado 100%"
+msgstr "Pago por Servicio Profesional al Estado 100%"
+
+#. module: l10n_pa_withholding
+#: selection:account.invoice,l10n_pa_wh_subject:0
+#: selection:l10n.pa.common.abstract,l10n_pa_wh_subject:0
+#: selection:res.partner,l10n_pa_wh_subject:0
+#: selection:sale.order,l10n_pa_wh_subject:0
+msgid "Pago por Venta de Bienes/Servicios al Estado 50%"
+msgstr "Pago por Venta de Bienes/Servicios al Estado 50%"
+
+#. module: l10n_pa_withholding
+#: model:ir.model,name:l10n_pa_withholding.model_res_partner
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: l10n_pa_withholding
+#: model:ir.model,name:l10n_pa_withholding.model_stock_picking
+msgid "Picking List"
+msgstr "Lista de Albarán"
+
+#. module: l10n_pa_withholding
+#: code:addons/l10n_pa_withholding/model/account_invoice.py:95
+#, python-format
+msgid "Please Define a Journal to be used for withholding ITBMS on Customer Invoice on Your Company."
+msgstr ""
+"Por favor Defina un Diario que se usará para retener ITBMS en la Factura de "
+"Cliente en Su Compañía."
+
+#. module: l10n_pa_withholding
+#: code:addons/l10n_pa_withholding/model/account_invoice.py:257
+#, python-format
+msgid "Please Define an Account to be used for withholding ITBMS on Customer Invoice on Your Company."
+msgstr ""
+"Por favor Defina una Cuenta que se usará para retener ITBMS en la Factura de "
+"Cliente en Su Compañía."
+
+#. module: l10n_pa_withholding
+#: code:addons/l10n_pa_withholding/model/account_invoice.py:87
+#, python-format
+msgid "Please define a Withholding Subject to this invoice."
+msgstr "Por favor defina un Objeto de Retención en esta factura."
+
+#. module: l10n_pa_withholding
+#: field:account.invoice,l10n_pa_prd_srv:0
+#: field:l10n.pa.common.abstract,l10n_pa_prd_srv:0
+#: field:res.partner,l10n_pa_prd_srv:0
+#: field:sale.order,l10n_pa_prd_srv:0
+msgid "Purchase of Goods or Services"
+msgstr "Compra de Bienes o Servicios"
+
+#. module: l10n_pa_withholding
+#: view:account.invoice:l10n_pa_withholding.invoice_customer_wh_itbms_form
+msgid "Reconciles Withholding with Invoice"
+msgstr "Reconcilia la Retención con la Factura"
+
+#. module: l10n_pa_withholding
+#: model:ir.model,name:l10n_pa_withholding.model_sale_order
+msgid "Sales Order"
+msgstr "Orden de Venta"
+
+#. module: l10n_pa_withholding
+#: field:account.invoice.tax.wh,sequence:0
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: l10n_pa_withholding
+#: selection:account.invoice,l10n_pa_concept:0
+#: selection:l10n.pa.common.abstract,l10n_pa_concept:0
+#: selection:res.partner,l10n_pa_concept:0
+#: selection:sale.order,l10n_pa_concept:0
+msgid "Servicios Básicos"
+msgstr "Servicios Básicos"
+
+#. module: l10n_pa_withholding
+#: field:account.invoice,l10n_pa_concept:0
+#: field:l10n.pa.common.abstract,l10n_pa_concept:0
+#: field:res.partner,l10n_pa_concept:0
+#: field:sale.order,l10n_pa_concept:0
+msgid "Supplier Invoice Concept"
+msgstr "Concepto de Factura de Proveedor"
+
+#. module: l10n_pa_withholding
+#: model:product.template,name:l10n_pa_withholding.product01_product_template
+msgid "Targus Laptop 16\" Bag"
+msgstr "Targus Laptop 16\" Bag"
+
+#. module: l10n_pa_withholding
+#: model:ir.model,name:l10n_pa_withholding.model_account_tax
+msgid "Tax"
+msgstr "Impuesto"
+
+#. module: l10n_pa_withholding
+#: field:account.invoice.tax.wh,account_id:0
+msgid "Tax Account"
+msgstr "Cuenta de Impuesto"
+
+#. module: l10n_pa_withholding
+#: field:account.invoice.tax.wh,tax_code_id:0
+msgid "Tax Code"
+msgstr "Código de Impuesto"
+
+#. module: l10n_pa_withholding
+#: field:account.invoice.tax.wh,tax_amount:0
+msgid "Tax Code Amount"
+msgstr "Monto de Código de Impuesto"
+
+#. module: l10n_pa_withholding
+#: field:account.invoice.tax.wh,name:0
+msgid "Tax Description"
+msgstr "Descripción de Impuesto"
+
+#. module: l10n_pa_withholding
+#: help:account.invoice.tax.wh,tax_id:0
+msgid "Tax related to withholding"
+msgstr "Impuesto relacionado a la retención"
+
+#. module: l10n_pa_withholding
+#: help:account.invoice.tax.wh,base_code_id:0
+msgid "The account basis of the tax declaration."
+msgstr "La cuenta base de la declaración de impuesto."
+
+#. module: l10n_pa_withholding
+#: help:account.invoice.tax.wh,tax_code_id:0
+msgid "The tax basis of the tax declaration."
+msgstr "El impuesto base de la declaración de impuesto."
+
+#. module: l10n_pa_withholding
+#: field:res.company,wh_sale_itbms_account_id:0
+msgid "Wh Sale ITBMS Account"
+msgstr "Cuenta de Ret de Ventas ITBMS"
+
+#. module: l10n_pa_withholding
+#: field:res.company,wh_sale_itbms_journal_id:0
+msgid "Wh Sale ITBMS Journal"
+msgstr "Diario de Ret de Ventas ITBMS"
+
+#. module: l10n_pa_withholding
+#: field:account.invoice,wh_tax_line:0
+msgid "Wh Tax Lines"
+msgstr "Líneas de Impuesto Ret"
+
+#. module: l10n_pa_withholding
+#: field:account.invoice.tax.wh,wh_amount:0
+msgid "Withheld Amount"
+msgstr "Monto Retenido"
+
+#. module: l10n_pa_withholding
+#: field:account.invoice.tax.wh,tax_id:0
+msgid "Withheld Tax"
+msgstr "Impuesto Retenido"
+
+#. module: l10n_pa_withholding
+#: view:account.invoice:l10n_pa_withholding.invoice_customer_wh_itbms_form
+msgid "Withheld Tax Account"
+msgstr "Cuenta de Impuesto Retenido"
+
+#. module: l10n_pa_withholding
+#: help:account.invoice,wh_tax_line:0
+msgid "Withheld Tax Lines"
+msgstr "Líneas de Impuesto Retenido"
+
+#. module: l10n_pa_withholding
+#: view:account.invoice:l10n_pa_withholding.invoice_customer_wh_itbms_form
+msgid "Withheld Taxes"
+msgstr "Impuestos Retenidos"
+
+#. module: l10n_pa_withholding
+#: field:account.tax,withholdable:0
+msgid "Withholdable"
+msgstr "Retenible"
+
+#. module: l10n_pa_withholding
+#: field:account.invoice,wh_move_id:0
+msgid "Withholding Journal Entry"
+msgstr "Asiento Contable de Retención"
+
+#. module: l10n_pa_withholding
+#: field:account.invoice,wh_move_name:0
+#: help:account.invoice,wh_move_name:0
+msgid "Withholding Name"
+msgstr "Nombre de la Retención"
+
+#. module: l10n_pa_withholding
+#: view:res.partner:l10n_pa_withholding.res_partner_wh_itbms_form
+msgid "the parent company"
+msgstr "la compañía padre"

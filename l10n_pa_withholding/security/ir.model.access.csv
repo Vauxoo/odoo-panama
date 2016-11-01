@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_account_invoice_tax_wh_uinvoice,account.invoice.tax.wh,model_account_invoice_tax_wh,account.group_account_invoice,1,1,1,1
+access_account_invoice_tax_wh_accountant,account.invoice.tax.wh.accountant,model_account_invoice_tax_wh,account.group_account_user,1,0,0,0
+access_account_invoice_tax_wh_sale_manager,account.invoice.tax.wh.sale manager,model_account_invoice_tax_wh,base.group_sale_salesman,1,0,0,0

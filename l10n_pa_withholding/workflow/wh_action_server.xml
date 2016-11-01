@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<openerp>
+    <data>
+        <!-- Server Actions  -->
+        <record id="wh_iva_srv_act" model="ir.actions.server">
+            <field name="sequence" eval="3"/>
+            <field name="model_id" ref="model_account_invoice"/>
+            <field name="name">ITBMS Withholding Server Action</field>
+            <field name="state">code</field>
+            <field name="condition">True</field>
+            <field name="type">ir.actions.server</field>
+            <field name="code">object.action_move_create_withholding()</field>
+        </record>
+
+        <!-- Server Actions Multi-Actions  -->
+        <record id="multiact_wh_srv_act" model="ir.actions.server">
+            <field name="model_id" ref="model_account_invoice"/>
+            <field eval="6" name="sequence"/>
+            <field name="child_ids" eval="[(4,ref('wh_iva_srv_act'))]"/>
+            <field name="name">Multi-Actions Withholding Server Action</field>
+            <field name="state">multi</field>
+            <field name="condition">True</field>
+            <field name="type">ir.actions.server</field>
+        </record>
+
+        <record id="account.act_open" model="workflow.activity">
+            <field name="action_id" ref="multiact_wh_srv_act"/>
+        </record>
+    </data>
+</openerp>
