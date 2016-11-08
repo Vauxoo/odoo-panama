@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="sale_order_wh_itbms_form" model="ir.ui.view">
+            <field name="name">sale.order.form.wh.itbms</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@string='Other Information']" position="after">
+                    <page string="Fiscal Info">
+                        <group colspan='2'>
+                            <field name="wh_agent_itbms"/>
+                            <field name="l10n_pa_wh_subject"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

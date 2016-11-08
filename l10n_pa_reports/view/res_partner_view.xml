@@ -1,22 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
-
-        <record  model="ir.ui.view" id="res_partner_form_form43">
-            <field name="name">res.partner.form.form43</field>
-            <field name="model">res.partner</field>
-            <field name="inherit_id" ref="base.view_partner_form"/>
-            <field name="arch" type="xml">
-                <xpath expr="//page[@name='sales_purchases']" position="after">
-                    <page name='fiscal_information' string="Fiscal Information">
-                        <group>
-                            <field name="l10n_pa_entity" colspan="2"/>
-                            <field name="l10n_pa_concept"/>
-                            <field name="l10n_pa_prd_srv"/>
-                        </group>
-                    </page>
-                </xpath>
-            </field>
-        </record>
     </data>
 </openerp>

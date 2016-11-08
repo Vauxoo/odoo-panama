@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<openerp>
+    <data>
+        <record id="res_company_view_act" model="ir.ui.view">
+            <field name="name">res.company.view.currency</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="model">res.company</field>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='account_grp']" position="after">
+                    <group name="account_itbms" string="Accounting Information for ITBMS">
+                        <field name='wh_sale_itbms_account_id'/>
+                        <field name='wh_sale_itbms_journal_id'/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>
