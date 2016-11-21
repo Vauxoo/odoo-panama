@@ -57,5 +57,51 @@
             <field name="partner_id" ref="base.res_partner_17"/>
             <field name="name">Zed+ Antivirus</field>
         </record>
+        <record id="demo_invoice_1" model="account.invoice">
+            <field name="payment_term" ref="account.account_payment_term"/>
+            <field name="journal_id" ref="account.sales_journal"/>
+            <field name="currency_id" ref="base.EUR"/>
+            <field name="user_id" ref="base.user_demo"/>
+            <field name="reference_type">none</field>
+            <field name="supplier_invoice_number">7U68529XN</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="state">draft</field>
+            <field name="type">out_invoice</field>
+            <field name="account_id" ref="account.a_recv"/>
+            <field eval="0" name="reconciled"/>
+            <field name="date_invoice" eval="time.strftime('%Y')+'-01-01'"/>
+            <field eval="14.0" name="amount_untaxed"/>
+            <field eval="14.0" name="amount_total"/>
+            <field name="partner_id" ref="l10n_pa_reports.res_partner_panama"/>
+            <field name="wh_agent_itbms" eval="True"/>
+            <field name="l10n_pa_wh_subject">4</field>
+            <field name="internal_number">9XU3974</field>
+        </record>
+        <record id="demo_invoice_1_line_rpanrearpanelshe0" model="account.invoice.line">
+            <field name="invoice_id" ref="demo_invoice_1"/>
+            <field name="account_id" ref="account.a_expense"/>
+            <field name="uos_id" ref="product.product_uom_unit"/>
+            <field name="price_unit" eval="1000.0" />
+            <field name="price_subtotal" eval="1000.0" />
+            <field name="company_id" ref="base.main_company"/>
+            <field name="invoice_line_tax_id" eval="[(6,0,[ref('l10n_pa_withholding.itbms_sale1')])]"/>
+            <field name="product_id" ref="product.product_product_39"/>
+            <field name="quantity" eval="1.0" />
+            <field name="partner_id" ref="base.res_partner_16"/>
+            <field name="name">Toner Cartridge</field>
+        </record>
+        <record id="demo_invoice_1_line_rckrackcm0" model="account.invoice.line">
+            <field name="invoice_id" ref="demo_invoice_1"/>
+            <field name="account_id" ref="account.a_expense"/>
+            <field name="uos_id" ref="product.product_uom_unit"/>
+            <field name="price_unit" eval="3000.0" />
+            <field name="price_subtotal" eval="3000.0" />
+            <field name="company_id" ref="base.main_company"/>
+            <field name="invoice_line_tax_id" eval="[(6,0,[ref('l10n_pa_withholding.itbms_sale1')])]"/>
+            <field name="product_id" ref="product.product_product_43"/>
+            <field name="quantity" eval="1.0" />
+            <field name="partner_id" ref="base.res_partner_17"/>
+            <field name="name">Zed+ Antivirus</field>
+        </record>
     </data>
 </openerp>

@@ -6,14 +6,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-09 07:12+0000\n"
-"PO-Revision-Date: 2016-10-09 07:12+0000\n"
-"Last-Translator: <>\n"
-"Language-Team: \n"
+"POT-Creation-Date: 2016-11-21 16:09+0000\n"
+"PO-Revision-Date: 2016-11-21 16:53+0000\n"
+"Last-Translator: Humberto Arocha <hbto@vauxoo.com>\n"
+"Language-Team: Spanish <http://example.com/projects/odoo-"
+"panama/l10n_pa_reports/es/>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.2-dev\n"
+
+#. module: l10n_pa_reports
+#: model:ir.ui.menu,name:l10n_pa_reports.menu_account_annex95_declaration
+msgid "(PA) Annex 95"
+msgstr "(PA) Anexo 95"
 
 #. module: l10n_pa_reports
 #: model:ir.ui.menu,name:l10n_pa_reports.menu_account_form43_declaration
@@ -21,9 +29,15 @@ msgid "(PA) Form 43"
 msgstr "(PA) Formulario 43"
 
 #. module: l10n_pa_reports
+#: view:account.pa.annex95.report:l10n_pa_reports.view_account_pa_annex95_report
 #: view:account.pa.form43.report:l10n_pa_reports.view_account_pa_form43_report
 msgid "- There are no Invoices Posted in Selected Period."
 msgstr "- No Facturas Posteadas en el Periodo Seleccionado."
+
+#. module: l10n_pa_reports
+#: view:account.pa.annex95.report:l10n_pa_reports.view_account_pa_annex95_report
+msgid "- You Have Selected a Wrong Period."
+msgstr "- Has Seleccionado un Período Errado."
 
 #. module: l10n_pa_reports
 #: view:account.pa.form43.report:l10n_pa_reports.view_account_pa_form43_report
@@ -31,125 +45,84 @@ msgid "- You Have selected a Wrong Period."
 msgstr "- Has Seleccionado un Período Errado."
 
 #. module: l10n_pa_reports
-#: selection:account.invoice,l10n_pa_concept:0
-msgid "Alquileres por Arrendamientos Comerciales"
-msgstr "Alquileres por Arrendamientos Comerciales"
+#: view:account.pa.annex95.report:l10n_pa_reports.view_account_pa_annex95_report
+msgid "Annex 95 Report"
+msgstr "Report Anexo 95"
 
 #. module: l10n_pa_reports
+#: view:account.pa.annex95.report:l10n_pa_reports.view_account_pa_annex95_report
+msgid "Annex 95 Report has not been created!"
+msgstr "¡El Reporte Anexo 95 no se ha creado!"
+
+#. module: l10n_pa_reports
+#: view:account.pa.annex95.report:l10n_pa_reports.view_account_pa_annex95_report
+msgid "Annex 95 report has been successfully created!"
+msgstr "¡El Report Anexo 95 se ha creado exitosamente!"
+
+#. module: l10n_pa_reports
+#: view:account.pa.annex95.report:l10n_pa_reports.view_account_pa_annex95_report
 #: view:account.pa.form43.report:l10n_pa_reports.view_account_pa_form43_report
 msgid "Cancel"
 msgstr "Cancelar"
 
 #. module: l10n_pa_reports
-#: selection:account.invoice,l10n_pa_concept:0
-msgid "Cargos Bancarios, Intereses y Otros Gastos Financieros"
-msgstr "Cargos Bancarios, Intereses y Otros Gastos Financieros"
-
-#. module: l10n_pa_reports
+#: selection:account.pa.annex95.report,state:0
 #: selection:account.pa.form43.report,state:0
 msgid "Choose"
 msgstr "Elegir"
 
 #. module: l10n_pa_reports
+#: view:account.pa.annex95.report:l10n_pa_reports.view_account_pa_annex95_report
 #: view:account.pa.form43.report:l10n_pa_reports.view_account_pa_form43_report
 msgid "Close"
 msgstr "Cerrar"
 
 #. module: l10n_pa_reports
+#: field:account.pa.annex95.report,company_id:0
 #: field:account.pa.form43.report,company_id:0
 msgid "Company"
 msgstr "Compañía"
 
 #. module: l10n_pa_reports
-#: selection:account.invoice,l10n_pa_concept:0
-msgid "Compras o Adquisiciones de Bienes Muebles"
-msgstr "Compras o Adquisiciones de Bienes Muebles"
-
-#. module: l10n_pa_reports
-#: selection:account.invoice,l10n_pa_concept:0
-msgid "Compras o Servicios Consolidados"
-msgstr "Compras o Servicios Consolidados"
-
-#. module: l10n_pa_reports
-#: selection:account.invoice,l10n_pa_concept:0
-msgid "Compras o Servicios del Exterior"
-msgstr "Compras o Servicios del Exterior"
-
-#. module: l10n_pa_reports
+#: view:account.pa.annex95.report:l10n_pa_reports.view_account_pa_annex95_report
 #: view:account.pa.form43.report:l10n_pa_reports.view_account_pa_form43_report
 msgid "Create"
 msgstr "Crear"
 
 #. module: l10n_pa_reports
+#: field:account.pa.annex95.report,create_uid:0
 #: field:account.pa.form43.report,create_uid:0
 msgid "Created by"
 msgstr "Creado por"
 
 #. module: l10n_pa_reports
+#: field:account.pa.annex95.report,create_date:0
 #: field:account.pa.form43.report,create_date:0
 msgid "Created on"
 msgstr "Creado el"
 
 #. module: l10n_pa_reports
+#: field:account.pa.annex95.report,display_name:0
 #: field:account.pa.form43.report,display_name:0
 msgid "Display Name"
 msgstr "Nombre a Mostrar"
 
 #. module: l10n_pa_reports
-#: help:account.pa.form43.report,file_csv:0
-msgid "Download information on CSV"
-msgstr "Descargar información en CSV"
-
-#. module: l10n_pa_reports
-#: field:res.partner,l10n_pa_entity:0
-msgid "Entity Type"
-msgstr "Tipo de Persona"
-
-#. module: l10n_pa_reports
-#: view:account.pa.form43.report:l10n_pa_reports.view_account_pa_form43_report
-msgid "Excel format."
-msgstr "Formato hoja de cálculo."
-
-#. module: l10n_pa_reports
-#: selection:res.partner,l10n_pa_entity:0
-msgid "Extranjero"
-msgstr "Extranjero"
-
-#. module: l10n_pa_reports
-#: field:account.pa.form43.report,file_csv:0
-msgid "File csv"
-msgstr "Archivo csv"
-
-#. module: l10n_pa_reports
-#: field:account.pa.form43.report,filename_xls:0
-msgid "File name"
-msgstr "Nombre del archivo"
-
-#. module: l10n_pa_reports
+#: field:account.pa.annex95.report,file_txt:0
 #: field:account.pa.form43.report,file_txt:0
 msgid "File txt"
 msgstr "Archivo txt"
 
 #. module: l10n_pa_reports
-#: field:account.pa.form43.report,file_xls:0
-msgid "File xls"
-msgstr "Archivo xls"
-
-#. module: l10n_pa_reports
+#: field:account.pa.annex95.report,filename:0
 #: field:account.pa.form43.report,filename:0
 msgid "Filename"
 msgstr "Nombre de archivo"
 
 #. module: l10n_pa_reports
-#: field:account.pa.form43.report,filename_csv:0
-msgid "Filename csv"
-msgstr "Nombre de archivo csv"
-
-#. module: l10n_pa_reports
-#: view:account.invoice:l10n_pa_reports.view_account_invoice_supplier_form_inh_form43
-#: view:res.partner:l10n_pa_reports.res_partner_form_form43
-msgid "Fiscal Information"
-msgstr "Información Fiscal"
+#: view:account.pa.form43.report:l10n_pa_reports.view_account_pa_form43_report
+msgid "Form 43 Report"
+msgstr "Reporte Formulario 43"
 
 #. module: l10n_pa_reports
 #: view:account.pa.form43.report:l10n_pa_reports.view_account_pa_form43_report
@@ -157,9 +130,15 @@ msgid "Form 43 Report has not been created!"
 msgstr "¡El Reporte Formulario 43 no se ha creado!"
 
 #. module: l10n_pa_reports
+#: selection:account.pa.annex95.report,state:0
 #: selection:account.pa.form43.report,state:0
 msgid "Get"
 msgstr "Obtener"
+
+#. module: l10n_pa_reports
+#: view:account.pa.annex95.report:l10n_pa_reports.view_account_pa_annex95_report
+msgid "Here is the exported Annex 95 Report file:"
+msgstr "Aquí está el archivo del Reporte Anexo 95 exportado:"
 
 #. module: l10n_pa_reports
 #: view:account.pa.form43.report:l10n_pa_reports.view_account_pa_form43_report
@@ -167,34 +146,10 @@ msgid "Here is the exported form43 Report file:"
 msgstr "Aquí esta el archivo exportado del Reporte Formulario 43:"
 
 #. module: l10n_pa_reports
-#: selection:account.invoice,l10n_pa_concept:0
-msgid "Honorarios y Comisiones por Servicios"
-msgstr "Honorarios y Comisiones por Servicios"
-
-#. module: l10n_pa_reports
+#: field:account.pa.annex95.report,id:0
 #: field:account.pa.form43.report,id:0
 msgid "ID"
 msgstr "ID"
-
-#. module: l10n_pa_reports
-#: selection:account.invoice,l10n_pa_prd_srv:0
-msgid "Importaciones"
-msgstr "Importaciones"
-
-#. module: l10n_pa_reports
-#: help:account.invoice,l10n_pa_prd_srv:0
-msgid "Indicates Source of Purchase of Goods or Services."
-msgstr "Indica la Origen de la Compra de Bienes o Servicios."
-
-#. module: l10n_pa_reports
-#: help:account.invoice,l10n_pa_concept:0
-msgid "Indicates the Concept of the Supplier Invoice."
-msgstr "Indica el Concepto de la Factura de Proveedor."
-
-#. module: l10n_pa_reports
-#: help:res.partner,l10n_pa_entity:0
-msgid "Indicates the nature of the Supplier Entity."
-msgstr "Indica la naturaleza de la Entidad del Proveedor."
 
 #. module: l10n_pa_reports
 #: model:ir.model,name:l10n_pa_reports.model_account_invoice
@@ -202,77 +157,64 @@ msgid "Invoice"
 msgstr "Factura"
 
 #. module: l10n_pa_reports
-#: code:addons/l10n_pa_reports/wizard/form_43.py:131
+#: model:ir.model,name:l10n_pa_reports.model_account_invoice_tax_wh
+msgid "Invoice Tax"
+msgstr "Impuesto en la Factura"
+
+#. module: l10n_pa_reports
+#: code:addons/l10n_pa_reports/wizard/form_43.py:73
 #, python-format
 msgid "Invoices to fix Data for Form 43"
 msgstr "Facturas a arreglar Datos para Formulario 43"
 
 #. module: l10n_pa_reports
-#: help:account.pa.form43.report,file_xls:0
-msgid "It will open in your excel program, to validate numbers"
-msgstr "Abrirá en su programa de hojas de cálculo, para validación de números"
-
-#. module: l10n_pa_reports
-#: selection:res.partner,l10n_pa_entity:0
-msgid "Juridico"
-msgstr "Juridico"
-
-#. module: l10n_pa_reports
+#: field:account.pa.annex95.report,__last_update:0
 #: field:account.pa.form43.report,__last_update:0
 msgid "Last Modified on"
 msgstr "Última Vez Modificado por"
 
 #. module: l10n_pa_reports
+#: field:account.pa.annex95.report,write_uid:0
 #: field:account.pa.form43.report,write_uid:0
 msgid "Last Updated by"
 msgstr "Última Vez Actualizado por"
 
 #. module: l10n_pa_reports
+#: field:account.pa.annex95.report,write_date:0
 #: field:account.pa.form43.report,write_date:0
 msgid "Last Updated on"
 msgstr "Última Actualización el"
 
 #. module: l10n_pa_reports
-#: selection:account.invoice,l10n_pa_prd_srv:0
-msgid "Locales"
-msgstr "Locales"
-
-#. module: l10n_pa_reports
+#: field:account.pa.annex95.report,name:0
 #: field:account.pa.form43.report,name:0
 msgid "Name"
 msgstr "Nombre"
 
 #. module: l10n_pa_reports
-#: selection:res.partner,l10n_pa_entity:0
-msgid "Natural"
-msgstr "Natural"
-
-#. module: l10n_pa_reports
+#: selection:account.pa.annex95.report,state:0
 #: selection:account.pa.form43.report,state:0
 msgid "Not File"
 msgstr "Sin Archivo"
 
 #. module: l10n_pa_reports
-#: model:ir.model,name:l10n_pa_reports.model_res_partner
-msgid "Partner"
-msgstr "Empresa"
-
-#. module: l10n_pa_reports
-#: code:addons/l10n_pa_reports/wizard/form_43.py:122
+#: code:addons/l10n_pa_reports/wizard/form_43.py:64
 #, python-format
 msgid "Partners to fix Data for Form 43"
 msgstr "Empresas para arreglar Datos para Formulario 43"
 
 #. module: l10n_pa_reports
+#: view:account.pa.annex95.report:l10n_pa_reports.view_account_pa_annex95_report
+#: field:account.pa.annex95.report,period_id:0
 #: view:account.pa.form43.report:l10n_pa_reports.view_account_pa_form43_report
 #: field:account.pa.form43.report,period_id:0
 msgid "Period"
 msgstr "Período"
 
 #. module: l10n_pa_reports
-#: view:account.pa.form43.report:l10n_pa_reports.view_account_pa_form43_report
-msgid "Plain CSV format."
-msgstr "Formato CSV plano."
+#: view:account.pa.annex95.report:l10n_pa_reports.view_account_pa_annex95_report
+msgid "Probably because:"
+msgstr "Probablemente porque:"
 
 #. module: l10n_pa_reports
 #: view:account.pa.form43.report:l10n_pa_reports.view_account_pa_form43_report
@@ -280,48 +222,40 @@ msgid "Probably by:"
 msgstr "Probablemente por:"
 
 #. module: l10n_pa_reports
-#: field:account.invoice,l10n_pa_prd_srv:0
-msgid "Purchase of Goods or Services"
-msgstr "Compra de Bienes o Servicios"
-
-#. module: l10n_pa_reports
-#: selection:account.invoice,l10n_pa_concept:0
-msgid "Servicios Básicos"
-msgstr "Servicios Básicos"
-
-#. module: l10n_pa_reports
+#: field:account.pa.annex95.report,state:0
 #: field:account.pa.form43.report,state:0
 msgid "State"
 msgstr "Estado"
 
 #. module: l10n_pa_reports
-#: field:account.invoice,l10n_pa_concept:0
-msgid "Supplier Invoice Concept"
-msgstr "Concepto de Factura de Proveedor"
-
-#. module: l10n_pa_reports
+#: view:account.pa.annex95.report:l10n_pa_reports.view_account_pa_annex95_report
 #: view:account.pa.form43.report:l10n_pa_reports.view_account_pa_form43_report
 msgid "TXT format."
 msgstr "Formato TXT."
 
 #. module: l10n_pa_reports
+#: help:account.pa.annex95.report,file_txt:0
 #: help:account.pa.form43.report,file_txt:0
 msgid "This file, you can import the SAT"
 msgstr "Este archivo, usted lo puede importar al DGI"
 
 #. module: l10n_pa_reports
+#: help:account.pa.annex95.report,filename:0
 #: help:account.pa.form43.report,filename:0
 msgid "This is File name"
 msgstr "Este es el Nombre del Fichero"
 
 #. module: l10n_pa_reports
-#: view:account.pa.form43.report:l10n_pa_reports.view_account_pa_form43_report
+#: model:ir.actions.act_window,name:l10n_pa_reports.action_account_pa_annex95_report
+msgid "annex95 Report"
+msgstr "Report anexo95"
+
+#. module: l10n_pa_reports
 #: model:ir.actions.act_window,name:l10n_pa_reports.action_account_pa_form43_report
-msgid "Form 43 Report"
-msgstr "Reporte Formulario 43"
+msgid "form43 Report"
+msgstr "Reporte form43"
 
 #. module: l10n_pa_reports
 #: view:account.pa.form43.report:l10n_pa_reports.view_account_pa_form43_report
 msgid "form43 report has been successfully created!"
 msgstr "¡el formulario 43 se ha creado exitosamente!"
-

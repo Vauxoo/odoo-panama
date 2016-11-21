@@ -314,7 +314,7 @@ msgstr "Indica el Concepto de la Factura del Proveedor."
 #: help:res.partner,l10n_pa_entity:0
 #: help:sale.order,l10n_pa_entity:0
 msgid "Indicates the nature of the Supplier Entity."
-msgstr "Indica la naturaleza  de la Entidad Proveedora."
+msgstr "Indica la naturaleza de la Entidad Proveedora."
 
 #. module: l10n_pa_withholding
 #: model:ir.model,name:l10n_pa_withholding.model_account_invoice

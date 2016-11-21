@@ -84,10 +84,6 @@ class TestWithholding(TransactionCase):
         self.assertEquals(
             inv.l10n_pa_wh_subject, '5', 'Withholding Concept Should be "5"')
 
-        inv.company_id.wh_sale_itbms_account_id = self.ref('account.iva')
-        inv.company_id.wh_sale_itbms_journal_id = self.ref(
-            'account.miscellaneous_journal')
-
         inv.signal_workflow('invoice_open')
 
         self.assertEquals(
@@ -149,9 +145,6 @@ class TestWithholding(TransactionCase):
         sale_brw.action_button_confirm()
 
         inv = self.create_invoice_from_sales_order(sale_id)
-        inv.company_id.wh_sale_itbms_account_id = self.ref('account.iva')
-        inv.company_id.wh_sale_itbms_journal_id = self.ref(
-            'account.miscellaneous_journal')
         inv.signal_workflow('invoice_open')
         self.assertEquals(
             bool(inv.wh_move_id), False,
@@ -174,9 +167,6 @@ class TestWithholding(TransactionCase):
         sale_brw.action_button_confirm()
 
         inv = self.create_invoice_from_sales_order(sale_id)
-        inv.company_id.wh_sale_itbms_account_id = self.ref('account.iva')
-        inv.company_id.wh_sale_itbms_journal_id = self.ref(
-            'account.miscellaneous_journal')
         inv.signal_workflow('invoice_open')
         self.assertEquals(
             bool(inv.wh_move_id), True,
@@ -239,9 +229,6 @@ class TestWithholding(TransactionCase):
         sale_brw.action_button_confirm()
 
         inv = self.create_invoice_from_sales_order(sale_id)
-        inv.company_id.wh_sale_itbms_account_id = self.ref('account.iva')
-        inv.company_id.wh_sale_itbms_journal_id = self.ref(
-            'account.miscellaneous_journal')
         inv.signal_workflow('invoice_open')
         self.assertEquals(
             bool(inv.wh_move_id), True,
@@ -298,9 +285,6 @@ class TestWithholding(TransactionCase):
         sale_brw.action_button_confirm()
 
         inv = self.create_invoice_from_sales_order(sale_id)
-        inv.company_id.wh_sale_itbms_account_id = self.ref('account.iva')
-        inv.company_id.wh_sale_itbms_journal_id = self.ref(
-            'account.miscellaneous_journal')
         inv.signal_workflow('invoice_open')
 
         refund_id = self.refund_wzd_obj.with_context(
@@ -345,6 +329,8 @@ class TestWithholding(TransactionCase):
         sale_brw.action_button_confirm()
 
         inv = self.create_invoice_from_sales_order(sale_id)
+        inv.company_id.wh_sale_itbms_account_id = False
+        inv.company_id.wh_sale_itbms_journal_id = False
 
         with self.assertRaises(except_orm):
             inv.signal_workflow('invoice_open')
@@ -360,8 +346,7 @@ class TestWithholding(TransactionCase):
 
         inv = self.create_invoice_from_sales_order(sale_id)
 
-        inv.company_id.wh_sale_itbms_journal_id = self.ref(
-            'account.miscellaneous_journal')
+        inv.company_id.wh_sale_itbms_account_id = False
 
         with self.assertRaises(except_orm):
             inv.signal_workflow('invoice_open')
@@ -376,9 +361,6 @@ class TestWithholding(TransactionCase):
         sale_brw.action_button_confirm()
 
         inv = self.create_invoice_from_sales_order(sale_id)
-        inv.company_id.wh_sale_itbms_account_id = self.ref('account.iva')
-        inv.company_id.wh_sale_itbms_journal_id = self.ref(
-            'account.miscellaneous_journal')
         inv.l10n_pa_wh_subject = False
 
         with self.assertRaises(except_orm):
@@ -396,9 +378,6 @@ class TestWithholding(TransactionCase):
 
         inv = self.create_invoice_from_sales_order(sale_id)
         inv.l10n_pa_wh_subject = 'na'
-        inv.company_id.wh_sale_itbms_account_id = self.ref('account.iva')
-        inv.company_id.wh_sale_itbms_journal_id = self.ref(
-            'account.miscellaneous_journal')
         inv.signal_workflow('invoice_open')
         self.assertEquals(
             bool(inv.wh_move_id), False,
@@ -413,9 +392,6 @@ class TestWithholding(TransactionCase):
         sale_brw.action_button_confirm()
 
         inv = self.create_invoice_from_sales_order(sale_id)
-        inv.company_id.wh_sale_itbms_account_id = self.ref('account.iva')
-        inv.company_id.wh_sale_itbms_journal_id = self.ref(
-            'account.miscellaneous_journal')
         inv.signal_workflow('invoice_open')
         wh_move_id_1 = inv.wh_move_id.id
         inv.action_move_create_withholding()

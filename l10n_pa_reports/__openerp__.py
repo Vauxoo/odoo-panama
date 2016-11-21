@@ -15,6 +15,7 @@
     ],
     "data": [
         'wizard/form_43_view.xml',
+        'wizard/annex_95_view.xml',
         'view/res_partner_view.xml',
         'view/invoice_view.xml',
     ],

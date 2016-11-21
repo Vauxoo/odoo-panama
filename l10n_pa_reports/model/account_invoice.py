@@ -54,3 +54,31 @@ class AccountInvoice(models.Model):
                 'tax': line.amount_tax
             })
         return data_lines, partner_ids, invoice_ids
+
+
+class AccountInvoiceTaxWh(models.Model):
+    """Invoice Tax Withholding"""
+    _inherit = 'account.invoice.tax.wh'
+
+    @api.multi
+    def get_data(self):
+        data_lines = []
+        for wh_line in self:
+            line = wh_line.invoice_id
+            partner_brw = line.partner_id.commercial_partner_id
+            vat = partner_brw.vat_alone
+            entity = partner_brw.l10n_pa_entity
+            dv = partner_brw.vat_dv
+
+            data_lines.append({
+                'entity': entity,
+                'vat': vat,
+                'dv': dv,
+                'name': partner_brw.name,
+                'invoice_number': line.number,
+                'wh_line': wh_line.base_amount,
+                'tax_amount': wh_line.tax_amount,
+                'subject': line.l10n_pa_wh_subject,
+                'wh_amount': wh_line.wh_amount,
+            })
+        return data_lines

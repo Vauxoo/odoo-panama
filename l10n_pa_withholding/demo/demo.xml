@@ -1,6 +1,10 @@
 <?xml version="1.0" ?>
 <openerp>
     <data noupdate="0">
+        <record id="base.main_company" model="res.company">
+            <field name="wh_sale_itbms_account_id" ref="account.o_expense"/>
+            <field name="wh_sale_itbms_journal_id" ref="account.miscellaneous_journal"/>
+        </record>
         <!-- Creating tax and base codes for OPaL -->
         <record id="sale_base_code" model="account.tax.code">
             <field name="name">Base de Impuestos - Ventas (test)</field>
