@@ -167,7 +167,7 @@ class AccountInvoice(models.Model):
         return True
 
     @api.multi
-    def wihholding_reconciliation(self):
+    def withholding_reconciliation(self):
         """Reconciles Journal Items from wh_move_id with those in move_id on
         Invoice"""
 

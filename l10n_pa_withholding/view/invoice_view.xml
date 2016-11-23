@@ -13,7 +13,7 @@
                             <field name="l10n_pa_wh_subject"/>
                             <div>
                                 <label for="wh_move_id"/>
-                                <button name="wihholding_reconciliation" states="open"
+                                <button name="withholding_reconciliation" states="open"
                                     string="(apply withholding)" class="oe_link oe_edit_only"
                                     type="object" help="Reconciles Withholding with Invoice"/>
                             </div>

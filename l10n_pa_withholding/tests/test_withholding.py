@@ -94,7 +94,7 @@ class TestWithholding(TransactionCase):
             'Journal Entry for Withholding should be Filled')
 
         # /!\ NOTE: Assert amount withheld
-        inv.wihholding_reconciliation()
+        inv.withholding_reconciliation()
         self.assertEquals(
             inv.residual, 98.0,
             'Residual should be 98.0')
@@ -150,7 +150,7 @@ class TestWithholding(TransactionCase):
             bool(inv.wh_move_id), False,
             'Journal Entry for Withholding should be Empty')
 
-        inv.wihholding_reconciliation()
+        inv.withholding_reconciliation()
 
         aml_ids = [line.id for line in inv.payment_ids]
         self.assertEquals(
@@ -180,7 +180,7 @@ class TestWithholding(TransactionCase):
             any(aml_ids), True,
             'Withholding Invoice should decrease Receivable on Customer')
 
-        inv.wihholding_reconciliation()
+        inv.withholding_reconciliation()
 
         aml_ids = [line.id for line in inv.payment_ids]
         self.assertEquals(
@@ -234,7 +234,7 @@ class TestWithholding(TransactionCase):
             bool(inv.wh_move_id), True,
             'Journal Entry for Withholding should be Filled')
 
-        inv.wihholding_reconciliation()
+        inv.withholding_reconciliation()
         aml_ids = [line.id for line in inv.payment_ids]
         self.assertEquals(
             len(aml_ids), 0,
