@@ -225,7 +225,7 @@ msgstr "ITBMS - 7% - Ventas (test)"
 #: code:addons/l10n_pa_withholding/model/account_invoice.py:119
 #, python-format
 msgid "ITBMS Withheld on Invoice"
-msgstr "ITBMOS Retenido en Factura"
+msgstr "ITBMS Retenido en Factura"
 
 #. module: l10n_pa_withholding
 #: field:account.invoice,wh_agent_itbms:0
