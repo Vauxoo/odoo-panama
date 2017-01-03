@@ -1,2 +1,3 @@
 hr https://github.com/Vauxoo/hr.git
-partner-contact https://github.com/OCA/partner-contact.git
+partner-contact https://github.com/Vauxoo/partner-contact.git
+addons-vauxoo https://github.com/Vauxoo/addons-vauxoo.git

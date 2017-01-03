@@ -13,6 +13,7 @@ addons:
       - python-lxml
       - python-simplejson
       - python-yaml
+      - python-libxml2
 
 python:
   - "2.7"
