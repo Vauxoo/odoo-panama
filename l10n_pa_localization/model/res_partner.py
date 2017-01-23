@@ -146,6 +146,17 @@ class ResPartner(models.Model):
         <field name="title" domain="[('domain', '=', 'contact')]"
             options='{"no_open": True}' \
             attrs="{'invisible': [('is_company','=', True)]}" />
+        <label for="vat_alone"/>
+        <div>
+            <group col="3">
+                <field name="vat_country_id" nolabel="1" placeholder="Country"
+                    width="80"/>
+                <field name="vat_alone" nolabel="1" placeholder="TIN"
+                    width="100"/>
+                <field name="vat_dv" nolabel="1" placeholder="Check Digit"
+                    width="10"/>
+            </group>
+        </div>
     </group>
 </group>
             """ % (
